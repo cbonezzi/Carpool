@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E2C2C744-3FC8-49EA-B561-5C79AA2E1A26</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Carpooling</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8679ee01-ea3f-75d2-daeb-ce57b7db7bff</key>
+		<string>https://github.com/cbonezzi/Carpool.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>branches/SuperDevelopment/Carpooling.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8679ee01-ea3f-75d2-daeb-ce57b7db7bff</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8679ee01-ea3f-75d2-daeb-ce57b7db7bff</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8679ee01-ea3f-75d2-daeb-ce57b7db7bff</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Carpool</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carpooling/searchList.swift"
+            timestampString = "449476305.412508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "searchList"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchList.prefer.setter : Swift.Optional&lt;Swift.Array&lt;Carpooling.Prefer&gt;&gt;"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/Carpool/branches/SuperDevelopment/Carpooling/searchList.swift"
+                  timestampString = "449542654.595558"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchList.prefer.materializeForSet : Swift.Optional&lt;Swift.Array&lt;Carpooling.Prefer&gt;&gt;"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/Carpool/branches/SuperDevelopment/Carpooling/searchList.swift"
+                  timestampString = "449542654.595779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchList.init (Carpooling.searchList.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Carpooling.searchList"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/Carpool/branches/SuperDevelopment/Carpooling/searchList.swift"
+                  timestampString = "449542654.596024"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchList.init (Carpooling.searchList.Type)() -&gt; Carpooling.searchList"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/Carpool/branches/SuperDevelopment/Carpooling/searchList.swift"
+                  timestampString = "449542654.596206"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "271">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchList.init (Carpooling.searchList.Type)(coder : ObjectiveC.NSCoder) -&gt; Carpooling.searchList"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/Carpool/branches/SuperDevelopment/Carpooling/searchList.swift"
+                  timestampString = "449542654.596385"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carpooling/searchPeople.swift"
+            timestampString = "449476298.361862"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "searchPeople"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchPeople.smokingSelection.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISegmentedControl&gt;"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/LatestDevelopement/Carpooling/searchPeople.swift"
+                  timestampString = "449476305.756109"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchPeople.smokingSelection.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISegmentedControl&gt;"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/LatestDevelopement/Carpooling/searchPeople.swift"
+                  timestampString = "449476305.756797"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchPeople.init (Carpooling.searchPeople.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Carpooling.searchPeople"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/LatestDevelopement/Carpooling/searchPeople.swift"
+                  timestampString = "449476305.757108"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchPeople.init (Carpooling.searchPeople.Type)() -&gt; Carpooling.searchPeople"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/LatestDevelopement/Carpooling/searchPeople.swift"
+                  timestampString = "449476305.757937"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carpooling.searchPeople.init (Carpooling.searchPeople.Type)(coder : ObjectiveC.NSCoder) -&gt; Carpooling.searchPeople"
+                  moduleName = "Carpooling"
+                  urlString = "file:///Users/cesar/Desktop/LatestDevelopement/Carpooling/searchPeople.swift"
+                  timestampString = "449476305.758427"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carpooling/ParseModel.swift"
+            timestampString = "449599986.153235"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "RetrieveDataForSearch(_:numLuggage:GoingFrom:GoingTo:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
