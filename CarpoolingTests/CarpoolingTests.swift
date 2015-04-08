@@ -66,17 +66,52 @@ class CarpoolingTests: XCTestCase {
         let sigv = SignupViewController()
         
         // assert that the ViewController.view is not nil
-        XCTAssertNotNil(sigv.view, "Login View Did Not load")
+        XCTAssertNotNil(sigv.view, "Signup View Did Not load")
     }
 
 
     func testProfileViewDidLoad()
     {
         // we only have access to this if we import our project above
-        let logv = ProfileViewController()
+        let prov = ProfileViewController()
         
         // assert that the ViewController.view is not nil
-        XCTAssertNotNil(logv.view, "Login View Did Not load")
+        XCTAssertNotNil(prov.view, "Profile View Did Not load")
     }
     
+    func testPreferencesViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prev = PreferencesViewController()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(prev.view, "Preferences View Did Not load")
+    }
+    
+    func testUAViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let uav = UserActivityViewController()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(uav.view, "User Activity View Did Not load")
+    }
+    
+    /*func testSearchPeopleDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let sp = searchPeople()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(sp.view, "Search People Did Not load")
+    }
+
+    func testSearchListDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let sl = searchList()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(sl.view, "Search List Did Not load")
+    }*/
 }
