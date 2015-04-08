@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HGl-6r-dOH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HGl-6r-dOH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -700,94 +700,6 @@
             </objects>
             <point key="canvasLocation" x="1328" y="-983"/>
         </scene>
-        <!--Search List-->
-        <scene sceneID="Yyi-7d-Xah">
-            <objects>
-                <viewController id="Gad-8x-EvY" customClass="searchList" customModule="Carpooling" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dr6-gH-xHF"/>
-                        <viewControllerLayoutGuide type="bottom" id="haA-Il-Q0q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0c0-3M-VbS" customClass="SearchList">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0w-07-nxe">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="85" width="103" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJj-j1-7vE">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <string key="text">  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.Update()
-    }
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="132" width="103" height="21"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm3-ws-gGC">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Go back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="9" y="5" width="69" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="gobackPressed:" destination="Gad-8x-EvY" eventType="touchUpInside" id="MDR-GI-rSp"/>
-                                    <segue destination="Khk-f6-GAU" kind="presentation" identifier="SearchPeople_Segue" id="a21-Yl-fOM"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnX-jf-qvr">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="74" y="170" width="86" height="21"/>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="F0w-07-nxe"/>
-                                <exclude reference="bJj-j1-7vE"/>
-                                <exclude reference="Zm3-ws-gGC"/>
-                                <exclude reference="ZnX-jf-qvr"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="F0w-07-nxe"/>
-                                <include reference="bJj-j1-7vE"/>
-                                <include reference="Zm3-ws-gGC"/>
-                                <include reference="ZnX-jf-qvr"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="usernameHolder1" destination="F0w-07-nxe" id="TFC-Om-T8o"/>
-                        <outlet property="usernameHolder2" destination="bJj-j1-7vE" id="HDS-TA-vTl"/>
-                        <outlet property="usernameHolder3" destination="ZnX-jf-qvr" id="gvO-Su-FlA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FAM-sS-sDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2021" y="1184"/>
-        </scene>
         <!--Preferences-->
         <scene sceneID="sNO-9V-0Nx">
             <objects>
@@ -1364,12 +1276,94 @@
                         <outlet property="GoingTo" destination="FnO-3k-mBg" id="1CS-tr-cpb"/>
                         <outlet property="numLuggage" destination="zDr-CM-UtC" id="XDz-BZ-UNf"/>
                         <outlet property="numOccupant" destination="cVY-5Z-yef" id="iFR-MU-6tL"/>
-                        <segue destination="Gad-8x-EvY" kind="show" identifier="showPeople_Segue" id="xjK-it-c3w"/>
+                        <segue destination="GBY-G6-v9c" kind="show" identifier="showPeople_Segue" id="jW7-ob-Avg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJa-z0-0er" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2021" y="193"/>
+        </scene>
+        <!--Search List-->
+        <scene sceneID="Nc5-ah-3cG">
+            <objects>
+                <viewController id="GBY-G6-v9c" customClass="searchList" customModule="Carpooling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qqo-aV-2Qh"/>
+                        <viewControllerLayoutGuide type="bottom" id="SFp-Wa-tYI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nta-tM-Xg6" customClass="SearchList">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-Wv-wfV">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="83" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEO-Re-bex">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="126" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-da-lov">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="168" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lcl-kW-SWC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="665"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="bg9-Cg-J2n">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bg9-Cg-J2n" id="oc3-aE-Y6c">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GBY-G6-v9c" id="Z6V-ru-ssb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="EAT-Wv-wfV"/>
+                                <exclude reference="vEO-Re-bex"/>
+                                <exclude reference="MhQ-da-lov"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="EAT-Wv-wfV"/>
+                                <include reference="vEO-Re-bex"/>
+                                <include reference="MhQ-da-lov"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="usernameHolder1" destination="EAT-Wv-wfV" id="3WC-yZ-aoL"/>
+                        <outlet property="usernameHolder2" destination="vEO-Re-bex" id="xmh-f8-egM"/>
+                        <outlet property="usernameHolder3" destination="MhQ-da-lov" id="BbT-Lm-a6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEn-TJ-kF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2835" y="762"/>
         </scene>
     </scenes>
     <resources>
@@ -1377,10 +1371,9 @@
         <image name="Wallet_logo_small.png" width="23" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wnM-Ns-2rL"/>
         <segue reference="7mj-0c-JU3"/>
+        <segue reference="wnM-Ns-2rL"/>
         <segue reference="KR3-WL-xQC"/>
-        <segue reference="2fe-Ax-5vK"/>
-        <segue reference="a21-Yl-fOM"/>
+        <segue reference="coy-1M-CYD"/>
     </inferredMetricsTieBreakers>
 </document>

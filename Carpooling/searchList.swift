@@ -25,6 +25,33 @@ class searchList: UIViewController {
     var prefer : [Prefer]?
     var listuser : [String]!
     
+   
+    // var userlist : [String] = listuser!
+    
+    //    for  x  in userlist!
+    //    {
+    //       //listuser![x]
+    //    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = UITableViewCell()
+        
+        let (usernameOfReturnedList) = listuser![indexPath.row]
+        //cell.textLabel!.text = "hello"
+        cell.textLabel!.text = usernameOfReturnedList
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // return 20
+        return listuser!.count
+    }
+
+    
       @IBAction func gobackPressed(sender: UIButton) {
         self.performSegueWithIdentifier("SearchPeople_Segue", sender: self)
     }
