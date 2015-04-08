@@ -89,6 +89,8 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        //add try-catch block, move elsewhere, add things to deal with?
         self.registerUsernameTextField.delegate = self
         self.registerPasswordTextField.delegate = self
         self.registerCPasswordTextField.delegate = self
