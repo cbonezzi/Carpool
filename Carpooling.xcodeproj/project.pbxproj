@@ -66,6 +66,50 @@
 		DBD1387D1ACB8FF2003ABA42 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138771ACB8FF2003ABA42 /* ImageIO.framework */; };
 		DBD1387E1ACB8FF2003ABA42 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138781ACB8FF2003ABA42 /* OpenGLES.framework */; };
 		DBFC60771A9ABBD0001BE648 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC60731A9ABBCF001BE648 /* HomeViewController.swift */; };
+		F58BBE261AD5CBB20087BF5A /* GoogleMapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AC1AA9732800150414 /* GoogleMapsModel.swift */; };
+		F58BBE271AD5CBB40087BF5A /* GoogleWalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AD1AA9732800150414 /* GoogleWalletModel.swift */; };
+		F58BBE291AD5CBBF0087BF5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC60731A9ABBCF001BE648 /* HomeViewController.swift */; };
+		F58BBE2A1AD5CC460087BF5A /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C36681AB20A530011B520 /* GetStartedViewController.swift */; };
+		F58BBE2B1AD5CC580087BF5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */; };
+		F58BBE2C1AD5CC5B0087BF5A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */; };
+		F58BBE2D1AD5CC7C0087BF5A /* ParseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AE1AA9732800150414 /* ParseModel.swift */; };
+		F58BBE2E1AD5CD020087BF5A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABC97E1A952E9C00CE6497 /* ProfileViewController.swift */; };
+		F58BBE2F1AD5CD060087BF5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065591AA921FB000DAE6B /* SearchViewController.swift */; };
+		F58BBE301AD5CD0B0087BF5A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655B1AA921FB000DAE6B /* NotificationsViewController.swift */; };
+		F58BBE311AD5CD0E0087BF5A /* prefer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF951AC65EFB00C797D8 /* prefer.swift */; };
+		F58BBE321AD5CD110087BF5A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065461AA92154000DAE6B /* Notification.swift */; };
+		F58BBE331AD5CD130087BF5A /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065451AA92154000DAE6B /* Driver.swift */; };
+		F58BBE341AD5CD160087BF5A /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065441AA92154000DAE6B /* Passenger.swift */; };
+		F58BBE351AD5CD1A0087BF5A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA92FCB1ACA73C100917454 /* Login.swift */; };
+		F58BBE361AD5CD1D0087BF5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065421AA92154000DAE6B /* User.swift */; };
+		F58BBE381AD5CD320087BF5A /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB962D0E1A927055007D059D /* PreferencesViewController.swift */; };
+		F58BBE391AD5CD390087BF5A /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655A1AA921FB000DAE6B /* PaymentViewController.swift */; };
+		F58BBE3A1AD5CD3E0087BF5A /* UserActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C366A1AB600240011B520 /* UserActivityViewController.swift */; };
+		F58BBE3B1AD5CD420087BF5A /* searchPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF911AC657FC00C797D8 /* searchPeople.swift */; };
+		F58BBE3C1AD5CD490087BF5A /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF931AC658C300C797D8 /* searchList.swift */; };
+		F58BBE3D1AD5CD560087BF5A /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA61AA50960007A8179 /* GoogleOpenSource.framework */; };
+		F58BBE3E1AD5CD590087BF5A /* GoogleWalletSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB128BA71AA50960007A8179 /* GoogleWalletSDK.bundle */; };
+		F58BBE3F1AD5CD5C0087BF5A /* GoogleWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA81AA50960007A8179 /* GoogleWalletSDK.framework */; };
+		F58BBE401AD5CD5F0087BF5A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBACA7EC1A9CD4FC0072FA53 /* Bolts.framework */; };
+		F58BBE411AD5CD620087BF5A /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBACA7EE1A9CE6710072FA53 /* GoogleMaps.bundle */; };
+		F58BBE421AD5CD640087BF5A /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBACA7EF1A9CE6710072FA53 /* GoogleMaps.framework */; };
+		F58BBE431AD5CD680087BF5A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03741A9C55260061A42B /* AudioToolbox.framework */; };
+		F58BBE441AD5CD6A0087BF5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03751A9C55260061A42B /* CFNetwork.framework */; };
+		F58BBE451AD5CD750087BF5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03761A9C55260061A42B /* CoreGraphics.framework */; };
+		F58BBE461AD5CD780087BF5A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03771A9C55260061A42B /* CoreLocation.framework */; };
+		F58BBE471AD5CD7B0087BF5A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03781A9C55260061A42B /* MobileCoreServices.framework */; };
+		F58BBE481AD5CD7E0087BF5A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03791A9C55270061A42B /* QuartzCore.framework */; };
+		F58BBE491AD5CD800087BF5A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037A1A9C55270061A42B /* Security.framework */; };
+		F58BBE4A1AD5CD830087BF5A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037B1A9C55270061A42B /* StoreKit.framework */; };
+		F58BBE4B1AD5CD850087BF5A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037C1A9C55270061A42B /* SystemConfiguration.framework */; };
+		F58BBE4C1AD5CD870087BF5A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03961A9C55BA0061A42B /* Parse.framework */; };
+		F58BBE4D1AD5CD890087BF5A /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03971A9C55BA0061A42B /* ParseCrashReporting.framework */; };
+		F58BBE4E1AD5CD8D0087BF5A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03981A9C55BA0061A42B /* ParseFacebookUtils.framework */; };
+		F58BBE4F1AD5CD900087BF5A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03991A9C55BA0061A42B /* ParseUI.framework */; };
+		F58BBE501AD5CD930087BF5A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03861A9C55900061A42B /* Bolts.framework */; };
+		F58BBE511AD5CD950087BF5A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03871A9C55900061A42B /* FacebookSDK.framework */; };
+		F58BBE521AD5CD980087BF5A /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03881A9C55900061A42B /* FBAudienceNetwork.framework */; };
+		F58BBE541AD5CDA00087BF5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB962D131A927056007D059D /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +232,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58BBE481AD5CD7E0087BF5A /* QuartzCore.framework in Frameworks */,
+				F58BBE511AD5CD950087BF5A /* FacebookSDK.framework in Frameworks */,
+				F58BBE4D1AD5CD890087BF5A /* ParseCrashReporting.framework in Frameworks */,
+				F58BBE521AD5CD980087BF5A /* FBAudienceNetwork.framework in Frameworks */,
+				F58BBE441AD5CD6A0087BF5A /* CFNetwork.framework in Frameworks */,
+				F58BBE401AD5CD5F0087BF5A /* Bolts.framework in Frameworks */,
+				F58BBE4A1AD5CD830087BF5A /* StoreKit.framework in Frameworks */,
+				F58BBE491AD5CD800087BF5A /* Security.framework in Frameworks */,
+				F58BBE4B1AD5CD850087BF5A /* SystemConfiguration.framework in Frameworks */,
+				F58BBE3D1AD5CD560087BF5A /* GoogleOpenSource.framework in Frameworks */,
+				F58BBE451AD5CD750087BF5A /* CoreGraphics.framework in Frameworks */,
+				F58BBE4F1AD5CD900087BF5A /* ParseUI.framework in Frameworks */,
+				F58BBE461AD5CD780087BF5A /* CoreLocation.framework in Frameworks */,
+				F58BBE431AD5CD680087BF5A /* AudioToolbox.framework in Frameworks */,
+				F58BBE4C1AD5CD870087BF5A /* Parse.framework in Frameworks */,
+				F58BBE471AD5CD7B0087BF5A /* MobileCoreServices.framework in Frameworks */,
+				F58BBE421AD5CD640087BF5A /* GoogleMaps.framework in Frameworks */,
+				F58BBE501AD5CD930087BF5A /* Bolts.framework in Frameworks */,
+				F58BBE4E1AD5CD8D0087BF5A /* ParseFacebookUtils.framework in Frameworks */,
+				F58BBE3F1AD5CD5C0087BF5A /* GoogleWalletSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +504,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58BBE541AD5CDA00087BF5A /* Images.xcassets in Resources */,
+				F58BBE3E1AD5CD590087BF5A /* GoogleWalletSDK.bundle in Resources */,
+				F58BBE411AD5CD620087BF5A /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +547,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58BBE2F1AD5CD060087BF5A /* SearchViewController.swift in Sources */,
+				F58BBE331AD5CD130087BF5A /* Driver.swift in Sources */,
+				F58BBE3C1AD5CD490087BF5A /* searchList.swift in Sources */,
+				F58BBE341AD5CD160087BF5A /* Passenger.swift in Sources */,
+				F58BBE2B1AD5CC580087BF5A /* LoginViewController.swift in Sources */,
+				F58BBE2C1AD5CC5B0087BF5A /* SignupViewController.swift in Sources */,
+				F58BBE311AD5CD0E0087BF5A /* prefer.swift in Sources */,
 				DB962D231A927056007D059D /* CarpoolingTests.swift in Sources */,
+				F58BBE391AD5CD390087BF5A /* PaymentViewController.swift in Sources */,
+				F58BBE361AD5CD1D0087BF5A /* User.swift in Sources */,
+				F58BBE261AD5CBB20087BF5A /* GoogleMapsModel.swift in Sources */,
+				F58BBE271AD5CBB40087BF5A /* GoogleWalletModel.swift in Sources */,
+				F58BBE321AD5CD110087BF5A /* Notification.swift in Sources */,
+				F58BBE291AD5CBBF0087BF5A /* HomeViewController.swift in Sources */,
+				F58BBE381AD5CD320087BF5A /* PreferencesViewController.swift in Sources */,
+				F58BBE3B1AD5CD420087BF5A /* searchPeople.swift in Sources */,
+				F58BBE2E1AD5CD020087BF5A /* ProfileViewController.swift in Sources */,
+				F58BBE301AD5CD0B0087BF5A /* NotificationsViewController.swift in Sources */,
+				F58BBE2A1AD5CC460087BF5A /* GetStartedViewController.swift in Sources */,
+				F58BBE3A1AD5CD3E0087BF5A /* UserActivityViewController.swift in Sources */,
+				F58BBE2D1AD5CC7C0087BF5A /* ParseModel.swift in Sources */,
+				F58BBE351AD5CD1A0087BF5A /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +756,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleWalletSDK",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/GoogleMapsSDK",
+					"$(PROJECT_DIR)/Carpooling",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -695,6 +787,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleWalletSDK",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/GoogleMapsSDK",
+					"$(PROJECT_DIR)/Carpooling",
 				);
 				INFOPLIST_FILE = CarpoolingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

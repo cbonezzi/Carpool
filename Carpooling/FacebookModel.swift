@@ -9,6 +9,7 @@
 import Foundation
 
 import UIKit
+import Parse
 
 class FacebookModel: NSObject, FBLoginViewDelegate {
     

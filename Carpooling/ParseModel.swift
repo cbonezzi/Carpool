@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Parse
 private var login : Login!
 private var prefer : Prefer!
 private var User1 : User!
