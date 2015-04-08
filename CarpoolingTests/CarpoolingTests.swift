@@ -33,4 +33,22 @@ class CarpoolingTests: XCTestCase {
         }
     }
     
+    func testHomeViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let homev = LoginViewController()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(homev.view, "Home View Did Not load")
+    }
+    
+    func testLoginViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let logv = LoginViewController()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(logv.view, "Login View Did Not load")
+    }
+    
 }
