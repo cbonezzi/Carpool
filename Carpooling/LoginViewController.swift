@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
         
         
-        ParseData.LoginUserbyEmail(loginUsernameTextField.text, password: loginPasswordTextField.text) {
+    ParseData.LoginUserbyEmail(loginUsernameTextField.text, password: loginPasswordTextField.text) {
             (loggedUser: LoginUser) in
             println(loggedUser)
             self.loggedUser1 = loggedUser
