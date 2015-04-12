@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class searchPeople: UIViewController {
+class searchPeople: UIViewController, UIAlertViewDelegate {
     
     var loggedUser1 : LoginUser!
     var loggedUser : CurrentUser!
@@ -18,7 +18,8 @@ class searchPeople: UIViewController {
     var ParseData : ParseModel = ParseModel()
     //var ParseM : ParseModelClass = ParseModelClass()
     var loginStatus : Bool = false
-    
+    //var alert = UIAlertController(title:"Alert", message:"Fields cannot be empty!!", preferredStyle: UIAlertControllerStyle.Alert)
+    var alert = UIAlertView(title: "Alert", message: "Field connot be emppty", delegate: nil, cancelButtonTitle: "OK")
     
     @IBOutlet weak var smokingSelection: UISegmentedControl!
     
@@ -33,15 +34,18 @@ class searchPeople: UIViewController {
     
     
     
-    func displayMyAlertMessage( userMessage: String)
+    func displayMyAlertMessage(/*userMessage: String*/)
     {
-        var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        //var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
         
-        let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
         
-        alert.addAction(ok);
+        //alert.addButtonWithTitle("ok")
+        alert.show()
+        //alert.addAction(ok);
         
-        self.presentViewController(alert, animated: true, completion: nil);
+        //self.(alertView: alert, clickedButtonAtIndex: 0)
+        //self.presentViewController(alert, animated: true, completion: nil);
     }
     
     
@@ -54,7 +58,7 @@ class searchPeople: UIViewController {
         if (numOccupant.text.isEmpty || numLuggage.text.isEmpty
             || GoingFrom.text.isEmpty || GoingTo.text.isEmpty) {
             
-            self.displayMyAlertMessage("Fields cannot be empty!!")
+            self.displayMyAlertMessage(/*"Fields cannot be empty!!"*/)
                 return
         }
         else {
@@ -91,6 +95,7 @@ class searchPeople: UIViewController {
     }
         override func viewDidLoad() {
             super.viewDidLoad()
+            //alert.show()
             // Do any additional setup after loading the view, typically from a nib.
         }
         

@@ -60,7 +60,9 @@ class UserActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Add something for test?
-        usernameLabel.text! = login![0].email
+        if(login != nil){
+            usernameLabel.text! = login![0].email
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -97,16 +97,27 @@ class CarpoolingTests: XCTestCase {
         XCTAssertNotNil(uav.view, "User Activity View Did Not load")
     }
     
-    /*func testSearchPeopleDidLoad()
+    func testSearchPeopleDidLoad()
     {
         // we only have access to this if we import our project above
         let sp = searchPeople()
         
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(sp.view, "Search People Did Not load")
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        
+        let Fake = FakeAlertView()
+        
+        sp.displayMyAlertMessage()
+        XCTAssertTrue(Fake.showWasCalled)
     }
 
-    func testSearchListDidLoad()
+    /*func testSearchListDidLoad()
     {
         // we only have access to this if we import our project above
         let sl = searchList()
