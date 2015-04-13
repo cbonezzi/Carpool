@@ -190,7 +190,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
-            endingLineNumber = "50">
+            endingLineNumber = "50"
+            landmarkName = "RetrieveDataForSearch(_:numLuggage:Role1:GoingFrom:GoingTo:completion:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -205,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
-            landmarkName = "show()"
+            landmarkName = "testProfileViewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -221,8 +223,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
             endingLineNumber = "106"
-            landmarkName = "FakeAlertView"
-            landmarkType = "3">
+            landmarkName = "testSignupViewDidLoad()"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -337,14 +339,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
             endingLineNumber = "122"
-            landmarkName = "testGoBackPeopleButton()"
+            landmarkName = "testPreferencesViewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Carpooling/searchPeople.swift"
@@ -353,38 +355,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
             endingLineNumber = "70"
-            landmarkName = "gobackPressed(_:)"
+            landmarkName = "displayMyAlertMessage()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Carpooling.searchPeople.gobackPressed (Carpooling.searchPeople)(ObjectiveC.UIButton) -&gt; ()"
-                  moduleName = "Carpooling"
-                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/Carpooling/searchPeople.swift"
-                  timestampString = "450584264.037799"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CarpoolingTests.searchPeople.gobackPressed (CarpoolingTests.searchPeople)(ObjectiveC.UIButton) -&gt; ()"
-                  moduleName = "CarpoolingTests"
-                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/Carpooling/searchPeople.swift"
-                  timestampString = "450584264.546494"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -399,7 +371,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "149"
             endingLineNumber = "149"
-            landmarkName = "testGoBackPeopleButton()"
+            landmarkName = "testUAViewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -410,43 +382,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Carpooling/searchPeople.swift"
-            timestampString = "450583184.404899"
+            timestampString = "450587111.686648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "prepareForSegue(_:sender:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "search(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Carpooling.searchPeople.prepareForSegue (Carpooling.searchPeople)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ()"
-                  moduleName = "Carpooling"
-                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/Carpooling/searchPeople.swift"
-                  timestampString = "450584264.054065"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CarpoolingTests.searchPeople.prepareForSegue (CarpoolingTests.searchPeople)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ()"
-                  moduleName = "CarpoolingTests"
-                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/Carpooling/searchPeople.swift"
-                  timestampString = "450584264.546917"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "23">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

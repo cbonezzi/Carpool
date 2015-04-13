@@ -100,7 +100,8 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
             
             (StuffUser: Prefer) in
             self.stuffUser = StuffUser
-            if (self.stuffUser.email != nil) {
+                
+            if (self.stuffUser.list.count > 0) {
                 println("in if")
             self.performSegueWithIdentifier("showPeople_Segue", sender: self)
                 }
