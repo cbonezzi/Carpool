@@ -19,6 +19,8 @@ class searchPeople: UIViewController  {
     var ParseData : ParseModel = ParseModel()
     //var ParseM : ParseModelClass = ParseModelClass()
     var loginStatus : Bool = false
+    var temp = 0
+    var Role: String = ""
     //var alert = UIAlertController(title:"Alert", message:"Fields cannot be empty!!", preferredStyle: UIAlertControllerStyle.Alert)
     var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
     
@@ -72,7 +74,7 @@ class searchPeople: UIViewController  {
         if (numOccupant.text.isEmpty || numLuggage.text.isEmpty
         || GoingFrom.text.isEmpty || GoingTo.text.isEmpty || Role.isEmpty) {
     
-            self.displayMyAlertMessage("Fields cannot be empty!!")
+            self.displayMyAlertMessage()
                 return
         }
         
@@ -87,7 +89,7 @@ class searchPeople: UIViewController  {
                 }
                 else {
                 println("in else")
-                    self.displayMyAlertMessage("No user found")
+                    //self.displayMyAlertMessage("No user found")
                 }
             //(loggedUser: PUser) in
             //println(loggedUser)
