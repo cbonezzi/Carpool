@@ -19,7 +19,7 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     //var ParseM : ParseModelClass = ParseModelClass()
     var loginStatus : Bool = false
     //var alert = UIAlertController(title:"Alert", message:"Fields cannot be empty!!", preferredStyle: UIAlertControllerStyle.Alert)
-    var alert = UIAlertView(title: "Alert", message: "Field connot be emppty", delegate: nil, cancelButtonTitle: "OK")
+    var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
     
     @IBOutlet weak var smokingSelection: UISegmentedControl!
     
@@ -42,6 +42,7 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
         
         //alert.addButtonWithTitle("ok")
         alert.show()
+        
         //alert.addAction(ok);
         
         //self.(alertView: alert, clickedButtonAtIndex: 0)

@@ -81,7 +81,7 @@ class searchList: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.Update()
+        //self.Update()
     }
     
     override func didReceiveMemoryWarning() {
