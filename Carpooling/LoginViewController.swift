@@ -58,8 +58,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "UserActivity_Segue") {
             var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
+            if(login != nil) {
             childVC.login = loggedUser1.RetrieveUserFromClass()
             self.segueCalled();
+            }
             println("welcome to user activity")
         }
         if (segue.identifier == "Signup_Segue") {
