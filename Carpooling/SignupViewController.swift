@@ -36,9 +36,12 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var registerCPasswordTextField: UITextField!
-    var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
+    var alert = UIAlertView(title: "Alert", message: "Field cannot be empty", delegate: nil, cancelButtonTitle: "OK")
     
-     var alert1 = UIAlertView(title: "Alert", message: "Password do not match", delegate: nil, cancelButtonTitle: "OK")
+    var alert1 = UIAlertView(title: "Alert", message: "Passwords do not match", delegate: nil, cancelButtonTitle: "OK")
+    
+    var alert2 = UIAlertView(title: "Alert", message: "Username needs to be an email address.", delegate: nil, cancelButtonTitle: "OK")
+    
     func displayMyAlertMessage()
     {
         
@@ -47,6 +50,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         
         
     }
+    
     func displayMyAlertMessage1()
     {
         
@@ -55,6 +59,16 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    func displayMyAlertMessage2()
+    {
+        
+        
+        alert2.show();
+        
+        
+    }
+
 
     
     @IBAction func registerButton(sender: AnyObject) {
@@ -93,16 +107,17 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
             
             //if !(Regex("/^[a-z].*[@][a-z]*[.](com|edu)/i").test(registerUsername)) {
                 
-                //self.displayMyAlertMessage("Username needs to be an email address.");
+                //self.displayMyAlertMessage2("Username needs to be an email address.");
             
                 //return;
             
            // }
             
-            let match = registerUsername.rangeOfString("/^[a-z].*[@][a-z]*[.](com|edu)/i", options: .RegularExpressionSearch);
-            
-            if (match == nil) {
-                self.displayMyAlertMessage("Username needs to be email.");
+            if let match = registerUsername.rangeOfString("^[a-z].*[@][a-z]*[.](com|edu)$", options: .RegularExpressionSearch) {
+                
+            } else {
+                self.displayMyAlertMessage2();
+                
                 return;
             }
             

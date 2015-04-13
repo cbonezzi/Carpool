@@ -117,9 +117,6 @@ class CarpoolingTests: XCTestCase {
         logv.prepareForSegue((UIStoryboardSegue(identifier: "Signup_Segue", source: logv, destination: sigv)), sender: myFirstButton)
         XCTAssertNotNil(sigv.view, "Signup View Did Not load")
 
-        
-       
-
     }
 
     func testSignupViewDidLoad()
@@ -146,9 +143,6 @@ class CarpoolingTests: XCTestCase {
         
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(sigv.view, "Signup View Did Not load")
-        
-       
-    
 
     }
 
