@@ -158,14 +158,15 @@ class CarpoolingTests: XCTestCase {
         //fake alert class
         class FakeAlertView: UIAlertView{
             var showWasCalled = false
-            
+           
             private override func show(){
                 showWasCalled = true
             }
         }
+        sp.viewDidLoad()
         
         let Fake = FakeAlertView()
-        
+        //sp.displayMyAlertMessage()
         sp.displayMyAlertMessage()
         XCTAssertFalse(Fake.showWasCalled)
     }

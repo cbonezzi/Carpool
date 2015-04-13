@@ -133,15 +133,6 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
     
     
     @IBAction func Goback(sender: AnyObject) {
-            //   var currentuser: [Login] = login!
-            //    print(currentuser)
-             //   ParseData.LoginUserbyEmail(currentuser[0].email) {
-        
-        //            (loggedUser: LoginUser) in
-        //            println(loggedUser)
-        //            self.loggedUser1 = loggedUser
-        //            self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
-        //        }
         self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
         
     }
@@ -161,7 +152,6 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
         new_user["luggage"] = luggageTextField.text
         new_user["GoingFrom"] = GoingFrom.text
         new_user["GoingTo"] = GoingTo.text
-        //new_user["date"] =
         new_user["min_age"] = min_age.text
         new_user["max_age"] = max_age.text
         
@@ -189,7 +179,6 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
             
             new_user.addObject(("Rider"), forKey: "role")
         }
-        
         new_user.saveInBackgroundWithBlock {
             (success: Bool, error: NSError!) -> Void in
             if (success) {
