@@ -102,7 +102,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
-            endingLineNumber = "13">
+            endingLineNumber = "13"
+            landmarkName = "searchPeople"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -188,7 +190,205 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
-            endingLineNumber = "50">
+            endingLineNumber = "50"
+            landmarkName = "RetrieveDataForSearch(_:numLuggage:Role1:GoingFrom:GoingTo:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarpoolingTests/CarpoolingTests.swift"
+            timestampString = "450563080.672564"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "testProfileViewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarpoolingTests/CarpoolingTests.swift"
+            timestampString = "450563120.705604"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "testSignupViewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).init (CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).Type)(title : Swift.Optional&lt;Swift.String&gt;, message : Swift.Optional&lt;Swift.String&gt;, delegate : Swift.Optional&lt;Swift.AnyObject&gt;, cancelButtonTitle : Swift.Optional&lt;Swift.String&gt;) -&gt; CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1)"
+                  moduleName = "CarpoolingTests"
+                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/CarpoolingTests/CarpoolingTests.swift"
+                  timestampString = "450563476.693589"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).init (CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).Type)(frame : C.CGRect) -&gt; CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1)"
+                  moduleName = "CarpoolingTests"
+                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/CarpoolingTests/CarpoolingTests.swift"
+                  timestampString = "450563476.693978"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).init (CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).Type)() -&gt; CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1)"
+                  moduleName = "CarpoolingTests"
+                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/CarpoolingTests/CarpoolingTests.swift"
+                  timestampString = "450563476.694461"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).init (CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).Type)(coder : ObjectiveC.NSCoder) -&gt; CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1)"
+                  moduleName = "CarpoolingTests"
+                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/CarpoolingTests/CarpoolingTests.swift"
+                  timestampString = "450563476.695034"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).showWasCalled.getter : Swift.Bool"
+                  moduleName = "CarpoolingTests"
+                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/CarpoolingTests/CarpoolingTests.swift"
+                  timestampString = "450563476.695686"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).showWasCalled.setter : Swift.Bool"
+                  moduleName = "CarpoolingTests"
+                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/CarpoolingTests/CarpoolingTests.swift"
+                  timestampString = "450563476.696028"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CarpoolingTests.CarpoolingTests.(testSearchPeopleDidLoad (CarpoolingTests.CarpoolingTests) -&gt; () -&gt; ()).(FakeAlertView #1).showWasCalled.materializeForSet : Swift.Bool"
+                  moduleName = "CarpoolingTests"
+                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/CarpoolingTests/CarpoolingTests.swift"
+                  timestampString = "450563476.696401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarpoolingTests/CarpoolingTests.swift"
+            timestampString = "450580846.090088"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "testPreferencesViewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carpooling/searchPeople.swift"
+            timestampString = "450579169.539774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "displayMyAlertMessage()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CarpoolingTests/CarpoolingTests.swift"
+            timestampString = "450584263.696063"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "testUAViewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carpooling/searchPeople.swift"
+            timestampString = "450587111.686648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "search(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -9,14 +9,18 @@
 import UIKit
 import Parse
 
-class PreferencesViewController: UIViewController  {
+class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
     
+    @IBOutlet weak var userlabel: UILabel!
     
     var localGender = 0
     var temp = 0
     var temp1 = 0
     var temp2 = 0
     var sliderValue = 0
+    var smoker : String = "Yes"
+    var gender : String = " Male"
+    var role : String = "Driver"
     
     var loggedUser1 : LoginUser!
     var loggedUser : CurrentUser!
@@ -39,7 +43,7 @@ class PreferencesViewController: UIViewController  {
     //        sliderValue = currentValue
     //    }
     
-    
+    var alert = UIAlertView(title:"Alert", message:"Fields cannot be empty", delegate : nil , cancelButtonTitle : "OK")
     
     @IBOutlet weak var min_age: UITextField!
     @IBOutlet weak var max_age: UITextField!
@@ -66,10 +70,12 @@ class PreferencesViewController: UIViewController  {
         if sender.selectedSegmentIndex == 0 {
             new_user.addObject(("Yes"), forKey: "Smoker")
             temp1 = 1
+            smoker = "yes"
         }
         else if sender.selectedSegmentIndex == 1 {
             new_user.addObject(("No"), forKey: "Smoker")
             temp1 = 2
+            smoker = "No"
         }
         
         
@@ -81,14 +87,17 @@ class PreferencesViewController: UIViewController  {
         if sender.selectedSegmentIndex == 0 {
             new_user.addObject(("Male"), forKey: "gender")
             temp = 1
+            gender = "Male"
         }
         else if sender.selectedSegmentIndex == 1 {
             new_user.addObject(("Female"), forKey: "gender")
             temp = 2
+            gender = "Female"
         }
         else if sender.selectedSegmentIndex == 2 {
             new_user.addObject(("Unspecified"), forKey: "gender")
             temp = 3
+            gender = "Unspecified"
         }
     }
     
@@ -100,31 +109,42 @@ class PreferencesViewController: UIViewController  {
         if sender.selectedSegmentIndex == 0 {
             new_user.addObject(("Driver"), forKey: "role")
             temp2 = 1
+            role = "Driver"
         }
         else if sender.selectedSegmentIndex == 1 {
-            new_user.addObject(("Rider"), forKey: "role")
+            new_user.addObject(("Passenger"), forKey: "role")
             temp2 = 2
+            role = "Passenger"
         }
 
     }
     
+    func displayMyAlertMessage()
+    {
+        
+        
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        
+        alert.show();
+        
+        //self.presentViewController(alert, animated: true, completion: nil);
+    }
+
+    
     
     @IBAction func Goback(sender: AnyObject) {
-            //   var currentuser: [Login] = login!
-            //    print(currentuser)
-             //   ParseData.LoginUserbyEmail(currentuser[0].email) {
-        
-        //            (loggedUser: LoginUser) in
-        //            println(loggedUser)
-        //            self.loggedUser1 = loggedUser
-        //            self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
-        //        }
         self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
         
     }
     
     @IBAction func submitPressed(sender: AnyObject) {
-    
+        
+        if (musicPreferenceTextField.text.isEmpty || NumOfOccupantsTextField.text.isEmpty || luggageTextField.text.isEmpty || GoingFrom.text.isEmpty || GoingTo.text.isEmpty || min_age.text.isEmpty || max_age.text.isEmpty || smoker.isEmpty || gender.isEmpty || role.isEmpty){
+            print("in the if")
+            self.displayMyAlertMessage()
+        }
+
+        else {
         var new_user = PFObject(className: "Preferences")
        
         new_user["music_taste"] = musicPreferenceTextField.text
@@ -132,7 +152,6 @@ class PreferencesViewController: UIViewController  {
         new_user["luggage"] = luggageTextField.text
         new_user["GoingFrom"] = GoingFrom.text
         new_user["GoingTo"] = GoingTo.text
-        //new_user["date"] =
         new_user["min_age"] = min_age.text
         new_user["max_age"] = max_age.text
         
@@ -160,10 +179,6 @@ class PreferencesViewController: UIViewController  {
             
             new_user.addObject(("Rider"), forKey: "role")
         }
-        
-    
-
-    
         new_user.saveInBackgroundWithBlock {
             (success: Bool, error: NSError!) -> Void in
             if (success) {
@@ -172,6 +187,7 @@ class PreferencesViewController: UIViewController  {
             } else {
                 print("error")
                 // There was a problem, check error.description
+            }
             }
         }
     }
@@ -182,7 +198,9 @@ class PreferencesViewController: UIViewController  {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "UserActivity_Segue") {
             var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
-            childVC.login = login!
+             if(login != nil){
+                childVC.login = login!
+            }
             println("welcome to userActivity")
         }
         
@@ -190,6 +208,9 @@ class PreferencesViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if(login != nil){
+            userlabel.text! = login![0].email
+        }
         
         println("Preference View Controller !!!!")
     }

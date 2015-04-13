@@ -36,19 +36,26 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var registerCPasswordTextField: UITextField!
+    var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
     
-    
-    func displayMyAlertMessage( userMessage: String)
+     var alert1 = UIAlertView(title: "Alert", message: "Password do not match", delegate: nil, cancelButtonTitle: "OK")
+    func displayMyAlertMessage()
     {
-        var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
         
-        let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
         
-        alert.addAction(ok);
+        alert.show();
         
-        self.presentViewController(alert, animated: true, completion: nil);
+        
     }
-    
+    func displayMyAlertMessage1()
+    {
+        
+        
+        alert1.show();
+        
+        
+    }
+
     
     @IBAction func registerButton(sender: AnyObject) {
         
@@ -71,7 +78,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
             
             if (registerUsername.isEmpty || registerPassword.isEmpty || registerCPassword.isEmpty){
                 
-                self.displayMyAlertMessage("All Fields mandatory");
+                self.displayMyAlertMessage();
                 return;
             }
             
@@ -79,7 +86,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
             
             if (registerPassword != registerCPassword){
                 
-                self.displayMyAlertMessage("Password do not match!!");
+                self.displayMyAlertMessage1();
                 
                 return;
             }

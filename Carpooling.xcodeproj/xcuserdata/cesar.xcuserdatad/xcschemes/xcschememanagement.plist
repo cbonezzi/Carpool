@@ -16,12 +16,19 @@
 		</dict>
 		<key>Carpooling.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7673658e09c8e9fcf048b5bf</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DB5076491AA4C6F400AEB886</key>
 		<dict>
 			<key>primary</key>

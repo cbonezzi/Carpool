@@ -24,62 +24,69 @@ class ParseModel {
         Parser = []
     }
     
-    func RetrieveDataForSearch(numOccupant: String, numLuggage: String, GoingFrom: String, GoingTo: String, completion: (user: Prefer) -> Void) {
-        
-        
+    
+    
+
+    func RetrieveDataForSearch(numOccupant: String, numLuggage: String , Role1 : String , GoingFrom: String, GoingTo: String, completion: (user: Prefer) -> Void) {
         var index: Int
         var user0: Prefer!
         var list: Prefer = Prefer()
         //for index=0 ; index<20; ++index{
-        
+        //print(Role1)
         var user = PFQuery(className:"Preferences")
         //user.whereKey("email", equalTo:loginUsername)
         user.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 // The find succeeded.
-                println("Successfully retrieved \(objects.count) scores.")
+                println("Successfully retrieved \(objects.count)objects")
                 // Do something with the found objects
                 if let objects = objects as? [PFObject] {
                     for object in objects {
                         var occ: AnyObject = object.valueForKey("occupants")!
+                        //println(occ)
                         var lug: AnyObject = object.valueForKey("luggage")!
+                        //println(lug)
                         var sou: AnyObject = object.valueForKey("GoingFrom")!
-                        println(sou)
+                        //println(sou)
+
                         var des: AnyObject = object.valueForKey("GoingTo")!
-                        print(des)
+                        //println(des)
+
+                        var roledb: AnyObject = object.valueForKey("role")!
+                        // For array to get index value 
+                        var role : String = roledb[0] as String!
+                        println(roledb)
                         if  (occ as? NSObject == numOccupant){
-                            
+                            println(occ)
                             if (lug as? NSObject == numLuggage){
                                 
                                 if (sou as? NSObject == GoingFrom){
                                     
                                     if (des as? NSObject == GoingTo){
                                         
+                                        if (role  == Role1){
                                         
+                                        print("hieeee")
                                         var email: AnyObject = object.valueForKey("user_email")!
-                                        print(email)
+                                        println(email)
                                         var user0 = Prefer(email :toString(email))
-                                        //var user0 = User("Driver", username: object.valueForKey("username"), age: object.valueForKey("age"), language: object.valueForKey("language"), gender: object.valueForKey("gender"), email: object.valueForKey("email"))
                                         prefer = user0
                                         var sup: [Prefer]!
                                         pUser = PUser(cuser: user0)
                                         list.list.append(toString(email))
-                                    }
-                                }
-                            }
-                        }
+                                
+                                        }}}}}
                         else {
                             // Log details of the failure
-                            println("Error")
+                            
+                            println("Error nothing found")
                         }
-                    }
-                }
-            }
+                    }}}
             //this is used for closure
             completion(user: list)
-        }
-    }
+        }}
+        
     
     
     func RetrieveDataFromDatabase(email: String, completion: (user: CurrentUser) -> Void) {
@@ -123,11 +130,12 @@ class ParseModel {
             else {
                 // Log details of the failure
                 println("Error: \(error) \(error.userInfo!)")
-            }
-        }
+            }}}
+        
         
         //return User1
-    }
+        
+        
     func LoginUserbyEmail(email: String, password : String, completion: (user: LoginUser) -> Void) {
         var user3 = PFQuery(className:"User")
         user3.whereKey("user_email", equalTo:email)
@@ -210,3 +218,4 @@ class ParseModel {
 }
 }
 }
+

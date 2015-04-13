@@ -11,6 +11,8 @@ import XCTest
 
 class CarpoolingTests: XCTestCase {
     
+    
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,6 +22,24 @@ class CarpoolingTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    // creating a button in order to simulate the
+
+        
+    let myFirstLabel = UILabel()
+    let myFirstButton = UIButton()
+//    myFirstLabel.text = "GoBackButton"
+//    myFirstLabel.font = UIFont(name: "MarkerFelt-Thin", size: 45)
+//    myFirstLabel.textColor = UIColor.redColor()
+//    myFirstLabel.textAlignment = .Center
+//    myFirstLabel.numberOfLines = 5
+//    myFirstLabel.frame = CGRectMake(15, 54, 300, 500)
+//    myFirstButton.setTitle("✸", forState: .Normal)
+//    myFirstButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+//    myFirstButton.frame = CGRectMake(15, -50, 300, 500)
+//    myFirstButton.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
+//        
+//    }
     
     func testExample() {
         // This is an example of a functional test case.
@@ -37,70 +57,41 @@ class CarpoolingTests: XCTestCase {
     {
         // we only have access to this if we import our project above
         let homev = HomeViewController()
+        let gsv = GetStartedViewController()
         
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(homev.view, "Home View Did Not load")
+        
+        homev.prepareForSegue((UIStoryboardSegue(identifier: "Start_Segue", source: homev, destination: gsv)), sender: myFirstButton)
+        XCTAssertNotNil(gsv.view, "Login View Did Not load")
+        
+
     }
     
     func testGSViewDidLoad()
     {
         // we only have access to this if we import our project above
         let gsv = GetStartedViewController()
-        
+        let logv = LoginViewController()
+        let sigv = SignupViewController()
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(gsv.view, "Get Started View Did Not load")
+        
+        gsv.prepareForSegue((UIStoryboardSegue(identifier: "Login_Segue", source: gsv, destination: logv)), sender: myFirstButton)
+        XCTAssertNotNil(logv.view, "Login View Did Not load")
+        
+        
+        gsv.prepareForSegue((UIStoryboardSegue(identifier: "Signup_Segue", source: gsv, destination: sigv)), sender: myFirstButton)
+        XCTAssertNotNil(sigv.view, "Signup View Did Not load")
+
     }
 
     func testLoginViewDidLoad()
     {
         // we only have access to this if we import our project above
         let logv = LoginViewController()
-        
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(logv.view, "Login View Did Not load")
-    }
-
-    func testSignupViewDidLoad()
-    {
-        // we only have access to this if we import our project above
-        let sigv = SignupViewController()
-        
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(sigv.view, "Signup View Did Not load")
-    }
-
-
-    func testProfileViewDidLoad()
-    {
-        // we only have access to this if we import our project above
-        let prov = ProfileViewController()
-        
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(prov.view, "Profile View Did Not load")
-    }
-    
-    func testPreferencesViewDidLoad()
-    {
-        // we only have access to this if we import our project above
-        let prev = PreferencesViewController()
-        
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(prev.view, "Preferences View Did Not load")
-    }
-    
-    func testUAViewDidLoad()
-    {
-        // we only have access to this if we import our project above
         let uav = UserActivityViewController()
-        
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(uav.view, "User Activity View Did Not load")
-    }
-    
-    func testSearchPeopleDidLoad()
-    {
-        // we only have access to this if we import our project above
-        let sp = searchPeople()
+        let sigv = SignupViewController()
         
         //fake alert class
         class FakeAlertView: UIAlertView{
@@ -113,16 +104,156 @@ class CarpoolingTests: XCTestCase {
         
         let Fake = FakeAlertView()
         
-        sp.displayMyAlertMessage()
-        XCTAssertTrue(Fake.showWasCalled)
+        logv.displayMyAlertMessage()
+        XCTAssertFalse(Fake.showWasCalled)
+
+        //logv = prepareForSegu
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(logv.view, "Login View Did Not load")
+        logv.prepareForSegue((UIStoryboardSegue(identifier: "UserActivity_Segue", source: logv, destination: uav)), sender: myFirstButton)
+        XCTAssertNotNil(uav.view, "User Activity View Did Not load")
+
+        
+        logv.prepareForSegue((UIStoryboardSegue(identifier: "Signup_Segue", source: logv, destination: sigv)), sender: myFirstButton)
+        XCTAssertNotNil(sigv.view, "Signup View Did Not load")
+
+        
+       
+
     }
 
-    /*func testSearchListDidLoad()
+    func testSignupViewDidLoad()
     {
         // we only have access to this if we import our project above
-        let sl = searchList()
+        let sigv = SignupViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        sigv.displayMyAlertMessage()
+        sigv.displayMyAlertMessage1()
+    
+        XCTAssertFalse(Fake.showWasCalled)
+
         
         // assert that the ViewController.view is not nil
-        XCTAssertNotNil(sl.view, "Search List Did Not load")
-    }*/
+        XCTAssertNotNil(sigv.view, "Signup View Did Not load")
+        
+       
+    
+
+    }
+
+
+    func testProfileViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prov = ProfileViewController()
+        let uav = UserActivityViewController()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(prov.view, "Profile View Did Not load")
+        prov.prepareForSegue((UIStoryboardSegue(identifier: "UserActivity_Segue", source: prov, destination: uav)), sender: myFirstButton)
+        XCTAssertNotNil(uav.view, "User Activity View Did Not load")
+    }
+    
+    func testPreferencesViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prev = PreferencesViewController()
+        // we only have access to this if we import our project above
+        let uav = UserActivityViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        
+        let Fake = FakeAlertView()
+        prev.displayMyAlertMessage()
+        
+        // assert that the ViewController.view is not nil
+
+        XCTAssertFalse(Fake.showWasCalled)
+        prev.prepareForSegue((UIStoryboardSegue(identifier: "UserActivity_Segue", source: prev, destination: uav)), sender: myFirstButton)
+        
+        
+        XCTAssertNotNil(uav.view, "User Activity View Did Not load")
+    }
+    
+    func testUAViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let uav = UserActivityViewController()
+        let prov = ProfileViewController()
+        let prev = PreferencesViewController()
+        let sp = searchPeople()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(uav.view, "User Activity View Did Not load")
+        uav.prepareForSegue((UIStoryboardSegue(identifier: "SearchPeople_Segue", source: uav, destination: sp)), sender: myFirstButton)
+        XCTAssertNotNil(sp.view, "Search People View Did Not load")
+       
+        
+        uav.prepareForSegue((UIStoryboardSegue(identifier: "Preferences_Segue", source: uav, destination: prev)), sender: myFirstButton)
+        XCTAssertNotNil(prev.view, "Preferences View Did Not load")
+        
+        uav.prepareForSegue((UIStoryboardSegue(identifier: "Profile_Segue", source: uav, destination: prov)), sender: myFirstButton)
+        XCTAssertNotNil(prov.view, "Profile View Did Not load")
+        
+
+    }
+    
+    func testSearchPeopleDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let sp = searchPeople()
+        let uav = UserActivityViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+           
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        sp.viewDidLoad()
+        
+        let Fake = FakeAlertView()
+        sp.displayMyAlertMessage()
+        sp.displayMyAlertMessage1()
+        XCTAssertFalse(Fake.showWasCalled)
+        
+         sp.prepareForSegue((UIStoryboardSegue(identifier: "UserActivity_Segue", source: sp, destination: uav)), sender: myFirstButton)
+         XCTAssertNotNil(uav.view, "User Activity View Did Not load")
+    }
+    
+    func testShowPeopleButton(){
+        let sp = searchPeople()
+        let sl = searchList()
+        
+        
+        // creating the segue for simulating the
+        
+       
+        sp.prepareForSegue((UIStoryboardSegue(identifier: "ShowPeople_Segue", source: sp, destination: sl)), sender: myFirstButton)
+       
+       
+       XCTAssertNotNil(sp.view, "User Activity View Did Not load")
+        
+        
+    }
 }

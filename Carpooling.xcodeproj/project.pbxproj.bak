@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049b17a5a0f6680a22d5777b /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */; };
+		04a027d70dbc2186a54cf8ed /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03991A9C55BA0061A42B /* ParseUI.framework */; };
+		04ddb60698e30fadebaef229 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138751ACB8FF2003ABA42 /* CoreText.framework */; };
+		0b3f40f5341d2559326193a4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065461AA92154000DAE6B /* Notification.swift */; };
+		0f041bdf616d720ec42ca206 /* GoogleWalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AD1AA9732800150414 /* GoogleWalletModel.swift */; };
+		1835ac4679e699328b7c3270 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065421AA92154000DAE6B /* User.swift */; };
+		197118eb1ce18307ecdde14e /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065591AA921FB000DAE6B /* SearchViewController.swift */; };
+		1ce3b162f64209b8dfc087ec /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03871A9C55900061A42B /* FacebookSDK.framework */; };
+		203b06182ac5f656eebdbb99 /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF931AC658C300C797D8 /* searchList.swift */; };
+		2443cf283d98e49cc67b9987 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA61AA50960007A8179 /* GoogleOpenSource.framework */; };
+		25306473824c337eebe6a230 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037B1A9C55270061A42B /* StoreKit.framework */; };
+		26c8943097badfa78902e960 /* UserActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C366A1AB600240011B520 /* UserActivityViewController.swift */; };
+		27a603bba376b01ca736999d /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03981A9C55BA0061A42B /* ParseFacebookUtils.framework */; };
+		32caf9608de4a788837572f2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03761A9C55260061A42B /* CoreGraphics.framework */; };
+		34e87f9e7c76e51d4534e9c2 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065441AA92154000DAE6B /* Passenger.swift */; };
+		3ad3e4bd73648283e595ca9a /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBACA7EF1A9CE6710072FA53 /* GoogleMaps.framework */; };
+		49aea9bd8eb8373143fb8e86 /* prefer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF951AC65EFB00C797D8 /* prefer.swift */; };
+		5631b5397db110d193f4957e /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBABC9581A942EA300CE6497 /* libicucore.dylib */; };
+		56b1f85f30658438dabda089 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB962D131A927056007D059D /* Images.xcassets */; };
+		56ea49c90e37e8d93839fb4c /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC60731A9ABBCF001BE648 /* HomeViewController.swift */; };
+		5fd978976cb7670ad5e84e10 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB962D0E1A927055007D059D /* PreferencesViewController.swift */; };
+		63d3c28292bb5d18d8b6a9de /* GoogleMapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AC1AA9732800150414 /* GoogleMapsModel.swift */; };
+		648f4ddd0fd4fcfba2f62fa9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03861A9C55900061A42B /* Bolts.framework */; };
+		65941a5f20996a49d82c4440 /* searchPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF911AC657FC00C797D8 /* searchPeople.swift */; };
+		7434e065ea49b921a6baa00f /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037A1A9C55270061A42B /* Security.framework */; };
+		7795c610493623facf19abb4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */; };
+		80436472e798493edd498d5b /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9AAA0D1A93F80D0087666C /* libz.dylib */; };
+		822a66cc3c1c348ade63b5b2 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655A1AA921FB000DAE6B /* PaymentViewController.swift */; };
+		8bdfebd220b871b0bc77e777 /* GoogleWalletSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB128BA71AA50960007A8179 /* GoogleWalletSDK.bundle */; };
+		8da4d9d8d90ef308783508cf /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138781ACB8FF2003ABA42 /* OpenGLES.framework */; };
+		9cdae5967efc260fe0f6c6c5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03961A9C55BA0061A42B /* Parse.framework */; };
+		9d95be9eba7801b10cc4e4c4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */; };
 		D540DF921AC657FC00C797D8 /* searchPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF911AC657FC00C797D8 /* searchPeople.swift */; };
 		D540DF941AC658C300C797D8 /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF931AC658C300C797D8 /* searchList.swift */; };
 		D540DF961AC65EFB00C797D8 /* prefer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF951AC65EFB00C797D8 /* prefer.swift */; };
@@ -110,6 +142,32 @@
 		F58BBE511AD5CD950087BF5A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03871A9C55900061A42B /* FacebookSDK.framework */; };
 		F58BBE521AD5CD980087BF5A /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03881A9C55900061A42B /* FBAudienceNetwork.framework */; };
 		F58BBE541AD5CDA00087BF5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB962D131A927056007D059D /* Images.xcassets */; };
+		a2b686bb1014db6fbe1aed2e /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03971A9C55BA0061A42B /* ParseCrashReporting.framework */; };
+		a47b0d14154508960426c19b /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AB1AA9732800150414 /* FacebookModel.swift */; };
+		a9cdf7d7b3878ba6e19ca78b /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03741A9C55260061A42B /* AudioToolbox.framework */; };
+		ad3548fa01945b47d4419bf8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9AAA1C1A93F9C70087666C /* libsqlite3.dylib */; };
+		af8f0dd56676d6b3b69d3dce /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065451AA92154000DAE6B /* Driver.swift */; };
+		b49c85c90f12dc5283b9572d /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03781A9C55260061A42B /* MobileCoreServices.framework */; };
+		b51ea3ee23d9b6f374cbf400 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138741ACB8FF2003ABA42 /* CoreData.framework */; };
+		b888e3569383ec3f8067ee67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB962D0C1A927055007D059D /* AppDelegate.swift */; };
+		b8b4e54c20b38d42fb87df32 /* GoogleWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA81AA50960007A8179 /* GoogleWalletSDK.framework */; };
+		ba1832eda8f2d66437126dfa /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03881A9C55900061A42B /* FBAudienceNetwork.framework */; };
+		c595f69ffcc7474c0765639f /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBABC9571A942EA300CE6497 /* libc++.dylib */; };
+		c75e19d84d8c3d0b8037acc6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBACA7EC1A9CD4FC0072FA53 /* Bolts.framework */; };
+		cbcba7f3c60264e4aebeca6f /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138771ACB8FF2003ABA42 /* ImageIO.framework */; };
+		ce72f2d8e71241b900fb7ce2 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655B1AA921FB000DAE6B /* NotificationsViewController.swift */; };
+		ce98996dc0c60ef295462464 /* ParseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AE1AA9732800150414 /* ParseModel.swift */; };
+		ceede026c89166422f8a3fdb /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBACA7EE1A9CE6710072FA53 /* GoogleMaps.bundle */; };
+		cf33ff685bb382ad0339b3b6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138731ACB8FF2003ABA42 /* AVFoundation.framework */; };
+		d397b07353b56ef07768965d /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C36681AB20A530011B520 /* GetStartedViewController.swift */; };
+		dc8626df0c7f7bf12edd57b0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03791A9C55270061A42B /* QuartzCore.framework */; };
+		e1ee0dd57a5843e25a45ee9c /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03771A9C55260061A42B /* CoreLocation.framework */; };
+		e5ace087c18a94930e6d4f1b /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138761ACB8FF2003ABA42 /* GLKit.framework */; };
+		e6f054ca895b928df573080e /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037C1A9C55270061A42B /* SystemConfiguration.framework */; };
+		eae8c9b198e4c479e122b3d2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03751A9C55260061A42B /* CFNetwork.framework */; };
+		ec5a4a1d72a7c457a0483276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E41AAC0042005A04D0 /* Main.storyboard */; };
+		f294227c1b4bd15cd71ea973 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABC97E1A952E9C00CE6497 /* ProfileViewController.swift */; };
+		f694f6b2525a4da38944dc54 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA92FCB1ACA73C100917454 /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +191,7 @@
 		DB128BA61AA50960007A8179 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = GoogleWalletSDK/GoogleOpenSource.framework; sourceTree = "<group>"; };
 		DB128BA71AA50960007A8179 /* GoogleWalletSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleWalletSDK.bundle; path = GoogleWalletSDK/GoogleWalletSDK.bundle; sourceTree = "<group>"; };
 		DB128BA81AA50960007A8179 /* GoogleWalletSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleWalletSDK.framework; path = GoogleWalletSDK/GoogleWalletSDK.framework; sourceTree = "<group>"; };
+		DB4188F21ADA2C0300FA8817 /* Carpooling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carpooling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB48B5E31AAC0042005A04D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DB48B5E51AAC0042005A04D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +250,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3510e1f4bb5768c1697c1fbe /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				cf33ff685bb382ad0339b3b6 /* AVFoundation.framework in Frameworks */,
+				b51ea3ee23d9b6f374cbf400 /* CoreData.framework in Frameworks */,
+				04ddb60698e30fadebaef229 /* CoreText.framework in Frameworks */,
+				e5ace087c18a94930e6d4f1b /* GLKit.framework in Frameworks */,
+				cbcba7f3c60264e4aebeca6f /* ImageIO.framework in Frameworks */,
+				8da4d9d8d90ef308783508cf /* OpenGLES.framework in Frameworks */,
+				e6f054ca895b928df573080e /* SystemConfiguration.framework in Frameworks */,
+				c75e19d84d8c3d0b8037acc6 /* Bolts.framework in Frameworks */,
+				a9cdf7d7b3878ba6e19ca78b /* AudioToolbox.framework in Frameworks */,
+				eae8c9b198e4c479e122b3d2 /* CFNetwork.framework in Frameworks */,
+				32caf9608de4a788837572f2 /* CoreGraphics.framework in Frameworks */,
+				e1ee0dd57a5843e25a45ee9c /* CoreLocation.framework in Frameworks */,
+				2443cf283d98e49cc67b9987 /* GoogleOpenSource.framework in Frameworks */,
+				b49c85c90f12dc5283b9572d /* MobileCoreServices.framework in Frameworks */,
+				3ad3e4bd73648283e595ca9a /* GoogleMaps.framework in Frameworks */,
+				dc8626df0c7f7bf12edd57b0 /* QuartzCore.framework in Frameworks */,
+				7434e065ea49b921a6baa00f /* Security.framework in Frameworks */,
+				ba1832eda8f2d66437126dfa /* FBAudienceNetwork.framework in Frameworks */,
+				25306473824c337eebe6a230 /* StoreKit.framework in Frameworks */,
+				b8b4e54c20b38d42fb87df32 /* GoogleWalletSDK.framework in Frameworks */,
+				80436472e798493edd498d5b /* libz.dylib in Frameworks */,
+				c595f69ffcc7474c0765639f /* libc++.dylib in Frameworks */,
+				1ce3b162f64209b8dfc087ec /* FacebookSDK.framework in Frameworks */,
+				9cdae5967efc260fe0f6c6c5 /* Parse.framework in Frameworks */,
+				5631b5397db110d193f4957e /* libicucore.dylib in Frameworks */,
+				ad3548fa01945b47d4419bf8 /* libsqlite3.dylib in Frameworks */,
+				27a603bba376b01ca736999d /* ParseFacebookUtils.framework in Frameworks */,
+				a2b686bb1014db6fbe1aed2e /* ParseCrashReporting.framework in Frameworks */,
+				04a027d70dbc2186a54cf8ed /* ParseUI.framework in Frameworks */,
+				648f4ddd0fd4fcfba2f62fa9 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB962D041A927055007D059D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +354,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB4188F41ADBACAC00FA8817 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB50653F1AA920F7000DAE6B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +411,7 @@
 			children = (
 				DB962D071A927055007D059D /* Carpooling.app */,
 				DB962D1C1A927056007D059D /* CarpoolingTests.xctest */,
+				DB4188F21ADA2C0300FA8817 /* Carpooling.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -315,7 +419,7 @@
 		DB962D091A927055007D059D /* Carpooling */ = {
 			isa = PBXGroup;
 			children = (
-				DBC815B01AD78E0A008F68AB /* Frameworks */,
+				DB4188F41ADBACAC00FA8817 /* Frameworks */,
 				DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */,
 				DB48B5E41AAC0042005A04D0 /* Main.storyboard */,
 				DBD0C1AA1AA96F2100150414 /* Classes */,
@@ -397,13 +501,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		DBC815B01AD78E0A008F68AB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DBD0C1AA1AA96F2100150414 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +553,23 @@
 			productReference = DB962D1C1A927056007D059D /* CarpoolingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		a518b9aeaae6753a976f7e87 /* Carpooling-cal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = e7ed04ee759942c51b04d4fb /* Build configuration list for PBXNativeTarget "Carpooling-cal" */;
+			buildPhases = (
+				7b731a164cfeef36181f874b /* Sources */,
+				3510e1f4bb5768c1697c1fbe /* Frameworks */,
+				00d10f655f996dbe3dfa33f0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Carpooling-cal";
+			productName = "Carpooling-cal";
+			productReference = DB4188F21ADA2C0300FA8817 /* Carpooling.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -491,11 +605,24 @@
 			targets = (
 				DB962D061A927055007D059D /* Carpooling */,
 				DB962D1B1A927056007D059D /* CarpoolingTests */,
+				a518b9aeaae6753a976f7e87 /* Carpooling-cal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00d10f655f996dbe3dfa33f0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049b17a5a0f6680a22d5777b /* LaunchScreen.xib in Resources */,
+				ec5a4a1d72a7c457a0483276 /* Main.storyboard in Resources */,
+				56b1f85f30658438dabda089 /* Images.xcassets in Resources */,
+				ceede026c89166422f8a3fdb /* GoogleMaps.bundle in Resources */,
+				8bdfebd220b871b0bc77e777 /* GoogleWalletSDK.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB962D051A927055007D059D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,6 +648,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7b731a164cfeef36181f874b /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9d95be9eba7801b10cc4e4c4 /* SignupViewController.swift in Sources */,
+				0b3f40f5341d2559326193a4 /* Notification.swift in Sources */,
+				26c8943097badfa78902e960 /* UserActivityViewController.swift in Sources */,
+				203b06182ac5f656eebdbb99 /* searchList.swift in Sources */,
+				af8f0dd56676d6b3b69d3dce /* Driver.swift in Sources */,
+				63d3c28292bb5d18d8b6a9de /* GoogleMapsModel.swift in Sources */,
+				822a66cc3c1c348ade63b5b2 /* PaymentViewController.swift in Sources */,
+				ce72f2d8e71241b900fb7ce2 /* NotificationsViewController.swift in Sources */,
+				7795c610493623facf19abb4 /* LoginViewController.swift in Sources */,
+				197118eb1ce18307ecdde14e /* SearchViewController.swift in Sources */,
+				a47b0d14154508960426c19b /* FacebookModel.swift in Sources */,
+				f294227c1b4bd15cd71ea973 /* ProfileViewController.swift in Sources */,
+				5fd978976cb7670ad5e84e10 /* PreferencesViewController.swift in Sources */,
+				49aea9bd8eb8373143fb8e86 /* prefer.swift in Sources */,
+				65941a5f20996a49d82c4440 /* searchPeople.swift in Sources */,
+				b888e3569383ec3f8067ee67 /* AppDelegate.swift in Sources */,
+				d397b07353b56ef07768965d /* GetStartedViewController.swift in Sources */,
+				f694f6b2525a4da38944dc54 /* Login.swift in Sources */,
+				34e87f9e7c76e51d4534e9c2 /* Passenger.swift in Sources */,
+				1835ac4679e699328b7c3270 /* User.swift in Sources */,
+				56ea49c90e37e8d93839fb4c /* HomeViewController.swift in Sources */,
+				ce98996dc0c60ef295462464 /* ParseModel.swift in Sources */,
+				0f041bdf616d720ec42ca206 /* GoogleWalletModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB962D031A927055007D059D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,6 +767,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		51333a5f7020664eaaaf684a /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMapsSDK",
+					"$(PROJECT_DIR)/GoogleWalletSDK",
+					"$(PROJECT_DIR)/parse-library-1",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)",
+					/Users/cesar/Desktop/Software,
+					Engineering/GoogleWalletSDK,
+					"\"$(SRCROOT)\"",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1",
+					"$(PROJECT_DIR)/GoogleWalletSDK",
+					"$(PROJECT_DIR)/GoogleMapsSDK",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
+				INFOPLIST_FILE = Carpooling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRANK_LIBRARY_SEARCH_PATHS)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(FRANK_LDFLAGS)",
+					"-force_load",
+					"\"$(SRCROOT)/calabash.framework/calabash\"",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = Carpooling;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Carpooling/Carpooling-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
 		DB962D241A927056007D059D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -807,6 +1012,39 @@
 			};
 			name = Release;
 		};
+		e218beadba34cdfce1535662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/GoogleMapsSDK",
+					"$(PROJECT_DIR)",
+					/Users/cesar/Desktop/Software,
+					Engineering/GoogleWalletSDK,
+					"$(PROJECT_DIR)/GoogleWalletSDK",
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				INFOPLIST_FILE = Carpooling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-force_load",
+					"\"$(SRCROOT)/calabash.framework/calabash\"",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = Carpooling;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -833,6 +1071,15 @@
 			buildConfigurations = (
 				DB962D2A1A927056007D059D /* Debug */,
 				DB962D2B1A927056007D059D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		e7ed04ee759942c51b04d4fb /* Build configuration list for PBXNativeTarget "Carpooling-cal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51333a5f7020664eaaaf684a /* Debug */,
+				e218beadba34cdfce1535662 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
