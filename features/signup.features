@@ -4,6 +4,13 @@ Feature: Select whether to login with an existing user or register a user
 	So I can use the system
 
 Scenario: Login with existing username
-	Given I am on the Login Page
-	When I touch "Login"
-	Then I should wait for "Login View Controller"
+	Given I am on the Welcome Screen
+	Then I touch the "Start" button
+    	And I wait until I see "Get Started..with Pull-it!!"
+    	When I touch the "Login" button
+	And I wait until I see "Login"
+	Given I am entering login credentials
+	And I wait until I see "What would you like to do"
+        Given I am on the User Activity Screen
+        Then I touch the "Preferences" button
+        And I wait until I see "Current User"

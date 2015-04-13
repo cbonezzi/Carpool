@@ -186,15 +186,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90k-ap-Utm">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="105" y="28" width="191" height="60"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-7N-led">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title=" Go Back">
@@ -279,11 +270,19 @@
                                     <action selector="genderSegmentedControl:" destination="UTb-eK-RR8" eventType="valueChanged" id="tzJ-OT-Eol"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90k-ap-Utm">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="28" width="191" height="60"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="90k-ap-Utm"/>
                                 <exclude reference="tCa-7N-led"/>
                                 <exclude reference="Whd-1S-PSg"/>
                                 <exclude reference="gtl-TN-0rl"/>
@@ -292,11 +291,11 @@
                                 <exclude reference="vxN-n9-oSd"/>
                                 <exclude reference="dXO-CL-4X8"/>
                                 <exclude reference="Ypk-bl-IC2"/>
+                                <exclude reference="90k-ap-Utm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="90k-ap-Utm"/>
                                 <include reference="tCa-7N-led"/>
                                 <include reference="Whd-1S-PSg"/>
                                 <include reference="gtl-TN-0rl"/>
@@ -305,6 +304,7 @@
                                 <include reference="vxN-n9-oSd"/>
                                 <include reference="dXO-CL-4X8"/>
                                 <include reference="Ypk-bl-IC2"/>
+                                <include reference="90k-ap-Utm"/>
                             </mask>
                         </variation>
                     </view>
@@ -367,20 +367,6 @@
                                     <rect key="frame" x="162" y="161" width="69" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDK-Pu-95T">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="322" width="77" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="loginButton:" destination="vMG-qt-lcr" eventType="touchUpInside" id="W0t-LM-gO2"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="zV5-Qa-xdj">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -399,6 +385,20 @@
                                     <rect key="frame" x="127" y="212" width="147" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDK-Pu-95T">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="322" width="77" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="loginButton:" destination="vMG-qt-lcr" eventType="touchUpInside" id="W0t-LM-gO2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -406,9 +406,9 @@
                                 <exclude reference="Q2E-Dd-EsR"/>
                                 <exclude reference="UKY-UN-aNJ"/>
                                 <exclude reference="7nt-WK-aJq"/>
-                                <exclude reference="aDK-Pu-95T"/>
                                 <exclude reference="zV5-Qa-xdj"/>
                                 <exclude reference="cqT-Bn-RJv"/>
+                                <exclude reference="aDK-Pu-95T"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -416,9 +416,9 @@
                                 <include reference="Q2E-Dd-EsR"/>
                                 <include reference="UKY-UN-aNJ"/>
                                 <include reference="7nt-WK-aJq"/>
-                                <include reference="aDK-Pu-95T"/>
                                 <include reference="zV5-Qa-xdj"/>
                                 <include reference="cqT-Bn-RJv"/>
+                                <include reference="aDK-Pu-95T"/>
                             </mask>
                         </variation>
                     </view>
@@ -587,19 +587,6 @@
                                     <rect key="frame" x="93" y="187" width="214" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fl-tI-q71">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Preferences">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="283" width="88" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="PreferencesPressed:" destination="PWT-Rz-ubN" eventType="touchUpInside" id="vGF-Ag-JS5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-Dx-gu4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -662,30 +649,43 @@
                                     <rect key="frame" x="120" y="47" width="145" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fl-tI-q71">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Preferences">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="283" width="88" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="PreferencesPressed:" destination="PWT-Rz-ubN" eventType="touchUpInside" id="vGF-Ag-JS5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="IZr-Zn-EEd"/>
                                 <exclude reference="keI-sg-vLY"/>
-                                <exclude reference="0fl-tI-q71"/>
                                 <exclude reference="e0J-Dx-gu4"/>
                                 <exclude reference="1TW-h9-eLK"/>
                                 <exclude reference="SOp-4z-geq"/>
                                 <exclude reference="NhT-HJ-cW9"/>
                                 <exclude reference="DiJ-Yg-svJ"/>
+                                <exclude reference="0fl-tI-q71"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="IZr-Zn-EEd"/>
                                 <include reference="keI-sg-vLY"/>
-                                <include reference="0fl-tI-q71"/>
                                 <include reference="e0J-Dx-gu4"/>
                                 <include reference="1TW-h9-eLK"/>
                                 <include reference="SOp-4z-geq"/>
                                 <include reference="NhT-HJ-cW9"/>
                                 <include reference="DiJ-Yg-svJ"/>
+                                <include reference="0fl-tI-q71"/>
                             </mask>
                         </variation>
                     </view>
@@ -857,7 +857,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="214" y="103" width="42" height="21"/>
+                                    <rect key="frame" x="163" y="102" width="42" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdI-Qy-BGq">
@@ -867,25 +867,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="292" y="103" width="42" height="21"/>
+                                    <rect key="frame" x="265" y="103" width="42" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="AIv-QL-ys3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="AIv-QL-ys3">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="99" width="33" height="30"/>
+                                    <rect key="frame" x="202" y="99" width="55" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bKv-Rt-cHQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bKv-Rt-cHQ">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="331" y="99" width="34" height="30"/>
+                                    <rect key="frame" x="304" y="98" width="53" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RC6-Bi-WLh">
@@ -997,15 +997,6 @@
                                     <action selector="smokerSegmentedControl:" destination="Zyh-mg-8av" eventType="valueChanged" id="XMl-2d-PfG"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-LU-j54">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="58" width="197" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Age Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7I-yC-non">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1013,7 +1004,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="103" width="162" height="21"/>
+                                    <rect key="frame" x="32" y="103" width="92" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-4j-dN1">
@@ -1030,6 +1021,15 @@
                                     <segue destination="PWT-Rz-ubN" kind="presentation" identifier="UserActivity_Segue" id="rgs-Jv-7mo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-LU-j54">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="58" width="197" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1064,9 +1064,9 @@
                                 <exclude reference="DzE-4H-80a"/>
                                 <exclude reference="7tn-q7-NNG"/>
                                 <exclude reference="tbl-nQ-mC6"/>
-                                <exclude reference="cR7-LU-j54"/>
                                 <exclude reference="G7I-yC-non"/>
                                 <exclude reference="vS5-4j-dN1"/>
+                                <exclude reference="cR7-LU-j54"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1100,9 +1100,9 @@
                                 <include reference="DzE-4H-80a"/>
                                 <include reference="7tn-q7-NNG"/>
                                 <include reference="tbl-nQ-mC6"/>
-                                <include reference="cR7-LU-j54"/>
                                 <include reference="G7I-yC-non"/>
                                 <include reference="vS5-4j-dN1"/>
+                                <include reference="cR7-LU-j54"/>
                             </mask>
                         </variation>
                     </view>
@@ -1309,7 +1309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJa-z0-0er" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020.5" y="192.75"/>
+            <point key="canvasLocation" x="2146.5" y="139.5"/>
         </scene>
         <!--Search List-->
         <scene sceneID="Nc5-ah-3cG">
@@ -1353,9 +1353,9 @@
         <image name="Wallet_logo_small.png" width="23" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eCP-6k-5Xk"/>
+        <segue reference="xIw-jt-z9g"/>
         <segue reference="KR3-WL-xQC"/>
-        <segue reference="wnM-Ns-2rL"/>
-        <segue reference="7mj-0c-JU3"/>
-        <segue reference="rgs-Jv-7mo"/>
+        <segue reference="Pm3-AH-fP4"/>
     </inferredMetricsTieBreakers>
 </document>

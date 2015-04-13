@@ -3,6 +3,11 @@ Given /^I am on the Welcome Screen$/ do
   sleep(STEP_PAUSE)
 end
 
+Given /^I am on the User Activity Screen$/ do
+  element_exists("UserActivityViewController")
+  sleep(STEP_PAUSE)
+end
+
 Then (/^I wait until I see "(.*?)"$/) do |arg|
   query("label marked:arg")
 end
@@ -20,6 +25,19 @@ Given /^I am entering credentials$/ do
   touch("button marked : 'Register'")
 end
 
+Given /^I am entering login credentials$/ do
+  touch("textField placeholder: 'Username'")
+  wait_for_keyboard
+  keyboard_enter_text("my_username")
+  touch("textField placeholder: 'Password'")
+  wait_for_keyboard
+  keyboard_enter_text("my_password")
+  touch("button marked : 'Login'")
+end
+
+Given /^I am entering Preferences values$/ do
+end
+   
 #definition for alert button (work around)
 def touch_alert_button(button)
   btn = query("view:'_UIModalItemTableViewCell' label marked:'#{button}'").first.empty?
