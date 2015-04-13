@@ -1,0 +1,9 @@
+Feature: Select whether to login with an existing user or register a user
+	As a user
+	I want to login or register
+	So I can use the system
+
+Scenario: Login with existing username
+	Given I am on the Login Page
+	When I touch "Login"
+	Then I should wait for "Login View Controller"

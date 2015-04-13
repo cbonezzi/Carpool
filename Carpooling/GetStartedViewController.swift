@@ -11,6 +11,8 @@ import UIKit
 
 class GetStartedViewController: UIViewController {
     
+    @IBOutlet var GSWPI: UILabel!
+    @IBOutlet var tf: UITextField!
     @IBAction func SignupPressed(sender: UIButton) {
         self.performSegueWithIdentifier("Signup_Segue", sender: self)
     }

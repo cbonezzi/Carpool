@@ -72,8 +72,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.loginUsernameTextField.delegate = self
-        self.loginPasswordTextField.delegate = self
+        //self.loginUsernameTextField.delegate = self
+        //self.loginPasswordTextField.delegate = self
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {

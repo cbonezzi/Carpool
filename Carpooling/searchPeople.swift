@@ -47,15 +47,18 @@ class searchPeople: UIViewController  {
     
     
     
-    func displayMyAlertMessage( userMessage: String)
+    func displayMyAlertMessage(/*userMessage: String*/)
     {
-        var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        //var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
         
-        let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
         
-        alert.addAction(ok);
+        //alert.addButtonWithTitle("ok")
+        alert.show()
+        //alert.addAction(ok);
         
-        self.presentViewController(alert, animated: true, completion: nil);
+        //self.(alertView: alert, clickedButtonAtIndex: 0)
+        //self.presentViewController(alert, animated: true, completion: nil);
     }
     
     
@@ -113,6 +116,7 @@ class searchPeople: UIViewController  {
     }
         override func viewDidLoad() {
             super.viewDidLoad()
+            //alert.show()
             // Do any additional setup after loading the view, typically from a nib.
         }
         

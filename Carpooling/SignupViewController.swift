@@ -91,9 +91,9 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         
         
         //add try-catch block, move elsewhere, add things to deal with?
-        self.registerUsernameTextField.delegate = self
-        self.registerPasswordTextField.delegate = self
-        self.registerCPasswordTextField.delegate = self
+        //self.registerUsernameTextField.delegate = self
+        //self.registerPasswordTextField.delegate = self
+        //self.registerCPasswordTextField.delegate = self
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
