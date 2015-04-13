@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2e-SQ-uAT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1327.5" y="143.25"/>
+            <point key="canvasLocation" x="1438.5" y="139.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="oCF-Wm-CB1">
@@ -822,20 +822,6 @@
                                     <rect key="frame" x="38" y="329" width="35" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-4j-dN1">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Go Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="20" width="60" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="Goback:" destination="Zyh-mg-8av" eventType="touchUpInside" id="2ry-bQ-J7d"/>
-                                    <segue destination="PWT-Rz-ubN" kind="presentation" identifier="UserActivity_Segue" id="rgs-Jv-7mo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHk-sk-9IR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Submit">
@@ -1030,6 +1016,20 @@
                                     <rect key="frame" x="32" y="103" width="162" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-4j-dN1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="20" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Goback:" destination="Zyh-mg-8av" eventType="touchUpInside" id="2ry-bQ-J7d"/>
+                                    <segue destination="PWT-Rz-ubN" kind="presentation" identifier="UserActivity_Segue" id="rgs-Jv-7mo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1047,7 +1047,6 @@
                                 <exclude reference="b1C-x9-WDs"/>
                                 <exclude reference="91n-BN-Ze2"/>
                                 <exclude reference="jaG-Jr-UYd"/>
-                                <exclude reference="vS5-4j-dN1"/>
                                 <exclude reference="zHk-sk-9IR"/>
                                 <exclude reference="XX6-fH-uva"/>
                                 <exclude reference="viA-8u-FIj"/>
@@ -1067,6 +1066,7 @@
                                 <exclude reference="tbl-nQ-mC6"/>
                                 <exclude reference="cR7-LU-j54"/>
                                 <exclude reference="G7I-yC-non"/>
+                                <exclude reference="vS5-4j-dN1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1083,7 +1083,6 @@
                                 <include reference="b1C-x9-WDs"/>
                                 <include reference="91n-BN-Ze2"/>
                                 <include reference="jaG-Jr-UYd"/>
-                                <include reference="vS5-4j-dN1"/>
                                 <include reference="zHk-sk-9IR"/>
                                 <include reference="XX6-fH-uva"/>
                                 <include reference="viA-8u-FIj"/>
@@ -1103,6 +1102,7 @@
                                 <include reference="tbl-nQ-mC6"/>
                                 <include reference="cR7-LU-j54"/>
                                 <include reference="G7I-yC-non"/>
+                                <include reference="vS5-4j-dN1"/>
                             </mask>
                         </variation>
                     </view>
@@ -1353,9 +1353,9 @@
         <image name="Wallet_logo_small.png" width="23" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rgs-Jv-7mo"/>
         <segue reference="KR3-WL-xQC"/>
         <segue reference="wnM-Ns-2rL"/>
         <segue reference="7mj-0c-JU3"/>
+        <segue reference="rgs-Jv-7mo"/>
     </inferredMetricsTieBreakers>
 </document>

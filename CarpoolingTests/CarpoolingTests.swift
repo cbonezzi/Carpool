@@ -113,17 +113,32 @@ class CarpoolingTests: XCTestCase {
         sp.viewDidLoad()
         
         let Fake = FakeAlertView()
-        //sp.displayMyAlertMessage()
         sp.displayMyAlertMessage()
         XCTAssertFalse(Fake.showWasCalled)
     }
-
-    /*func testSearchListDidLoad()
-    {
-        // we only have access to this if we import our project above
-        let sl = searchList()
+    
+    func testGoBackPeopleButton(){
+        let sp = searchPeople()
+        let ua = UserActivityViewController()
         
-        // assert that the ViewController.view is not nil
-        XCTAssertNotNil(sl.view, "Search List Did Not load")
-    }*/
+        ua.viewDidLoad()
+        
+        // creating a button in order to simulate the
+        let myFirstLabel = UILabel()
+        let myFirstButton = UIButton()
+        myFirstLabel.text = "GoBackButton"
+        myFirstLabel.font = UIFont(name: "MarkerFelt-Thin", size: 45)
+        myFirstLabel.textColor = UIColor.redColor()
+        myFirstLabel.textAlignment = .Center
+        myFirstLabel.numberOfLines = 5
+        myFirstLabel.frame = CGRectMake(15, 54, 300, 500)
+        myFirstButton.setTitle("✸", forState: .Normal)
+        myFirstButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        myFirstButton.frame = CGRectMake(15, -50, 300, 500)
+        myFirstButton.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
+        
+        // creating the segue for simulating the
+        sp.prepareForSegue((UIStoryboardSegue(identifier: "UserActivity_Segue", source: sp, destination: ua)), sender: myFirstButton)
+        XCTAssertNotNil(ua.view, "User Activity View Did Not load")
+    }
 }

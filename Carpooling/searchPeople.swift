@@ -111,7 +111,9 @@ class searchPeople: UIViewController  {
         //    println("profile segue firing")
         if (segue.identifier == "UserActivity_Segue") {
             var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
-            childVC.login = login!
+            if(login != nil){
+                childVC.login = login!
+            }
             println("welcome to userActivity")
         }
         
