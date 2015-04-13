@@ -198,7 +198,9 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "UserActivity_Segue") {
             var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
-            childVC.login = login!
+             if(login != nil){
+                childVC.login = login!
+            }
             println("welcome to userActivity")
         }
         

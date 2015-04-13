@@ -84,9 +84,10 @@ class ProfileViewController: UIViewController {
  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "UserActivity_Segue") {
             var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
+             if(login != nil){
             childVC.login = login!
             println("welcome to userActivity")
-        }
+            }}
 
 }
 
