@@ -10,8 +10,7 @@ import Foundation
 
 import UIKit
 
-
-class searchPeople: UIViewController  {
+class searchPeople: UIViewController, UIAlertViewDelegate {
     
     var loggedUser1 : LoginUser!
     var loggedUser : CurrentUser!
@@ -24,6 +23,9 @@ class searchPeople: UIViewController  {
     //var alert = UIAlertController(title:"Alert", message:"Fields cannot be empty!!", preferredStyle: UIAlertControllerStyle.Alert)
     var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
     
+    var alert1 = UIAlertView(title: "Alert", message: "No user found", delegate: nil, cancelButtonTitle: "OK")
+    
+    @IBOutlet weak var smokingSelection: UISegmentedControl!
     
     @IBOutlet weak var numOccupant: UITextField!
     @IBOutlet weak var numLuggage: UITextField!
@@ -46,10 +48,25 @@ class searchPeople: UIViewController  {
 
     }
     
+    func displayMyAlertMessage1()
+    {
+        //var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        
+        //alert.addButtonWithTitle("ok")
+        alert1.show()
+        
+        //alert.addAction(ok);
+        
+        //self.(alertView: alert, clickedButtonAtIndex: 0)
+        //self.presentViewController(alert, animated: true, completion: nil);
+    }
+    
+
     
     
-    
-    func displayMyAlertMessage(/*userMessage: String*/)
+    func displayMyAlertMessage()
     {
         //var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -83,13 +100,13 @@ class searchPeople: UIViewController  {
             
             (StuffUser: Prefer) in
             self.stuffUser = StuffUser
-            if (self.stuffUser != nil) {
+            if (self.stuffUser.email != nil) {
                 println("in if")
             self.performSegueWithIdentifier("showPeople_Segue", sender: self)
                 }
                 else {
                 println("in else")
-                    //self.displayMyAlertMessage("No user found")
+                    self.displayMyAlertMessage1()
                 }
             //(loggedUser: PUser) in
             //println(loggedUser)

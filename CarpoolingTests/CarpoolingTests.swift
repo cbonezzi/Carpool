@@ -55,7 +55,24 @@ class CarpoolingTests: XCTestCase {
     {
         // we only have access to this if we import our project above
         let logv = LoginViewController()
+        // we only have access to this if we import our project above
         
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        
+        let Fake = FakeAlertView()
+        
+        logv.displayMyAlertMessage()
+        XCTAssertFalse(Fake.showWasCalled)
+
+        //logv = prepareForSegu
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(logv.view, "Login View Did Not load")
     }
@@ -64,6 +81,25 @@ class CarpoolingTests: XCTestCase {
     {
         // we only have access to this if we import our project above
         let sigv = SignupViewController()
+        // we only have access to this if we import our project above
+        
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        sigv.displayMyAlertMessage()
+        sigv.displayMyAlertMessage1()
+    
+        XCTAssertFalse(Fake.showWasCalled)
+
         
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(sigv.view, "Signup View Did Not load")
@@ -83,6 +119,23 @@ class CarpoolingTests: XCTestCase {
     {
         // we only have access to this if we import our project above
         let prev = PreferencesViewController()
+        // we only have access to this if we import our project above
+        
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        
+        let Fake = FakeAlertView()
+        
+        prev.displayMyAlertMessage()
+        XCTAssertFalse(Fake.showWasCalled)
+
         
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(prev.view, "Preferences View Did Not load")
@@ -114,6 +167,7 @@ class CarpoolingTests: XCTestCase {
         
         let Fake = FakeAlertView()
         sp.displayMyAlertMessage()
+        sp.displayMyAlertMessage1()
         XCTAssertFalse(Fake.showWasCalled)
     }
     

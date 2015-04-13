@@ -19,27 +19,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     var ParseData : ParseModel = ParseModel()
     //var ParseM : ParseModelClass = ParseModelClass()
     var loginStatus : Bool = false
+    var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
+    
+    func segueCalled(){
+        println("buton clicked Segue Fired")
+    }
     
     @IBOutlet var LoginView: UIView!
     
-    func displayMyAlertMessage( userMessage: String)
+    func displayMyAlertMessage()
     {
-        var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
-        
-        alert.addAction(ok);
-        
-        self.presentViewController(alert, animated: true, completion: nil);
+                alert.show();
+        //self.presentViewController(alert, animated: true, completion: nil);
     }
     
-    
+   
     
     @IBAction func loginButton(sender: AnyObject) {
         
         if (loginUsernameTextField.text.isEmpty || loginPasswordTextField.text.isEmpty){
             
-            self.displayMyAlertMessage("username and password cannot be empty!!");
+            self.displayMyAlertMessage();
             
         }
         
@@ -59,11 +59,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         if (segue.identifier == "UserActivity_Segue") {
             var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
             childVC.login = loggedUser1.RetrieveUserFromClass()
+            self.segueCalled();
             println("welcome to user activity")
         }
         if (segue.identifier == "Signup_Segue") {
             var childVC2 : SignupViewController = segue.destinationViewController as SignupViewController
             //var childVC2 : LoginViewController = segue.destinationViewController as LoginViewController
+            self.segueCalled();
             println("segue2 firing")
         }
     }
