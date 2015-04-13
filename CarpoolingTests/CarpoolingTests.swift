@@ -168,6 +168,7 @@ class CarpoolingTests: XCTestCase {
         let Fake = FakeAlertView()
         //sp.displayMyAlertMessage()
         sp.displayMyAlertMessage()
+        sp.displayMyAlertMessage1()
         XCTAssertFalse(Fake.showWasCalled)
     }
 

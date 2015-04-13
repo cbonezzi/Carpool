@@ -209,6 +209,7 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
         if(login != nil){
             userlabel.text! = login![0].email
         }
+        
         println("Preference View Controller !!!!")
     }
     
