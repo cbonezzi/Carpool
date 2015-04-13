@@ -10,7 +10,8 @@ import Foundation
 
 import UIKit
 
-class searchPeople: UIViewController, UIAlertViewDelegate {
+
+class searchPeople: UIViewController  {
     
     var loggedUser1 : LoginUser!
     var loggedUser : CurrentUser!
@@ -21,7 +22,6 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     //var alert = UIAlertController(title:"Alert", message:"Fields cannot be empty!!", preferredStyle: UIAlertControllerStyle.Alert)
     var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
     
-    @IBOutlet weak var smokingSelection: UISegmentedControl!
     
     @IBOutlet weak var numOccupant: UITextField!
     @IBOutlet weak var numLuggage: UITextField!
@@ -31,6 +31,19 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     var loggedUser2 : PUser!
     var stuffUser : Prefer!
     //var searchUserList : SearchUsers!
+    @IBAction func RoleSegment(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+             Role = "Driver"
+            temp = 1
+        }
+        else if sender.selectedSegmentIndex == 1 {
+             Role = "Passenger"
+
+                     temp = 2
+        }
+
+    }
+    
     
     
     
@@ -57,26 +70,34 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     @IBAction func search(sender: AnyObject) {
         
         if (numOccupant.text.isEmpty || numLuggage.text.isEmpty
-            || GoingFrom.text.isEmpty || GoingTo.text.isEmpty) {
-            
-            self.displayMyAlertMessage(/*"Fields cannot be empty!!"*/)
+        || GoingFrom.text.isEmpty || GoingTo.text.isEmpty || Role.isEmpty) {
+    
+            self.displayMyAlertMessage("Fields cannot be empty!!")
                 return
         }
+        
         else {
-        ParseData.RetrieveDataForSearch( numOccupant.text, numLuggage: numLuggage.text, GoingFrom: GoingFrom.text, GoingTo: GoingTo.text ) {
+            ParseData.RetrieveDataForSearch(numOccupant.text, numLuggage: numLuggage.text, Role1 : Role ,GoingFrom: GoingFrom.text, GoingTo: GoingTo.text ) {
             
             (StuffUser: Prefer) in
             self.stuffUser = StuffUser
+            if (self.stuffUser != nil) {
+                println("in if")
             self.performSegueWithIdentifier("showPeople_Segue", sender: self)
-            
+                }
+                else {
+                println("in else")
+                    self.displayMyAlertMessage("No user found")
+                }
             //(loggedUser: PUser) in
             //println(loggedUser)
             //self.loggedUser = loggedUser
             //self.performSegueWithIdentifier("showPeople", sender: self)
         }
     }
-    }
     
+}
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showPeople_Segue") {
             var childVC : searchList = segue.destinationViewController as searchList

@@ -55,16 +55,17 @@ class searchList: UIViewController {
       @IBAction func gobackPressed(sender: UIButton) {
         self.performSegueWithIdentifier("SearchPeople_Segue", sender: self)
     }
+    // Removed because we are displaying list in table view
     func Update(){
         println("Hellooo!!!")
         //var helloUser = User1.RetrieveUserFromClass()
-               //if(prefer != nil){
+               if(prefer != nil){
             usernameHolder1.text = listuser![0]
             //print(usernameHolder1.text)
             usernameHolder2.text = listuser![1]
             //usernameHolder3.text = prefer![2].email
         
-    }
+        }}
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // if (segue.identifier == "showPeople_Segue") {
         //   var childVC : searchList = segue.destinationViewController as searchList
