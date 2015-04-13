@@ -206,7 +206,10 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        userlabel.text! = login![0].email
+        if(login != nil){
+            userlabel.text! = login![0].email
+        }
+        
         println("Preference View Controller !!!!")
     }
     
