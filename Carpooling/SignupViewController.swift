@@ -10,6 +10,22 @@ import Foundation
 import UIKit
 import Parse
 
+class Regex {
+    let internalExpression: NSRegularExpression
+    let pattern: String
+    
+    init(_ pattern: String) {
+        self.pattern = pattern
+        var error: NSError?
+        self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+    }
+    
+    func test(input: String) -> Bool {
+        let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input)))
+        return matches.count > 0
+    }
+}
+
 class SignupViewController : UIViewController, UITextFieldDelegate {
     
     
@@ -65,6 +81,21 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
                 
                 self.displayMyAlertMessage("Password do not match!!");
                 
+                return;
+            }
+            
+            //if !(Regex("/^[a-z].*[@][a-z]*[.](com|edu)/i").test(registerUsername)) {
+                
+                //self.displayMyAlertMessage("Username needs to be an email address.");
+            
+                //return;
+            
+           // }
+            
+            let match = registerUsername.rangeOfString("/^[a-z].*[@][a-z]*[.](com|edu)/i", options: .RegularExpressionSearch);
+            
+            if (match == nil) {
+                self.displayMyAlertMessage("Username needs to be email.");
                 return;
             }
             
