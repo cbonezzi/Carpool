@@ -7,10 +7,13 @@ Scenario: Login with existing username
 	Given I am on the Welcome Screen
 	Then I touch the "Start" button
     	And I wait until I see "Get Started..with Pull-it!!"
-    	When I touch the "Login" button
+    	Then I touch the "Login" button
 	And I wait until I see "Login"
 	Given I am entering login credentials
 	And I wait until I see "What would you like to do"
         Given I am on the User Activity Screen
-        Then I touch the "Preferences" button
-        And I wait until I see "Current User"
+	#Then I touch the "Logout"
+        Then I touch the "Search" button
+        #Then I will touch the "Search" button
+        #Given I am on the Search Screen
+        #And I wait until I see "Search"

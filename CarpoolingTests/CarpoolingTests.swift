@@ -24,22 +24,8 @@ class CarpoolingTests: XCTestCase {
     }
     
     // creating a button in order to simulate the
-
-        
     let myFirstLabel = UILabel()
     let myFirstButton = UIButton()
-//    myFirstLabel.text = "GoBackButton"
-//    myFirstLabel.font = UIFont(name: "MarkerFelt-Thin", size: 45)
-//    myFirstLabel.textColor = UIColor.redColor()
-//    myFirstLabel.textAlignment = .Center
-//    myFirstLabel.numberOfLines = 5
-//    myFirstLabel.frame = CGRectMake(15, 54, 300, 500)
-//    myFirstButton.setTitle("✸", forState: .Normal)
-//    myFirstButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
-//    myFirstButton.frame = CGRectMake(15, -50, 300, 500)
-//    myFirstButton.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
-//        
-//    }
     
     func testExample() {
         // This is an example of a functional test case.
@@ -255,5 +241,40 @@ class CarpoolingTests: XCTestCase {
        XCTAssertNotNil(sp.view, "User Activity View Did Not load")
         
         
+    }
+    
+    func testParseSearch(){
+        var expectation:XCTestExpectation?
+        var stuffUser : Prefer!
+        let pm : ParseModel = ParseModel()
+        let sp = searchPeople()
+        let sl = searchList()
+        
+        //sp.search(myFirstButton)
+        //sp.prepareForSegue((UIStoryboardSegue(identifier: "ShowPeople_Segue", source: sp, destination: sl)), sender: myFirstButton)
+        expectation = self.expectationWithDescription("asynchronous request")
+        
+        //Networkclass.getThing("http://api.things.com/someid", delegate: self)
+        
+        
+        pm.RetrieveDataForSearch("1", numLuggage: "2", Role1: "Passenger", GoingFrom: "iowacity", GoingTo: "chicago"){
+            (StuffUser: Prefer) in
+            stuffUser = StuffUser
+            self.waitForExpectationsWithTimeout(10.0, handler:nil)
+        }
+        
+       
+        //self.waitForExpectationsWithTimeout(10.0, handler:nil)
+        expectation?.fulfill()
+        
+        //var stuffUser : Prefer!
+        
+        //let pm = ParseModel()
+        
+        //pm.RetrieveDataForSearch("1", numLuggage: "2", Role1: "Passenger", GoingFrom: "iowacity", GoingTo: "chicago"){
+        //    (StuffUser: Prefer) in
+        //    stuffUser = StuffUser
+        //}
+        //XCTAssertNotNil(stuffUser, "Not Nil")
     }
 }
