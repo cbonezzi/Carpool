@@ -36,9 +36,9 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var registerCPasswordTextField: UITextField!
-    var alert = UIAlertView(title: "Alert", message: "Field cannot be empty", delegate: nil, cancelButtonTitle: "OK")
+    var alert = UIAlertView(title: "Alert", message: "Please fill all fields", delegate: nil, cancelButtonTitle: "OK")
     
-    var alert1 = UIAlertView(title: "Alert", message: "Passwords do not match", delegate: nil, cancelButtonTitle: "OK")
+    var alert1 = UIAlertView(title: "Alert", message: "Confirm Password does not match Password", delegate: nil, cancelButtonTitle: "OK")
     
     var alert2 = UIAlertView(title: "Alert", message: "Username needs to be an email address.", delegate: nil, cancelButtonTitle: "OK")
     
