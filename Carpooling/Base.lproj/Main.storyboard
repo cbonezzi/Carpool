@@ -1312,7 +1312,7 @@
                         <outlet property="GoingTo" destination="FnO-3k-mBg" id="1CS-tr-cpb"/>
                         <outlet property="numLuggage" destination="zDr-CM-UtC" id="XDz-BZ-UNf"/>
                         <outlet property="numOccupant" destination="cVY-5Z-yef" id="iFR-MU-6tL"/>
-                        <segue destination="GBY-G6-v9c" kind="show" identifier="showPeople_Segue" id="jW7-ob-Avg"/>
+                        <segue destination="GBY-G6-v9c" kind="show" identifier="ShowPeople_Segue" id="jW7-ob-Avg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJa-z0-0er" userLabel="First Responder" sceneMemberID="firstResponder"/>

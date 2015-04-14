@@ -323,7 +323,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "testLoginViewDidLoad()"
+            landmarkName = "testSignupViewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -355,7 +355,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
             endingLineNumber = "135"
-            landmarkName = "testSignupViewDidLoad()"
+            landmarkName = "testAlertMessage1DidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -387,7 +387,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "244"
             endingLineNumber = "244"
-            landmarkName = "testShowPeopleButton()"
+            landmarkName = "testSearchPeopleDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -403,7 +403,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "269"
             endingLineNumber = "269"
-            landmarkName = "testParseSearch()"
+            landmarkName = "testShowPeopleButton()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -419,7 +419,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "278"
             endingLineNumber = "278"
-            landmarkName = "testParseSearch()"
+            landmarkName = "testShowPeopleButton()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -518,7 +518,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Carpooling/searchPeople.swift"
@@ -642,7 +642,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Carpooling/UserActivityViewController.swift"
@@ -653,36 +653,6 @@
             endingLineNumber = "61"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Carpooling.UserActivityViewController.viewDidLoad (Carpooling.UserActivityViewController)() -&gt; ()"
-                  moduleName = "Carpooling"
-                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/Carpooling/UserActivityViewController.swift"
-                  timestampString = "450655411.759588"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "15">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CarpoolingTests.UserActivityViewController.viewDidLoad (CarpoolingTests.UserActivityViewController)() -&gt; ()"
-                  moduleName = "CarpoolingTests"
-                  urlString = "file:///Users/cesar/Desktop/SuperDevelopment/Carpooling/UserActivityViewController.swift"
-                  timestampString = "450655412.586994"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "15">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -789,7 +759,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "255"
             endingLineNumber = "255"
-            landmarkName = "testParseSearch()"
+            landmarkName = "show()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -805,7 +775,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
             endingLineNumber = "247"
-            landmarkName = "testParseSearch()"
+            landmarkName = "testSearchPeopleDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
