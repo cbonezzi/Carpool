@@ -21,9 +21,9 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     var temp = 0
     var Role: String = ""
     //var alert = UIAlertController(title:"Alert", message:"Fields cannot be empty!!", preferredStyle: UIAlertControllerStyle.Alert)
-    var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
+    var alert = UIAlertView(title: "Alert", message: "Please fill all fields.", delegate: nil, cancelButtonTitle: "OK")
     
-    var alert1 = UIAlertView(title: "Alert", message: "No user found", delegate: nil, cancelButtonTitle: "OK")
+    var alert1 = UIAlertView(title: "Alert", message: "No user found.", delegate: nil, cancelButtonTitle: "OK")
     
     @IBOutlet weak var smokingSelection: UISegmentedControl!
     

@@ -10,6 +10,22 @@ import Foundation
 import UIKit
 import Parse
 
+class Regex {
+    let internalExpression: NSRegularExpression
+    let pattern: String
+    
+    init(_ pattern: String) {
+        self.pattern = pattern
+        var error: NSError?
+        self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+    }
+    
+    func test(input: String) -> Bool {
+        let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input)))
+        return matches.count > 0
+    }
+}
+
 class SignupViewController : UIViewController, UITextFieldDelegate {
     
     
@@ -20,9 +36,12 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var registerCPasswordTextField: UITextField!
-    var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
+    var alert = UIAlertView(title: "Alert", message: "Please fill all fields", delegate: nil, cancelButtonTitle: "OK")
     
-     var alert1 = UIAlertView(title: "Alert", message: "Password do not match", delegate: nil, cancelButtonTitle: "OK")
+    var alert1 = UIAlertView(title: "Alert", message: "Confirm Password does not match Password", delegate: nil, cancelButtonTitle: "OK")
+    
+    var alert2 = UIAlertView(title: "Alert", message: "Username needs to be an email address.", delegate: nil, cancelButtonTitle: "OK")
+    
     func displayMyAlertMessage()
     {
         
@@ -31,6 +50,7 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         
         
     }
+    
     func displayMyAlertMessage1()
     {
         
@@ -39,6 +59,16 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    func displayMyAlertMessage2()
+    {
+        
+        
+        alert2.show();
+        
+        
+    }
+
 
     
     @IBAction func registerButton(sender: AnyObject) {
@@ -71,6 +101,22 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
             if (registerPassword != registerCPassword){
                 
                 self.displayMyAlertMessage1();
+                
+                return;
+            }
+            
+            //if !(Regex("/^[a-z].*[@][a-z]*[.](com|edu)/i").test(registerUsername)) {
+                
+                //self.displayMyAlertMessage2("Username needs to be an email address.");
+            
+                //return;
+            
+           // }
+            
+            if let match = registerUsername.rangeOfString("^[a-z].*[@][a-z]*[.](com|edu)$", options: .RegularExpressionSearch) {
+                
+            } else {
+                self.displayMyAlertMessage2();
                 
                 return;
             }

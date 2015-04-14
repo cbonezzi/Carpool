@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     var ParseData : ParseModel = ParseModel()
     //var ParseM : ParseModelClass = ParseModelClass()
     var loginStatus : Bool = false
-    var alert = UIAlertView(title: "Alert", message: "Field connot be empty", delegate: nil, cancelButtonTitle: "OK")
+    var alert = UIAlertView(title: "Alert", message: "Field can not be empty", delegate: nil, cancelButtonTitle: "OK")
     
     func segueCalled(){
         println("buton clicked Segue Fired")

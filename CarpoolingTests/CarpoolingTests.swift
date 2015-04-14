@@ -103,9 +103,6 @@ class CarpoolingTests: XCTestCase {
         logv.prepareForSegue((UIStoryboardSegue(identifier: "Signup_Segue", source: logv, destination: sigv)), sender: myFirstButton)
         XCTAssertNotNil(sigv.view, "Signup View Did Not load")
 
-        
-       
-
     }
 
     func testSignupViewDidLoad()
@@ -125,17 +122,58 @@ class CarpoolingTests: XCTestCase {
         let Fake = FakeAlertView()
         
         sigv.displayMyAlertMessage()
-        sigv.displayMyAlertMessage1()
     
         XCTAssertFalse(Fake.showWasCalled)
 
         
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(sigv.view, "Signup View Did Not load")
-        
-       
-    
 
+    }
+    
+    func testAlertMessage1DidLoad()
+    {
+        // we only have access to this if we import our project above
+        let sigv = SignupViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        sigv.displayMyAlertMessage1()
+        
+        XCTAssertFalse(Fake.showWasCalled)
+        
+        
+    }
+    
+    func testAlertMessage2DidLoad()
+    {
+        // we only have access to this if we import our project above
+        let sigv = SignupViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        sigv.displayMyAlertMessage2()
+        
+        XCTAssertFalse(Fake.showWasCalled)
+        
     }
 
 
