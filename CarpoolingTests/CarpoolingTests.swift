@@ -137,6 +137,7 @@ class CarpoolingTests: XCTestCase {
         
         sigv.displayMyAlertMessage()
         sigv.displayMyAlertMessage1()
+        sigv.displayMyAlertMessage2()
     
         XCTAssertFalse(Fake.showWasCalled)
 
