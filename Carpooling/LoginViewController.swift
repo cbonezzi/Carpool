@@ -29,8 +29,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     func displayMyAlertMessage()
     {
-                alert.show();
-        //self.presentViewController(alert, animated: true, completion: nil);
+        alert.show();
     }
     
    
@@ -58,7 +57,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "UserActivity_Segue") {
             var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
-            if(login != nil) {
+            if(loggedUser1 != nil) {
             childVC.login = loggedUser1.RetrieveUserFromClass()
             self.segueCalled();
             }

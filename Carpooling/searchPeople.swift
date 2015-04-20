@@ -103,7 +103,7 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
                 
             if (self.stuffUser.list.count > 0) {
                 println("in if")
-            self.performSegueWithIdentifier("showPeople_Segue", sender: self)
+            self.performSegueWithIdentifier("ShowPeople_Segue", sender: self)
                 }
                 else {
                 println("in else")
@@ -119,7 +119,7 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
 }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "showPeople_Segue") {
+        if (segue.identifier == "ShowPeople_Segue") {
             var childVC : searchList = segue.destinationViewController as searchList
             childVC.listuser = stuffUser.list
             childVC.login = login!
