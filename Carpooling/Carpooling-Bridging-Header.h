@@ -9,9 +9,11 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 // for Google Wallet SDK
-#import <GoogleWalletSDK/GoogleWalletSDK.h>
+//#import <GoogleWalletSDK/GoogleWalletSDK.h>
 
 // for Google Maps SDK
 #import <GoogleMaps/GoogleMaps.h>
+
+#import "PayPalMobile.h"
 
 #endif
