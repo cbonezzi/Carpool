@@ -121,8 +121,8 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowPeople_Segue") {
             var childVC : searchList = segue.destinationViewController as searchList
-            childVC.listuser = stuffUser.list
-            childVC.login = login!
+            //childVC.listuser = stuffUser.list
+            //childVC.login = login!
             
         }
             //childVC.prefer = //loggedUser.RetrieveUserFromClass()
@@ -132,7 +132,7 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
             if(login != nil){
                 childVC.login = login!
             }
-            println("welcome to userActivity")
+            println("Welcome to userActivity")
         }
         
         
@@ -141,6 +141,7 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
             super.viewDidLoad()
             //alert.show()
             // Do any additional setup after loading the view, typically from a nib.
+            
         }
         
         override func didReceiveMemoryWarning() {

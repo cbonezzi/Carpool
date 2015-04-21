@@ -17,6 +17,10 @@ class UserActivityViewController: UIViewController {
     
     
     
+    @IBAction func logoutPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("HomePage_Segue", sender: self)
+    }
+    
     @IBAction func SearchPressed(sender: UIButton) {
         
         self.performSegueWithIdentifier("SearchPeople_Segue", sender: self)
@@ -51,6 +55,10 @@ class UserActivityViewController: UIViewController {
             var childVC : ProfileViewController = segue.destinationViewController as ProfileViewController
             childVC.login = login
             println("welcome to Profile")
+        }
+        if (segue.identifier == "HomePage_Segue") {
+            var childVC : GetStartedViewController = segue.destinationViewController as GetStartedViewController
+            println("welcome to Get Started Page")
         }
         
         

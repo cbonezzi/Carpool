@@ -44,6 +44,10 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
     //    }
     
     var alert = UIAlertView(title:"Alert", message:"Fields cannot be empty", delegate : nil , cancelButtonTitle : "OK")
+    var alert1 = UIAlertView(title:"Alert1", message:"Occupants must be a number", delegate : nil , cancelButtonTitle : "OK")
+    var alert2 = UIAlertView(title:"Alert2", message:"Luggage must be a number", delegate : nil , cancelButtonTitle : "OK")
+    var alert3 = UIAlertView(title:"Alert3", message:"Min Age must be a number", delegate : nil , cancelButtonTitle : "OK")
+    var alert4 = UIAlertView(title:"Alert4", message:"Max Age must be a number", delegate : nil , cancelButtonTitle : "OK")
     
     @IBOutlet weak var min_age: UITextField!
     @IBOutlet weak var max_age: UITextField!
@@ -130,6 +134,49 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
         //self.presentViewController(alert, animated: true, completion: nil);
     }
 
+    func displayMyAlertMessage1()
+    {
+    
+    
+    //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+    
+    alert1.show();
+    
+    //self.presentViewController(alert, animated: true, completion: nil);
+    }
+    
+    func displayMyAlertMessage2()
+    {
+        
+        
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        
+        alert2.show();
+        
+        //self.presentViewController(alert, animated: true, completion: nil);
+    }
+    
+    func displayMyAlertMessage3()
+    {
+        
+        
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        
+        alert3.show();
+        
+        //self.presentViewController(alert, animated: true, completion: nil);
+    }
+    
+    func displayMyAlertMessage4()
+    {
+        
+        
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        
+        alert4.show();
+        
+        //self.presentViewController(alert, animated: true, completion: nil);
+    }
     
     
     @IBAction func Goback(sender: AnyObject) {
@@ -145,49 +192,29 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
         }
 
         else {
-        var new_user = PFObject(className: "Preferences")
-       
-        new_user["music_taste"] = musicPreferenceTextField.text
-        new_user["occupants"] = NumOfOccupantsTextField.text
-        new_user["luggage"] = luggageTextField.text
-        new_user["GoingFrom"] = GoingFrom.text
-        new_user["GoingTo"] = GoingTo.text
-        new_user["min_age"] = min_age.text
-        new_user["max_age"] = max_age.text
-        
-        if ( temp == 1 ) {
-            new_user.addObject(("Male"), forKey: "gender")
-        }
-        else if ( temp == 2 ) {
-            new_user.addObject(("Female"), forKey: "gender")
-        }
-        else if ( temp == 3 ) {
-            new_user.addObject(toString("Unspecified"), forKey: "gender")
-        }
-        
-              if ( temp1 == 1 ) {
-            new_user.addObject(("Yes"), forKey: "Smoker")
-        }
-        else if ( temp1 == 2 ) {
-            new_user.addObject(("No"), forKey: "Smoker")
-        }
-        
-        if ( temp2 == 1 ) {
-            new_user.addObject(("Driver"), forKey: "role")
-        }
-        else if ( temp2 == 2 ) {
             
-            new_user.addObject(("Rider"), forKey: "role")
-        }
-        new_user.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError!) -> Void in
-            if (success) {
-                print("success")
-                // The object has been saved.
+            let numoc = self.NumOfOccupantsTextField.text;
+            let lugg = self.luggageTextField.text;
+            let minage = self.min_age.text;
+            let maxage = self.max_age.text;
+            
+            if let match = numoc.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
+                if let match = lugg.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
+                    if let match = minage.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
+                        if let match = maxage.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
+                        } else {
+                            self.displayMyAlertMessage4();
+                        }
+                    } else {
+                        self.displayMyAlertMessage3();
+                    }
+                } else {
+                    self.displayMyAlertMessage2();
+                }
             } else {
-                print("error")
-                // There was a problem, check error.description
-            }
+                self.displayMyAlertMessage1();
+                
+                return;
             }
         }
     }

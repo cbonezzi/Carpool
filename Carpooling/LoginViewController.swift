@@ -21,8 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     var loginStatus : Bool = false
     var alert = UIAlertView(title: "Alert", message: "Field can not be empty", delegate: nil, cancelButtonTitle: "OK")
     
+    
     func segueCalled(){
-        println("buton clicked Segue Fired")
+        println("Button Clicked, Segue Fired")
     }
     
     @IBOutlet var LoginView: UIView!
@@ -61,7 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             childVC.login = loggedUser1.RetrieveUserFromClass()
             self.segueCalled();
             }
-            println("welcome to user activity")
+            println("Welcome to User Activity")
         }
         if (segue.identifier == "Signup_Segue") {
             var childVC2 : SignupViewController = segue.destinationViewController as SignupViewController

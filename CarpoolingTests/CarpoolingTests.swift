@@ -131,7 +131,7 @@ class CarpoolingTests: XCTestCase {
 
     }
     
-    func testAlertMessage1DidLoad()
+    func testSignupAlertMessage1DidLoad()
     {
         // we only have access to this if we import our project above
         let sigv = SignupViewController()
@@ -154,7 +154,7 @@ class CarpoolingTests: XCTestCase {
         
     }
     
-    func testAlertMessage2DidLoad()
+    func testSignupAlertMessage2DidLoad()
     {
         // we only have access to this if we import our project above
         let sigv = SignupViewController()
@@ -217,6 +217,121 @@ class CarpoolingTests: XCTestCase {
         XCTAssertNotNil(uav.view, "User Activity View Did Not load")
     }
     
+    func testPreferencesAlertMessageDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prev = PreferencesViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        prev.displayMyAlertMessage()
+        
+        XCTAssertFalse(Fake.showWasCalled)
+        
+        
+    }
+    
+    func testPreferencesAlertMessage1DidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prev = PreferencesViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        prev.displayMyAlertMessage1()
+        
+        XCTAssertFalse(Fake.showWasCalled)
+        
+        
+    }
+    
+    func testPreferencesAlertMessage2DidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prev = PreferencesViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        prev.displayMyAlertMessage2()
+        
+        XCTAssertFalse(Fake.showWasCalled)
+        
+        
+    }
+    
+    func testPreferencesAlertMessage3DidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prev = PreferencesViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        prev.displayMyAlertMessage3()
+        
+        XCTAssertFalse(Fake.showWasCalled)
+        
+        
+    }
+    
+    func testPreferencesAlertMessage4DidLoad()
+    {
+        // we only have access to this if we import our project above
+        let prev = PreferencesViewController()
+        
+        //fake alert class
+        class FakeAlertView: UIAlertView{
+            var showWasCalled = false
+            
+            private override func show(){
+                showWasCalled = true
+            }
+        }
+        //sigv.performSegueWithIdentifier(<#identifier: String?#>, sender: <#AnyObject?#>)
+        let Fake = FakeAlertView()
+        
+        prev.displayMyAlertMessage4()
+        
+        XCTAssertFalse(Fake.showWasCalled)
+        
+        
+    }
+    
     func testUAViewDidLoad()
     {
         // we only have access to this if we import our project above
@@ -224,6 +339,7 @@ class CarpoolingTests: XCTestCase {
         let prov = ProfileViewController()
         let prev = PreferencesViewController()
         let sp = searchPeople()
+        let gst = GetStartedViewController()
         
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(uav.view, "User Activity View Did Not load")
@@ -236,6 +352,9 @@ class CarpoolingTests: XCTestCase {
         
         uav.prepareForSegue((UIStoryboardSegue(identifier: "Profile_Segue", source: uav, destination: prov)), sender: myFirstButton)
         XCTAssertNotNil(prov.view, "Profile View Did Not load")
+        
+        uav.prepareForSegue((UIStoryboardSegue(identifier: "HomePage_Segue", source: uav, destination: gst)), sender: myFirstButton)
+        XCTAssertNotNil(gst.view, "Get Started View Did Not load")
         
 
     }
@@ -281,7 +400,7 @@ class CarpoolingTests: XCTestCase {
         
     }
     
-    func testParseSearch(){
+    /*func testParseSearch(){
         var expectation:XCTestExpectation?
         var stuffUser : Prefer!
         let pm : ParseModel = ParseModel()
@@ -314,5 +433,5 @@ class CarpoolingTests: XCTestCase {
         //    stuffUser = StuffUser
         //}
         //XCTAssertNotNil(stuffUser, "Not Nil")
-    }
+    }*/
 }
