@@ -89,7 +89,7 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     @IBAction func search(sender: AnyObject) {
         
         if (numOccupant.text.isEmpty || numLuggage.text.isEmpty
-        || GoingFrom.text.isEmpty || GoingTo.text.isEmpty || Role.isEmpty) {
+        || GoingFrom.text.isEmpty || GoingTo.text.isEmpty /*|| Role.isEmpty*/) {
     
             self.displayMyAlertMessage()
                 return
@@ -121,8 +121,8 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowPeople_Segue") {
             var childVC : searchList = segue.destinationViewController as searchList
-            //childVC.listuser = stuffUser.list
-            //childVC.login = login!
+            childVC.listuser = stuffUser.list
+            childVC.login = login!
             
         }
             //childVC.prefer = //loggedUser.RetrieveUserFromClass()

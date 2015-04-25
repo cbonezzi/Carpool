@@ -15,6 +15,7 @@ class searchList: UIViewController {
     var ParseData : ParseModel = ParseModel()
     
     
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var usernameHolder2: UILabel!
     
     @IBOutlet weak var usernameHolder1: UILabel!
@@ -65,7 +66,8 @@ class searchList: UIViewController {
             usernameHolder2.text = listuser![1]
             //usernameHolder3.text = prefer![2].email
         
-        }}
+        }
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // if (segue.identifier == "showPeople_Segue") {
         //   var childVC : searchList = segue.destinationViewController as searchList
@@ -82,7 +84,17 @@ class searchList: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.Update()
+        var camera = GMSCameraPosition.cameraWithLatitude(-33.868,
+        longitude:151.2086, zoom:6)
+        var mapView1 = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+
+        var marker = GMSMarker()
+        marker.position = camera.target
+        marker.snippet = "Hello World"
+        marker.appearAnimation = kGMSMarkerAnimationPop
+        marker.map = mapView1
+
+        mapView = mapView1
     }
     
     override func didReceiveMemoryWarning() {

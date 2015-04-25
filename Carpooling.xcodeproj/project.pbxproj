@@ -777,7 +777,7 @@
 				TargetAttributes = {
 					DB962D061A927055007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 625732G463;
+						DevelopmentTeam = PPJS5QNJ9P;
 					};
 					DB962D1B1A927056007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1095,6 +1095,8 @@
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-Objc",
+					"-force_load",
+					"$(SRCROOT)/GoogleMapsSDK/GoogleMaps.framework/Versions/A/GoogleMaps",
 				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1134,6 +1136,8 @@
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-Objc",
+					"-force_load",
+					"$(SRCROOT)/GoogleMapsSDK/GoogleMaps.framework/Versions/A/GoogleMaps",
 				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
