@@ -86,15 +86,14 @@ class searchList: UIViewController {
         super.viewDidLoad()
         var camera = GMSCameraPosition.cameraWithLatitude(-33.868,
         longitude:151.2086, zoom:6)
-        var mapView1 = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        mapView.camera = camera
+        
 
         var marker = GMSMarker()
         marker.position = camera.target
         marker.snippet = "Hello World"
         marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView1
-
-        mapView = mapView1
+        marker.map = mapView
     }
     
     override func didReceiveMemoryWarning() {

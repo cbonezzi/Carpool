@@ -1180,7 +1180,7 @@
 					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				INFOPLIST_FILE = Carpooling/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1213,7 +1213,7 @@
 					"$(PROJECT_DIR)/GoogleWalletSDK",
 				);
 				INFOPLIST_FILE = Carpooling/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carpooling/PayPalMobile";
 				OTHER_LDFLAGS = "";
