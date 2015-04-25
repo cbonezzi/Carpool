@@ -40,6 +40,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         if (loginUsernameTextField.text.isEmpty || loginPasswordTextField.text.isEmpty){
             
             self.displayMyAlertMessage();
+            return;
             
         }
         
