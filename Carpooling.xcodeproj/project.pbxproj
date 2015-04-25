@@ -320,6 +320,7 @@
 		DBD138761ACB8FF2003ABA42 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		DBD138771ACB8FF2003ABA42 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		DBD138781ACB8FF2003ABA42 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DBDF0E891AEBEE4C00A34ECB /* Carpooling.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Carpooling.entitlements; sourceTree = "<group>"; };
 		DBFC60731A9ABBCF001BE648 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F5CC638C1ADDC3F0003F3674 /* Carpooling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carpooling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CC638E1ADF14E8003F3674 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
@@ -574,6 +575,7 @@
 		DB962D091A927055007D059D /* Carpooling */ = {
 			isa = PBXGroup;
 			children = (
+				DBDF0E891AEBEE4C00A34ECB /* Carpooling.entitlements */,
 				F5CC638D1ADF14E8003F3674 /* PayPalMobile */,
 				DB4188F41ADBACAC00FA8817 /* Frameworks */,
 				DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */,
@@ -778,6 +780,11 @@
 					DB962D061A927055007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = PPJS5QNJ9P;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
 					};
 					DB962D1B1A927056007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1149,6 +1156,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Carpooling/Carpooling.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1191,6 +1199,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Carpooling/Carpooling.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
