@@ -777,6 +777,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Software Eng. Proj.";
 				TargetAttributes = {
+					7673658e09c8e9fcf048b5bf = {
+						DevelopmentTeam = 625732G463;
+					};
 					DB962D061A927055007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = PPJS5QNJ9P;

@@ -29,7 +29,7 @@ class UserActivityViewController: UIViewController {
     }
     
     @IBAction func NotificationPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
+        self.performSegueWithIdentifier("Notifications_Segue", sender: self)
     }
     @IBAction func PreferencesPressed(sender: UIButton) {
         self.performSegueWithIdentifier("Preferences_Segue", sender: self)
@@ -61,6 +61,11 @@ class UserActivityViewController: UIViewController {
             println("welcome to Get Started Page")
         }
         
+        if (segue.identifier == "Notifications_Segue") {
+            var childVC : NotificationsViewController = segue.destinationViewController as NotificationsViewController
+            println("welcome to Notification Page")
+        }
+
         
         
         
