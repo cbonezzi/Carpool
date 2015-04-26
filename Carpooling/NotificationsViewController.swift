@@ -19,25 +19,11 @@ class NotificationsViewController : UIViewController, UITextViewDelegate  {
     
     @IBAction func sendNotification(sender: AnyObject) {
         
-        
-        var sweet:PFObject = PFObject(className: "Sweets")
-        sweet["content"] = textView.text
-        sweet["user_email"] = PFUser.currentUser()
-        
-        sweet.saveInBackground()
-        
-        var push:PFPush = PFPush()
-        push.setChannel("Notifications")
-        
-        var data:NSDictionary = ["alert":"", "badge":"0", "content-available":"1","sound":""]
-        
-        push.setData(data)
+        // look into this for the notification docs to learn whether the installation is set to a particular object
+        let push = PFPush()
+        push.setChannel("Giants")
+        push.setMessage(textView.text)
         push.sendPushInBackground()
-        
-        
-        //self.navigationController.popToRootViewControllerAnimated(true)
-
-
     }
     
     func textView(textView: UITextView!,
@@ -65,6 +51,13 @@ class NotificationsViewController : UIViewController, UITextViewDelegate  {
         textView.becomeFirstResponder()
         
         // Do any additional setup after loading the view.
+    }
+    
+    /**
+    * Called when the user click on the view (outside the UITextField).
+    */
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {

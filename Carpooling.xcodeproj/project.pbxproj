@@ -778,7 +778,7 @@
 				ORGANIZATIONNAME = "Software Eng. Proj.";
 				TargetAttributes = {
 					7673658e09c8e9fcf048b5bf = {
-						DevelopmentTeam = 625732G463;
+						DevelopmentTeam = PPJS5QNJ9P;
 					};
 					DB962D061A927055007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1180,7 +1180,7 @@
 					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				INFOPLIST_FILE = Carpooling/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1189,7 +1189,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "61433b75-b756-4ea1-80f1-b057e09539d5";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Carpooling/Carpooling-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1213,12 +1213,12 @@
 					"$(PROJECT_DIR)/GoogleWalletSDK",
 				);
 				INFOPLIST_FILE = Carpooling/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carpooling/PayPalMobile";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "61433b75-b756-4ea1-80f1-b057e09539d5";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
