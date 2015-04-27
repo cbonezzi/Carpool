@@ -25,14 +25,15 @@ class NotificationsViewController : UIViewController, UITextViewDelegate  {
         var data = [ "title": "Some Title",
             "alert": message]
 
-        
-        var userQuery: PFQuery = PFUser.query()
+        var userQuery: PFQuery = PFInstallation.query()
+        //var userQuery: PFQuery = PFUser.query()
+        userQuery.whereKey("channels", equalTo: "channelName")
         userQuery.whereKey("objectId", equalTo: "SS9zXFLAdb")
-        var query: PFQuery = PFInstallation.query()
-        query.whereKey("currentUser", equalTo: userQuery)
+      
+        //query.whereKey("user_email", equalTo: userQuery)
         
         var push: PFPush = PFPush()
-        push.setQuery(query)
+        push.setQuery(userQuery)
         push.setData(data)
         push.sendPushInBackground()
 //        let push = PFPush()
