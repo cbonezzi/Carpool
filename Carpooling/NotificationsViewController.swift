@@ -20,10 +20,27 @@ class NotificationsViewController : UIViewController, UITextViewDelegate  {
     @IBAction func sendNotification(sender: AnyObject) {
         
         // look into this for the notification docs to learn whether the installation is set to a particular object
-        let push = PFPush()
-        push.setChannel("Giants")
-        push.setMessage(textView.text)
+        
+        let message = textView.text
+        var data = [ "title": "Some Title",
+            "alert": message]
+
+        
+        var userQuery: PFQuery = PFUser.query()
+        userQuery.whereKey("objectId", equalTo: "SS9zXFLAdb")
+        var query: PFQuery = PFInstallation.query()
+        query.whereKey("currentUser", equalTo: userQuery)
+        
+        var push: PFPush = PFPush()
+        push.setQuery(query)
+        push.setData(data)
         push.sendPushInBackground()
+//        let push = PFPush()
+//        push.setChannel("Giants")
+//        push.setMessage(textView.text)
+//        push.sendPushInBackground()
+        
+        
     }
     
     func textView(textView: UITextView!,

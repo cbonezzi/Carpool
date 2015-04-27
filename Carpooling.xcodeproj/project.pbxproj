@@ -10,6 +10,7 @@
 		0091845424dd63ee028d7279 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03781A9C55260061A42B /* MobileCoreServices.framework */; };
 		04994936ca8379c6afbe3850 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065441AA92154000DAE6B /* Passenger.swift */; };
 		049b17a5a0f6680a22d5777b /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */; };
+		04A6C07D1AED63CB001542D0 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C07C1AED63CB001542D0 /* images.jpg */; };
 		04a027d70dbc2186a54cf8ed /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03991A9C55BA0061A42B /* ParseUI.framework */; };
 		04ddb60698e30fadebaef229 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138751ACB8FF2003ABA42 /* CoreText.framework */; };
 		06ae9a2964494be62276675c /* prefer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF951AC65EFB00C797D8 /* prefer.swift */; };
@@ -144,7 +145,6 @@
 		F58BBE2A1AD5CC460087BF5A /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C36681AB20A530011B520 /* GetStartedViewController.swift */; };
 		F58BBE2B1AD5CC580087BF5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */; };
 		F58BBE2C1AD5CC5B0087BF5A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */; };
-		F58BBE2D1AD5CC7C0087BF5A /* ParseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AE1AA9732800150414 /* ParseModel.swift */; };
 		F58BBE2E1AD5CD020087BF5A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABC97E1A952E9C00CE6497 /* ProfileViewController.swift */; };
 		F58BBE2F1AD5CD060087BF5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065591AA921FB000DAE6B /* SearchViewController.swift */; };
 		F58BBE301AD5CD0B0087BF5A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655B1AA921FB000DAE6B /* NotificationsViewController.swift */; };
@@ -255,6 +255,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A6C07C1AED63CB001542D0 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = ../../images.jpg; sourceTree = "<group>"; };
 		D5310F011AA7E80A003B9F64 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		D540DF911AC657FC00C797D8 /* searchPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchPeople.swift; sourceTree = "<group>"; };
 		D540DF931AC658C300C797D8 /* searchList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchList.swift; sourceTree = "<group>"; };
@@ -575,6 +576,7 @@
 		DB962D091A927055007D059D /* Carpooling */ = {
 			isa = PBXGroup;
 			children = (
+				04A6C07C1AED63CB001542D0 /* images.jpg */,
 				DBDF0E891AEBEE4C00A34ECB /* Carpooling.entitlements */,
 				F5CC638D1ADF14E8003F3674 /* PayPalMobile */,
 				DB4188F41ADBACAC00FA8817 /* Frameworks */,
@@ -851,6 +853,7 @@
 				DB962D141A927056007D059D /* Images.xcassets in Resources */,
 				DBACA7F01A9CE6710072FA53 /* GoogleMaps.bundle in Resources */,
 				DB128BAA1AA50960007A8179 /* GoogleWalletSDK.bundle in Resources */,
+				04A6C07D1AED63CB001542D0 /* images.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,7 +985,6 @@
 				F58BBE301AD5CD0B0087BF5A /* NotificationsViewController.swift in Sources */,
 				F58BBE2A1AD5CC460087BF5A /* GetStartedViewController.swift in Sources */,
 				F58BBE3A1AD5CD3E0087BF5A /* UserActivityViewController.swift in Sources */,
-				F58BBE2D1AD5CC7C0087BF5A /* ParseModel.swift in Sources */,
 				F58BBE351AD5CD1A0087BF5A /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
