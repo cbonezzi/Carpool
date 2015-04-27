@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HGl-6r-dOH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HGl-6r-dOH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -239,7 +239,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="239" width="31" height="21"/>
+                                    <rect key="frame" x="49" y="345" width="31" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtl-TN-0rl">
@@ -248,7 +248,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="321" width="57" height="21"/>
+                                    <rect key="frame" x="49" y="427" width="57" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-xT-gC8">
@@ -257,7 +257,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="153" width="90" height="21"/>
+                                    <rect key="frame" x="49" y="259" width="90" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJv-Ss-cy4">
@@ -265,7 +265,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="236" width="118" height="30"/>
+                                    <rect key="frame" x="175" y="342" width="118" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxN-n9-oSd">
@@ -275,7 +275,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="421" width="49" height="30"/>
+                                    <rect key="frame" x="197" y="527" width="49" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="Submit:" destination="UTb-eK-RR8" eventType="touchUpInside" id="Gl5-Ir-VI7"/>
@@ -286,7 +286,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="150" width="118" height="30"/>
+                                    <rect key="frame" x="175" y="256" width="118" height="30"/>
                                 </variation>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Ypk-bl-IC2">
@@ -298,7 +298,7 @@
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="318" width="169" height="29"/>
+                                    <rect key="frame" x="159" y="424" width="169" height="29"/>
                                 </variation>
                                 <connections>
                                     <action selector="genderSegmentedControl:" destination="UTb-eK-RR8" eventType="valueChanged" id="tzJ-OT-Eol"/>
@@ -313,6 +313,26 @@
                                     <rect key="frame" x="105" y="28" width="191" height="60"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x9I-sN-DWe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="29" y="96" width="110" height="128"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a33-ii-LqA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Upload Pic">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="188" y="145" width="93" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="uploadImage:" destination="UTb-eK-RR8" eventType="touchUpInside" id="YF0-jP-qWW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -326,6 +346,8 @@
                                 <exclude reference="dXO-CL-4X8"/>
                                 <exclude reference="Ypk-bl-IC2"/>
                                 <exclude reference="90k-ap-Utm"/>
+                                <exclude reference="x9I-sN-DWe"/>
+                                <exclude reference="a33-ii-LqA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -339,12 +361,15 @@
                                 <include reference="dXO-CL-4X8"/>
                                 <include reference="Ypk-bl-IC2"/>
                                 <include reference="90k-ap-Utm"/>
+                                <include reference="x9I-sN-DWe"/>
+                                <include reference="a33-ii-LqA"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Google_logo_small.png" id="6y0-0E-EIh"/>
                     <connections>
                         <outlet property="age" destination="pJv-Ss-cy4" id="Ofc-AX-HaD"/>
+                        <outlet property="imageView" destination="x9I-sN-DWe" id="mBF-Kl-e2e"/>
                         <outlet property="username" destination="dXO-CL-4X8" id="aTw-F1-otI"/>
                         <segue destination="PWT-Rz-ubN" kind="presentation" identifier="UserActivity_Segue" id="eCP-6k-5Xk"/>
                     </connections>
@@ -591,6 +616,63 @@
             </objects>
             <point key="canvasLocation" x="348" y="-591"/>
         </scene>
+        <!--Notifications View Controller-->
+        <scene sceneID="8Q4-Jf-cNC">
+            <objects>
+                <viewController id="JUl-wC-Jb1" customClass="NotificationsViewController" customModule="Carpooling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YKy-Oo-yd0"/>
+                        <viewControllerLayoutGuide type="bottom" id="RoX-WK-P0w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OhU-h8-igm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLt-hJ-sBG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="56" y="206" width="288" height="170"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hck-lC-eF1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Sent Notification">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="137" y="440" width="127" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendNotification:" destination="JUl-wC-Jb1" eventType="touchUpInside" id="EQl-WL-SRu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tLt-hJ-sBG"/>
+                                <exclude reference="Hck-lC-eF1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tLt-hJ-sBG"/>
+                                <include reference="Hck-lC-eF1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="tLt-hJ-sBG" id="D7C-0J-8vL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewp-Ox-fID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1084.5" y="-231.75"/>
+        </scene>
         <!--User Activity View Controller-->
         <scene sceneID="5a4-M0-n4z">
             <objects>
@@ -649,19 +731,6 @@
                                     <segue destination="mUS-l7-hQY" kind="show" identifier="HomePage_Segue" id="HKX-5S-a66"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TW-h9-eLK">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Notification">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="128" y="333" width="82" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="NotificationPressed:" destination="PWT-Rz-ubN" eventType="touchUpInside" id="4de-07-08O"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOp-4z-geq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Profile">
@@ -697,6 +766,20 @@
                                     <rect key="frame" x="120" y="47" width="185" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TW-h9-eLK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Notification">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="128" y="343" width="82" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="NotificationPressed:" destination="PWT-Rz-ubN" eventType="touchUpInside" id="4de-07-08O"/>
+                                    <segue destination="JUl-wC-Jb1" kind="presentation" identifier="Notifications_Segue" id="7Lv-KO-0ir"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -705,10 +788,10 @@
                                 <exclude reference="keI-sg-vLY"/>
                                 <exclude reference="0fl-tI-q71"/>
                                 <exclude reference="e0J-Dx-gu4"/>
-                                <exclude reference="1TW-h9-eLK"/>
                                 <exclude reference="SOp-4z-geq"/>
                                 <exclude reference="NhT-HJ-cW9"/>
                                 <exclude reference="DiJ-Yg-svJ"/>
+                                <exclude reference="1TW-h9-eLK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -717,10 +800,10 @@
                                 <include reference="keI-sg-vLY"/>
                                 <include reference="0fl-tI-q71"/>
                                 <include reference="e0J-Dx-gu4"/>
-                                <include reference="1TW-h9-eLK"/>
                                 <include reference="SOp-4z-geq"/>
                                 <include reference="NhT-HJ-cW9"/>
                                 <include reference="DiJ-Yg-svJ"/>
+                                <include reference="1TW-h9-eLK"/>
                             </mask>
                         </variation>
                     </view>
@@ -733,7 +816,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0g3-kZ-BNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604.5" y="-191.25"/>
+            <point key="canvasLocation" x="-519" y="-182.25"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="sNO-9V-0Nx">
@@ -1408,14 +1491,12 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="AoU-r5-DTJ"/>
                                         <exclude reference="Iiy-0Q-MqU"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="280" width="335" height="292"/>
                                     <mask key="subviews">
-                                        <include reference="AoU-r5-DTJ"/>
                                         <include reference="Iiy-0Q-MqU"/>
                                     </mask>
                                 </variation>
@@ -1446,11 +1527,12 @@
         <image name="Google_logo_small.png" width="48" height="17"/>
         <image name="Wallet_logo_small.png" width="23" height="24"/>
         <image name="default_marker.png" width="22" height="39"/>
+        <image name="images.jpg" width="283" height="178"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="coy-1M-CYD"/>
-        <segue reference="IUg-I8-llk"/>
-        <segue reference="GR3-Mb-ghd"/>
+        <segue reference="eCP-6k-5Xk"/>
+        <segue reference="HKX-5S-a66"/>
         <segue reference="wnM-Ns-2rL"/>
+        <segue reference="GR3-Mb-ghd"/>
     </inferredMetricsTieBreakers>
 </document>

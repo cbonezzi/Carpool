@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         let installation = PFInstallation.currentInstallation()
+        installation.addUniqueObject("Giants", forKey: "channels")
         installation.setDeviceTokenFromData(deviceToken)
         installation/*.saveInBackgroundWithTarget(nil, selector: nil)*/.saveInBackground()
     }

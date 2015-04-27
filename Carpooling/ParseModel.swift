@@ -25,7 +25,71 @@ class ParseModel {
         Parser = []
     }
     
+    func uploadProfileImage( file : PFFile, emailRetrieved: String, age : String, username : String){
+        
+        var objectid : String!
+        
+        print("in parse model")
+        
+        // retrieving object id
+        var user = PFQuery(className:"User")
+        user.whereKey("user_email", equalTo:emailRetrieved)
+        user.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects.count)objects")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var email : AnyObject = object.valueForKey("user_email")!
+                        var emailPassed  = email as String
+                        println("retirver id " + emailPassed)
+                       
+                        if (emailRetrieved == emailPassed){
+                            objectid  = object.objectId
+                             println(objectid)
+                        }
+                    }}}}
+        
+        
+        var user1 = PFQuery(className: "User")
+        user1.getObjectInBackgroundWithId(objectid){
+           (edit_user: PFObject?, error: NSError?) -> Void in
+//            if error != nil {
+//                println(error)
+//            } else if let  edit_user = edit_user {
+                println("inside")
+               // let image = edit_user["image"] as PFFile
+               // let age = edit_user["age"] as  String
+               // let username = edit_user["user_email"] as String
+               // print (age, username)
+                //edit_user.saveInBackground()
+            }
+        
+        
+      
+        //new_user["gender"] = gender{
+        
+//        
+//        new_user.saveInBackgroundWithBlock {
+//            (success: Bool, error: NSError!) -> Void in
+//            if (success) {
+//                // The object has been saved.
+//                print("Success foto upload")
+//                
+//            } else {
+//                // There was a problem, check error.description
+//                print("error")
+//            }
+//        }
+//        
+        
+        
+        
+    }
     
+
     
 
     func RetrieveDataForSearch(numOccupant: String, numLuggage: String , Role1 : String , GoingFrom: String, GoingTo: String, completion: (user: Prefer) -> Void) {
