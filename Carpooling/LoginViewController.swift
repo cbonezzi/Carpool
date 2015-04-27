@@ -51,6 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             self.loggedUser1 = loggedUser
             self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
         }
+        
     }
     @IBAction func registerPressed(sender: UIButton) {
         self.performSegueWithIdentifier("Signup_Segue", sender: self)
