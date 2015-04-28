@@ -15,6 +15,7 @@ var stuff : ProfileViewController!
 var currentUser : CurrentUser!
 var loginUser : LoginUser!
 var pUser : PUser!
+var alert = UIAlertView(title: "Alert", message: "Incorrect!", delegate: nil, cancelButtonTitle: "OK")
 
 class ParseModel {
     
@@ -239,17 +240,24 @@ class ParseModel {
                             }
                         }
                             
-                            
-                        else {
-                            // Log details of the failure
-                            println("Error: \(error) \(error.userInfo!)")
-                            //self.displayMyAlertMessage("Invalid Username!!");
-                        }
                     }
-                    
-                    //return User1
                 }
-    
+                if (objects.count == 0){
+                    self.displayMyAlertMessage();
+                    println("Couldn't log in")
+                }
+                    
+            }
+            else {
+                // Log details of the failure
+                println("Error: \(error) \(error.userInfo!)")
+                //self.displayMyAlertMessage("Invalid Username!!");
+            }
+        }
+                    
+        //return User1
+
+    }
     func SearchDatabaseForUser(email: String) -> Bool {
         var status : Bool = false
         var user3 = PFQuery(className:"User")
@@ -278,8 +286,11 @@ class ParseModel {
         }
         return status
     }
-}
-}
-}
+    
+    func displayMyAlertMessage()
+    {
+        alert.show();
+    }
+    
 }
 
