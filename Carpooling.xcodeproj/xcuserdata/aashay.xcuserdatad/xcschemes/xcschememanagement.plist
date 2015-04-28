@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Carpooling-cal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Carpooling.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +17,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7673658e09c8e9fcf048b5bf</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DB962D061A927055007D059D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DB962D1B1A927056007D059D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>a518b9aeaae6753a976f7e87</key>
 		<dict>
 			<key>primary</key>
 			<true/>

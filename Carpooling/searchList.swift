@@ -8,13 +8,14 @@
 
 import Foundation
 import UIKit
-class searchList: UIViewController {
+class searchList: UIViewController,UITableViewDataSource, UITableViewDelegate {
     var loggedUser1 : LoginUser!
     var loggedUser : CurrentUser!
     var login : [Login]!
     var ParseData : ParseModel = ParseModel()
     
     
+    @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var usernameHolder2: UILabel!
     
@@ -25,22 +26,19 @@ class searchList: UIViewController {
     
     var prefer : [Prefer]?
     var listuser : [String]!
-    
-   
+     
     // var userlist : [String] = listuser!
     
     //    for  x  in userlist!
     //    {
     //       //listuser![x]
     //    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+       func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        
+        var cell:UITableViewCell = theTableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         let (usernameOfReturnedList) = listuser![indexPath.row]
         //cell.textLabel!.text = "hello"
         cell.textLabel!.text = usernameOfReturnedList
@@ -51,7 +49,13 @@ class searchList: UIViewController {
         // return 20
         return listuser!.count
     }
-
+        // from james' code
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("did select tv row" + String(indexPath.row))
+        
+    }
+    
     
       @IBAction func gobackPressed(sender: UIButton) {
         self.performSegueWithIdentifier("SearchPeople_Segue", sender: self)
@@ -68,20 +72,33 @@ class searchList: UIViewController {
         
         }
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // if (segue.identifier == "showPeople_Segue") {
         //   var childVC : searchList = segue.destinationViewController as searchList
         //     childVC.listuser = stuffUser.list
         //childVC.prefer = //loggedUser.RetrieveUserFromClass()
         //    println("profile segue firing")
-        if (segue.identifier == "SearchPeople_Segue") {
-            var childVC : searchPeople = segue.destinationViewController as searchPeople
-            childVC.login = login!
-            println("welcome to userActivity")
+//        if (segue.identifier == "SearchPeople_Segue") {
+//            var childVC : searchPeople = segue.destinationViewController as searchPeople
+//            childVC.login = login!
+//            println("welcome to userActivity")
+//        }
+        // 
+       
+
+// from James' code
+            let child2VC: UserProfileInfoViewController = segue.destinationViewController as UserProfileInfoViewController
+        //child2VC.usernameTable = usernameOfReturnedList
+        
+            let index: Int = theTableView.indexPathForSelectedRow()!.row
+            
+           // destVC.projectURL = projects.projectURLForIndex(index)
         }
+
+
         
-        
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var camera = GMSCameraPosition.cameraWithLatitude(-33.868,

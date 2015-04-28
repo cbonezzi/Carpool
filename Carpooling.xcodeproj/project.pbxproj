@@ -198,6 +198,10 @@
 		F5CC63B11AE03E4C003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B31AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B41AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
+		FBC3944E1AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */; };
+		FBC3944F1AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */; };
+		FBC394501AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */; };
+		FBC394511AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */; };
 		a2b686bb1014db6fbe1aed2e /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03971A9C55BA0061A42B /* ParseCrashReporting.framework */; };
 		a47b0d14154508960426c19b /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AB1AA9732800150414 /* FacebookModel.swift */; };
 		a9cdf7d7b3878ba6e19ca78b /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03741A9C55260061A42B /* AudioToolbox.framework */; };
@@ -344,6 +348,7 @@
 		F5CC63A11ADF16AB003F3674 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F5CC63A41ADF1A79003F3674 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipsideViewController.swift; sourceTree = "<group>"; };
+		FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfoViewController.swift; sourceTree = "<group>"; };
 		e7bb5ec9af6ed5407b292b10 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -529,6 +534,7 @@
 				DB0C366A1AB600240011B520 /* UserActivityViewController.swift */,
 				D540DF911AC657FC00C797D8 /* searchPeople.swift */,
 				D540DF931AC658C300C797D8 /* searchList.swift */,
+				FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -898,6 +904,7 @@
 				ce98996dc0c60ef295462464 /* ParseModel.swift in Sources */,
 				F5CC63B31AE03E50003F3674 /* FlipsideViewController.swift in Sources */,
 				0f041bdf616d720ec42ca206 /* GoogleWalletModel.swift in Sources */,
+				FBC394501AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +936,7 @@
 				0ec2c3ff783c3e8890ee172a /* ParseModel.swift in Sources */,
 				F5CC63B41AE03E50003F3674 /* FlipsideViewController.swift in Sources */,
 				554089d6744f417fd556a925 /* GoogleWalletModel.swift in Sources */,
+				FBC394511AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,6 +968,7 @@
 				DBD0C1B21AA9732800150414 /* ParseModel.swift in Sources */,
 				F5CC63B11AE03E4C003F3674 /* FlipsideViewController.swift in Sources */,
 				DBD0C1B11AA9732800150414 /* GoogleWalletModel.swift in Sources */,
+				FBC3944E1AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +985,7 @@
 				F58BBE311AD5CD0E0087BF5A /* prefer.swift in Sources */,
 				DB962D231A927056007D059D /* CarpoolingTests.swift in Sources */,
 				F58BBE361AD5CD1D0087BF5A /* User.swift in Sources */,
+				FBC3944F1AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */,
 				F58BBE261AD5CBB20087BF5A /* GoogleMapsModel.swift in Sources */,
 				F58BBE321AD5CD110087BF5A /* Notification.swift in Sources */,
 				F58BBE291AD5CBBF0087BF5A /* HomeViewController.swift in Sources */,
