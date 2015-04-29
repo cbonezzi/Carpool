@@ -34,58 +34,34 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
     
     var loggedUser2 : PUser!
     var stuffUser : Prefer!
+    
     //var searchUserList : SearchUsers!
     @IBAction func RoleSegment(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-             Role = "Driver"
+            Role = "Driver"
             temp = 1
         }
         else if sender.selectedSegmentIndex == 1 {
-             Role = "Passenger"
-
-                     temp = 2
+            Role = "Passenger"
+            temp = 2
         }
 
     }
     
     func displayMyAlertMessage1()
     {
-        //var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
-        
-        //alert.addButtonWithTitle("ok")
         alert1.show()
-        
-        //alert.addAction(ok);
-        
-        //self.(alertView: alert, clickedButtonAtIndex: 0)
-        //self.presentViewController(alert, animated: true, completion: nil);
     }
-    
-
-    
     
     func displayMyAlertMessage()
     {
-        //var alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
-        
-        //alert.addButtonWithTitle("ok")
         alert.show()
-        
-        //alert.addAction(ok);
-        
-        //self.(alertView: alert, clickedButtonAtIndex: 0)
-        //self.presentViewController(alert, animated: true, completion: nil);
     }
-    
-    
     
     @IBAction func gobackPressed(sender: UIButton) {
          self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
     }
+    
     @IBAction func search(sender: AnyObject) {
         
         if (numOccupant.text.isEmpty || numLuggage.text.isEmpty
@@ -109,21 +85,22 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
                 println("in else")
                     self.displayMyAlertMessage1()
                 }
-            //(loggedUser: PUser) in
-            //println(loggedUser)
-            //self.loggedUser = loggedUser
-            //self.performSegueWithIdentifier("showPeople", sender: self)
+                //(loggedUser: PUser) in
+                //println(loggedUser)
+                //self.loggedUser = loggedUser
+                //self.performSegueWithIdentifier("showPeople", sender: self)
+            }
         }
-    }
     
-}
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowPeople_Segue") {
             var childVC : searchList = segue.destinationViewController as searchList
             childVC.listuser = stuffUser.list
             childVC.login = login!
-            
+            childVC.sourceData = GoingFrom.text
+            childVC.destinationData = GoingTo.text            
         }
             //childVC.prefer = //loggedUser.RetrieveUserFromClass()
         //    println("profile segue firing")
@@ -134,18 +111,17 @@ class searchPeople: UIViewController, UIAlertViewDelegate {
             }
             println("Welcome to userActivity")
         }
-        
-        
     }
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
             //alert.show()
             // Do any additional setup after loading the view, typically from a nib.
             
-        }
-        
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
     }
+        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+    }
+}

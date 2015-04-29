@@ -74,9 +74,9 @@ class NotificationsViewController : UIViewController, UITextViewDelegate  {
     /**
     * Called when the user click on the view (outside the UITextField).
     */
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
-    }
+//    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+//        self.view.endEditing(true)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -13,7 +13,9 @@ class searchList: UIViewController {
     var loggedUser : CurrentUser!
     var login : [Login]!
     var ParseData : ParseModel = ParseModel()
-    
+    var sourceData : String = String()
+    var destinationData : String = String()
+    var url : String = String()
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var usernameHolder2: UILabel!
@@ -82,8 +84,60 @@ class searchList: UIViewController {
         
         
     }
+    
+    func getTopAppsDataFromItunesWithSuccess(success: ((iTunesData: NSData!) -> Void)) {
+        //1
+        DataManager.loadDataFromURL(NSURL(string: url)!, completion:{(data, error) -> Void in
+            //2
+            if let urlData = data {
+                //3
+                success(iTunesData: urlData)
+            }
+        })
+    }
+    
+    func getCoordinates(source: String, destination: String) {
+        let origin_state = "IA"
+        let dest_state = "IL"
+        //let success : NSData = NSData()
+        //url = "https://maps.googleapis.com/maps/api/geocode/json?address=" +  source + ",%20" + state + "&key=AIzaSyBa936coujKGuKjKFgfj-NAhnes1vKWwP0"
+        //let data = NSData(contentsOfURL: NSURL(string: url)!)
+        
+        
+        // Get the #1 app name from iTunes and SwiftyJSON
+        DataManager.getTopAppsDataFromItunesWithSuccess(source, origin_state: origin_state, destination: destination, destination_state: dest_state) { (data) -> Void in
+            //urlAPI = url
+            let json = JSON(data: data)
+            //var test = json
+            //var stringtest = JSON.parse()
+            let appName = json["feed"]["entry"][0]["im:name"]["label"].string// {
+                println("NSURLSession: \(appName)")
+            //}
+            // More soon...
+            //1
+            if let appArray = json["results"]["geometry"]["bounds"]["northeast"][""].array {
+                //2
+                var apps = [AppModel]()
+                
+                //3
+                for appDict in appArray {
+                    var appName: Float = appDict["lat"].floatValue
+                    //var appURL: String? = appDict["im:image"][0]["label"].string
+                    
+                    //var app = AppModel(name: appName, appStoreURL: appURL)
+                    //apps.append(app)
+                }
+                
+                //4
+                println(apps)
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.getCoordinates(sourceData, destination: destinationData)
         var camera = GMSCameraPosition.cameraWithLatitude(-33.868,
         longitude:151.2086, zoom:6)
         mapView.camera = camera

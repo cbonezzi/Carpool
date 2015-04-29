@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         
         // this is used to have access to the facebook objects within the application
-        FBLoginView.self
-        FBProfilePictureView.self
+        //FBLoginView.self
+        //FBProfilePictureView.self
         
         // for google maps SDK
         let apitGoogleMapsKey = GMSServices.provideAPIKey("AIzaSyBm54gWQHH8vA8gg9yhLdK0ykrX72sq3wA")
@@ -36,10 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?, annotation: AnyObject) -> Bool {
-        var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
-        return wasHandled
-    }
+//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?, annotation: AnyObject) -> Bool {
+//        //var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+//        return true //wasHandled
+//    }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         let installation = PFInstallation.currentInstallation()
