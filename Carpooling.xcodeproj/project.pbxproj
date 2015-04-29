@@ -17,7 +17,6 @@
 		0b3f40f5341d2559326193a4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065461AA92154000DAE6B /* Notification.swift */; };
 		0c437b134f5b68ad8a2e34a5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138751ACB8FF2003ABA42 /* CoreText.framework */; };
 		0cbb823ac2d34e06fb903e8b /* GoogleWalletSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB128BA71AA50960007A8179 /* GoogleWalletSDK.bundle */; };
-		0d4dc60d69370da4fe337e72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E41AAC0042005A04D0 /* Main.storyboard */; };
 		0ec2c3ff783c3e8890ee172a /* ParseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AE1AA9732800150414 /* ParseModel.swift */; };
 		0f041bdf616d720ec42ca206 /* GoogleWalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AD1AA9732800150414 /* GoogleWalletModel.swift */; };
 		0fe35b66ca2dd248f4ecb41e /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03881A9C55900061A42B /* FBAudienceNetwork.framework */; };
@@ -91,7 +90,6 @@
 		DB128BAA1AA50960007A8179 /* GoogleWalletSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB128BA71AA50960007A8179 /* GoogleWalletSDK.bundle */; };
 		DB128BAB1AA50960007A8179 /* GoogleWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA81AA50960007A8179 /* GoogleWalletSDK.framework */; };
 		DB48B5E61AAC0042005A04D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */; };
-		DB48B5E71AAC0042005A04D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E41AAC0042005A04D0 /* Main.storyboard */; };
 		DB48B5E91AAC0573005A04D0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */; };
 		DB5065481AA92154000DAE6B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065421AA92154000DAE6B /* User.swift */; };
 		DB50654A1AA92154000DAE6B /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065441AA92154000DAE6B /* Passenger.swift */; };
@@ -198,6 +196,7 @@
 		F5CC63B11AE03E4C003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B31AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B41AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
+		FB0FE81B1AF05F70002A3DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0FE81A1AF05F70002A3DAA /* Main.storyboard */; };
 		FBC3944E1AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */; };
 		FBC3944F1AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */; };
 		FBC394501AEEEA6600641346 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */; };
@@ -241,7 +240,6 @@
 		e76e6408bf8d7d99f2d7e737 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03991A9C55BA0061A42B /* ParseUI.framework */; };
 		ea3a425ac43565626d0b4d1f /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065591AA921FB000DAE6B /* SearchViewController.swift */; };
 		eae8c9b198e4c479e122b3d2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03751A9C55260061A42B /* CFNetwork.framework */; };
-		ec5a4a1d72a7c457a0483276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E41AAC0042005A04D0 /* Main.storyboard */; };
 		eff20543fbe51823973ce629 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138771ACB8FF2003ABA42 /* ImageIO.framework */; };
 		f294227c1b4bd15cd71ea973 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBABC97E1A952E9C00CE6497 /* ProfileViewController.swift */; };
 		f694f6b2525a4da38944dc54 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA92FCB1ACA73C100917454 /* Login.swift */; };
@@ -272,7 +270,6 @@
 		DB128BA81AA50960007A8179 /* GoogleWalletSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleWalletSDK.framework; path = GoogleWalletSDK/GoogleWalletSDK.framework; sourceTree = "<group>"; };
 		DB4188F21ADA2C0300FA8817 /* Carpooling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carpooling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB48B5E31AAC0042005A04D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DB48B5E51AAC0042005A04D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DB5065421AA92154000DAE6B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB5065441AA92154000DAE6B /* Passenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
@@ -348,6 +345,7 @@
 		F5CC63A11ADF16AB003F3674 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F5CC63A41ADF1A79003F3674 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipsideViewController.swift; sourceTree = "<group>"; };
+		FB0FE81A1AF05F70002A3DAA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../Main.storyboard; sourceTree = "<group>"; };
 		FBC3944D1AEEEA6600641346 /* UserProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfoViewController.swift; sourceTree = "<group>"; };
 		e7bb5ec9af6ed5407b292b10 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -583,11 +581,11 @@
 			isa = PBXGroup;
 			children = (
 				04A6C07C1AED63CB001542D0 /* images.jpg */,
+				FB0FE81A1AF05F70002A3DAA /* Main.storyboard */,
 				DBDF0E891AEBEE4C00A34ECB /* Carpooling.entitlements */,
 				F5CC638D1ADF14E8003F3674 /* PayPalMobile */,
 				DB4188F41ADBACAC00FA8817 /* Frameworks */,
 				DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */,
-				DB48B5E41AAC0042005A04D0 /* Main.storyboard */,
 				DBD0C1AA1AA96F2100150414 /* Classes */,
 				DB5065411AA9211C000DAE6B /* Model */,
 				DB50653F1AA920F7000DAE6B /* ViewController */,
@@ -831,7 +829,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				049b17a5a0f6680a22d5777b /* LaunchScreen.xib in Resources */,
-				ec5a4a1d72a7c457a0483276 /* Main.storyboard in Resources */,
 				56b1f85f30658438dabda089 /* Images.xcassets in Resources */,
 				ceede026c89166422f8a3fdb /* GoogleMaps.bundle in Resources */,
 				8bdfebd220b871b0bc77e777 /* GoogleWalletSDK.bundle in Resources */,
@@ -843,7 +840,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				d688c2f0eeb7ad364c351d44 /* LaunchScreen.xib in Resources */,
-				0d4dc60d69370da4fe337e72 /* Main.storyboard in Resources */,
 				7d77ffe1299dd4dce18a41f7 /* Images.xcassets in Resources */,
 				51866ba59e521d4fbc444e11 /* GoogleMaps.bundle in Resources */,
 				0cbb823ac2d34e06fb903e8b /* GoogleWalletSDK.bundle in Resources */,
@@ -855,9 +851,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB48B5E61AAC0042005A04D0 /* LaunchScreen.xib in Resources */,
-				DB48B5E71AAC0042005A04D0 /* Main.storyboard in Resources */,
 				DB962D141A927056007D059D /* Images.xcassets in Resources */,
 				DBACA7F01A9CE6710072FA53 /* GoogleMaps.bundle in Resources */,
+				FB0FE81B1AF05F70002A3DAA /* Main.storyboard in Resources */,
 				DB128BAA1AA50960007A8179 /* GoogleWalletSDK.bundle in Resources */,
 				04A6C07D1AED63CB001542D0 /* images.jpg in Resources */,
 			);
@@ -1016,14 +1012,6 @@
 				DB48B5E31AAC0042005A04D0 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		DB48B5E41AAC0042005A04D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB48B5E51AAC0042005A04D0 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

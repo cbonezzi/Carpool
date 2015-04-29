@@ -9,13 +9,17 @@
 import Foundation
 import UIKit
 class searchList: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    
+
+   
     var loggedUser1 : LoginUser!
     var loggedUser : CurrentUser!
     var login : [Login]!
     var ParseData : ParseModel = ParseModel()
-    
+    var name :String!
     
     @IBOutlet weak var theTableView: UITableView!
+    
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var usernameHolder2: UILabel!
     
@@ -24,38 +28,54 @@ class searchList: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var usernameHolder3: UILabel!
     
+    var user_email = UserProfileInfoViewController.self
     var prefer : [Prefer]?
     var listuser : [String]!
-     
-    // var userlist : [String] = listuser!
+    //var copy_listuser : listuser!
     
-    //    for  x  in userlist!
-    //    {
-    //       //listuser![x]
-    //    }
+    //var usernameOfReturnedList : [String] = []
+    
+        var usernameOfReturnedList : String!
+    
        func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        theTableView.dataSource = self
+        theTableView.delegate = self
         var cell:UITableViewCell = theTableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        let (usernameOfReturnedList) = listuser![indexPath.row]
+        var usernameOfReturnedList = listuser![indexPath.row]
+        println(listuser![indexPath.row])
+        println(usernameOfReturnedList)
         //cell.textLabel!.text = "hello"
         cell.textLabel!.text = usernameOfReturnedList
+        var name : String = cell.textLabel!.text!
+        println (name)
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // return 20
+      
+    
         return listuser!.count
     }
         // from james' code
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //self.performSegueWithIdentifier("displayProfile_Segue", sender: UITableViewCell.self)
+        println(usernameOfReturnedList)
+
         println("did select tv row" + String(indexPath.row))
         
     }
     
+    func display() -> String{
+        var name: String = usernameOfReturnedList
+        return name
+    }
     
       @IBAction func gobackPressed(sender: UIButton) {
         self.performSegueWithIdentifier("SearchPeople_Segue", sender: self)
@@ -74,26 +94,48 @@ class searchList: UIViewController,UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // if (segue.identifier == "showPeople_Segue") {
-        //   var childVC : searchList = segue.destinationViewController as searchList
-        //     childVC.listuser = stuffUser.list
-        //childVC.prefer = //loggedUser.RetrieveUserFromClass()
-        //    println("profile segue firing")
-//        if (segue.identifier == "SearchPeople_Segue") {
-//            var childVC : searchPeople = segue.destinationViewController as searchPeople
-//            childVC.login = login!
-//            println("welcome to userActivity")
-//        }
-        // 
-       
-
-// from James' code
-            let child2VC: UserProfileInfoViewController = segue.destinationViewController as UserProfileInfoViewController
-        //child2VC.usernameTable = usernameOfReturnedList
         
-            let index: Int = theTableView.indexPathForSelectedRow()!.row
+       // if (segue.identifier == "displayProfile_Segue"){
+                  // var child2VC : searchList = segue.destinationViewController as searchList
+            var child2VC: UserProfileInfoViewController = segue.destinationViewController as UserProfileInfoViewController
+            let indexPath = self.theTableView.indexPathForSelectedRow()!
+            var destinationTitle = (self.usernameOfReturnedList)
+        
+            child2VC.user_email = listuser[indexPath.item]//[indexPath.row]
+            //println(destinationTitle[indexPath.row])
+            //println("name" + name)
+            //childVC.listuser = stuffUser.list
+            //childVC.login = login!
             
-           // destVC.projectURL = projects.projectURLForIndex(index)
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        println(usernameOfReturnedList)
+//            let child2VC: UserProfileInfoViewController = segue.destinationViewController as UserProfileInfoViewController
+//        println(usernameOfReturnedList)
+//            let indexPath = self.theTableView.indexPathForSelectedRow()!
+//            let index: Int = theTableView.indexPathForSelectedRow()!.row
+        //  let destinationTitle = self.filteredBooths[indexPath.row].name
+        
+       // var destinationTitle = (self.usernameOfReturnedList)
+//        println(usernameOfReturnedList)
+        //var destinationTitle = cell.textLabel!.text
+        //UserProfileInfoViewController.user_email = destinationTitle
+        
+        // destVC.projectURL = projects.projectURLForIndex(index)
         }
 
 
