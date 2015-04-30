@@ -15,8 +15,10 @@ var stuff : ProfileViewController!
 var currentUser : CurrentUser!
 var loginUser : LoginUser!
 var pUser : PUser!
+var alert = UIAlertView(title: "Alert", message: "Sorry, that combination does not exist.", delegate: nil, cancelButtonTitle: "OK")
 
 class ParseModel {
+    
     
     var Parser : [PFQuery]
     
@@ -225,15 +227,21 @@ class ParseModel {
                                 //this is used for closure
                                 completion(user: loginUser)
                                 
+                            } else {
+                                alert.show();
                             }
                         }
-                            
                             
                         else {
                             // Log details of the failure
                             println("Error: \(error) \(error.userInfo!)")
                             //self.displayMyAlertMessage("Invalid Username!!");
                         }
+                        
+                    }
+                    
+                    if(objects.count == 0){
+                        alert.show();
                     }
                     
                     //return User1

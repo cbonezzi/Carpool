@@ -76,13 +76,6 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
         var new_user = PFObject(className:"User")
         new_user["user_email"] = registerUsernameTextField.text
         new_user["password"] = registerPasswordTextField.text
-        new_user.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError!) -> Void in
-            if (success) {
-                // The object has been saved.
-            } else {
-                // There was a problem, check error.description
-            }
             
             let registerUsername = self.registerUsernameTextField.text;
             let registerPassword = self.registerPasswordTextField.text;
@@ -119,6 +112,14 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
                 self.displayMyAlertMessage2();
                 
                 return;
+            }
+        
+        new_user.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError!) -> Void in
+            if (success) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
             }
             
             // Alert message to confirm registration
