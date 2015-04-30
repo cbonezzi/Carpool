@@ -10,6 +10,12 @@
 		0091845424dd63ee028d7279 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03781A9C55260061A42B /* MobileCoreServices.framework */; };
 		04994936ca8379c6afbe3850 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065441AA92154000DAE6B /* Passenger.swift */; };
 		049b17a5a0f6680a22d5777b /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */; };
+		04A767EA1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */; };
+		04A767EB1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */; };
+		04A767EC1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */; };
+		04A767EE1AF1B64C00F77BC7 /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A767ED1AF1B64C00F77BC7 /* searchList.swift */; };
+		04A767EF1AF1B64C00F77BC7 /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A767ED1AF1B64C00F77BC7 /* searchList.swift */; };
+		04A767F01AF1B64C00F77BC7 /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A767ED1AF1B64C00F77BC7 /* searchList.swift */; };
 		04a027d70dbc2186a54cf8ed /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03991A9C55BA0061A42B /* ParseUI.framework */; };
 		04ddb60698e30fadebaef229 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138751ACB8FF2003ABA42 /* CoreText.framework */; };
 		06ae9a2964494be62276675c /* prefer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF951AC65EFB00C797D8 /* prefer.swift */; };
@@ -28,7 +34,6 @@
 		1dcd50a5f807d48ae434f17b /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655A1AA921FB000DAE6B /* PaymentViewController.swift */; };
 		1f232fec896334ae96af84c7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD138781ACB8FF2003ABA42 /* OpenGLES.framework */; };
 		200f12834dc9de730349c0d2 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065451AA92154000DAE6B /* Driver.swift */; };
-		203b06182ac5f656eebdbb99 /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF931AC658C300C797D8 /* searchList.swift */; };
 		2443cf283d98e49cc67b9987 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA61AA50960007A8179 /* GoogleOpenSource.framework */; };
 		25306473824c337eebe6a230 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037B1A9C55270061A42B /* StoreKit.framework */; };
 		26a622106477737b77d19db5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB962D0C1A927055007D059D /* AppDelegate.swift */; };
@@ -81,7 +86,6 @@
 		9cdae5967efc260fe0f6c6c5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03961A9C55BA0061A42B /* Parse.framework */; };
 		9d95be9eba7801b10cc4e4c4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */; };
 		D540DF921AC657FC00C797D8 /* searchPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF911AC657FC00C797D8 /* searchPeople.swift */; };
-		D540DF941AC658C300C797D8 /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF931AC658C300C797D8 /* searchList.swift */; };
 		D540DF961AC65EFB00C797D8 /* prefer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF951AC65EFB00C797D8 /* prefer.swift */; };
 		D59C071B1AA5147F00F4AB93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */; };
 		DB0C36691AB20A530011B520 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C36681AB20A530011B520 /* GetStartedViewController.swift */; };
@@ -169,7 +173,6 @@
 		F58BBE381AD5CD320087BF5A /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB962D0E1A927055007D059D /* PreferencesViewController.swift */; };
 		F58BBE3A1AD5CD3E0087BF5A /* UserActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C366A1AB600240011B520 /* UserActivityViewController.swift */; };
 		F58BBE3B1AD5CD420087BF5A /* searchPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF911AC657FC00C797D8 /* searchPeople.swift */; };
-		F58BBE3C1AD5CD490087BF5A /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF931AC658C300C797D8 /* searchList.swift */; };
 		F58BBE3D1AD5CD560087BF5A /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA61AA50960007A8179 /* GoogleOpenSource.framework */; };
 		F58BBE3E1AD5CD590087BF5A /* GoogleWalletSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB128BA71AA50960007A8179 /* GoogleWalletSDK.bundle */; };
 		F58BBE3F1AD5CD5C0087BF5A /* GoogleWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128BA81AA50960007A8179 /* GoogleWalletSDK.framework */; };
@@ -239,7 +242,6 @@
 		d397b07353b56ef07768965d /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C36681AB20A530011B520 /* GetStartedViewController.swift */; };
 		d688c2f0eeb7ad364c351d44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */; };
 		dc8626df0c7f7bf12edd57b0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03791A9C55270061A42B /* QuartzCore.framework */; };
-		dcfe91b406ce96b42853012c /* searchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540DF931AC658C300C797D8 /* searchList.swift */; };
 		df77c4e39f6cbcdb107b8087 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E037A1A9C55270061A42B /* Security.framework */; };
 		e1ee0dd57a5843e25a45ee9c /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03771A9C55260061A42B /* CoreLocation.framework */; };
 		e2a9ad2032598b77ea044ad3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */; };
@@ -267,9 +269,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfoViewController.swift; sourceTree = "<group>"; };
+		04A767ED1AF1B64C00F77BC7 /* searchList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchList.swift; sourceTree = "<group>"; };
 		D5310F011AA7E80A003B9F64 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		D540DF911AC657FC00C797D8 /* searchPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchPeople.swift; sourceTree = "<group>"; };
-		D540DF931AC658C300C797D8 /* searchList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchList.swift; sourceTree = "<group>"; };
 		D540DF951AC65EFB00C797D8 /* prefer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = prefer.swift; sourceTree = "<group>"; };
 		D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB0C36681AB20A530011B520 /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
@@ -531,6 +534,8 @@
 		DB50653F1AA920F7000DAE6B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				04A767ED1AF1B64C00F77BC7 /* searchList.swift */,
+				04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */,
 				DBFC60731A9ABBCF001BE648 /* HomeViewController.swift */,
 				DB0C36681AB20A530011B520 /* GetStartedViewController.swift */,
 				D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */,
@@ -543,7 +548,6 @@
 				F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */,
 				DB0C366A1AB600240011B520 /* UserActivityViewController.swift */,
 				D540DF911AC657FC00C797D8 /* searchPeople.swift */,
-				D540DF931AC658C300C797D8 /* searchList.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -896,9 +900,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9d95be9eba7801b10cc4e4c4 /* SignupViewController.swift in Sources */,
+				04A767EB1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				0b3f40f5341d2559326193a4 /* Notification.swift in Sources */,
 				26c8943097badfa78902e960 /* UserActivityViewController.swift in Sources */,
-				203b06182ac5f656eebdbb99 /* searchList.swift in Sources */,
 				af8f0dd56676d6b3b69d3dce /* Driver.swift in Sources */,
 				63d3c28292bb5d18d8b6a9de /* GoogleMapsModel.swift in Sources */,
 				822a66cc3c1c348ade63b5b2 /* PaymentViewController.swift in Sources */,
@@ -912,6 +916,7 @@
 				5fd978976cb7670ad5e84e10 /* PreferencesViewController.swift in Sources */,
 				49aea9bd8eb8373143fb8e86 /* prefer.swift in Sources */,
 				65941a5f20996a49d82c4440 /* searchPeople.swift in Sources */,
+				04A767EF1AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				b888e3569383ec3f8067ee67 /* AppDelegate.swift in Sources */,
 				d397b07353b56ef07768965d /* GetStartedViewController.swift in Sources */,
 				f694f6b2525a4da38944dc54 /* Login.swift in Sources */,
@@ -930,9 +935,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ca5f91167c347e97fc8ec673 /* SignupViewController.swift in Sources */,
+				04A767EC1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				62a919a197a3eaffc63e07f6 /* Notification.swift in Sources */,
 				83f31a75cbe8f0a42e5f2fec /* UserActivityViewController.swift in Sources */,
-				dcfe91b406ce96b42853012c /* searchList.swift in Sources */,
 				200f12834dc9de730349c0d2 /* Driver.swift in Sources */,
 				5454d8afb8a8c1825c807aec /* GoogleMapsModel.swift in Sources */,
 				1dcd50a5f807d48ae434f17b /* PaymentViewController.swift in Sources */,
@@ -946,6 +951,7 @@
 				ffeee5c1675cb885269212dc /* PreferencesViewController.swift in Sources */,
 				06ae9a2964494be62276675c /* prefer.swift in Sources */,
 				37a2630152cb20a1d15616f8 /* searchPeople.swift in Sources */,
+				04A767F01AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				26a622106477737b77d19db5 /* AppDelegate.swift in Sources */,
 				9c0bc3cfe2e32a756683f1a6 /* GetStartedViewController.swift in Sources */,
 				b264e5695b6e7f1e78b36bcf /* Login.swift in Sources */,
@@ -964,9 +970,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB48B5E91AAC0573005A04D0 /* SignupViewController.swift in Sources */,
+				04A767EA1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				DB50654C1AA92154000DAE6B /* Notification.swift in Sources */,
 				DB0C366B1AB600240011B520 /* UserActivityViewController.swift in Sources */,
-				D540DF941AC658C300C797D8 /* searchList.swift in Sources */,
 				DB50654B1AA92154000DAE6B /* Driver.swift in Sources */,
 				DBD0C1B01AA9732800150414 /* GoogleMapsModel.swift in Sources */,
 				DB50655E1AA921FB000DAE6B /* PaymentViewController.swift in Sources */,
@@ -980,6 +986,7 @@
 				DB962D0F1A927055007D059D /* PreferencesViewController.swift in Sources */,
 				D540DF961AC65EFB00C797D8 /* prefer.swift in Sources */,
 				D540DF921AC657FC00C797D8 /* searchPeople.swift in Sources */,
+				04A767EE1AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				DB962D0D1A927055007D059D /* AppDelegate.swift in Sources */,
 				DB0C36691AB20A530011B520 /* GetStartedViewController.swift in Sources */,
 				DBA92FCC1ACA73C100917454 /* Login.swift in Sources */,
@@ -999,7 +1006,6 @@
 			files = (
 				F58BBE2F1AD5CD060087BF5A /* SearchViewController.swift in Sources */,
 				F58BBE331AD5CD130087BF5A /* Driver.swift in Sources */,
-				F58BBE3C1AD5CD490087BF5A /* searchList.swift in Sources */,
 				DBA19B0D1AEF69F100F9A4B0 /* SwiftyJSON.swift in Sources */,
 				F58BBE341AD5CD160087BF5A /* Passenger.swift in Sources */,
 				F58BBE2B1AD5CC580087BF5A /* LoginViewController.swift in Sources */,

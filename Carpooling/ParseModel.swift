@@ -24,7 +24,7 @@ class ParseModel {
         Parser = []
     }
     
-    func uploadProfileImage( file : PFFile, emailRetrieved: String, age : String, username : String){
+    func uploadProfileImage( file : PFFile, emailRetrieved: String, age : String, username : String, password : String){
         
         var objectid : String!
         
@@ -44,49 +44,36 @@ class ParseModel {
                         var email : AnyObject = object.valueForKey("user_email")!
                         var emailPassed  = email as String
                         println("retirver id " + emailPassed)
-                       
+                        
                         if (emailRetrieved == emailPassed){
                             objectid  = object.objectId
-                             println(objectid)
+                            println(objectid)
+                            user.getObjectInBackgroundWithId(objectid){
+                                (edit_user: PFObject?, error: NSError?) -> Void in
+                                if error != nil {
+                                    println(error)
+                                } else if let  edit_user = edit_user {
+                                    println("inside")
+                                    edit_user["image"] = file
+                                    edit_user["age"] =  age
+                                    edit_user["user_email"] = username
+                                    edit_user["password"] = password
+                                    print (age, username, password)
+                                    edit_user.saveInBackground()
+                                }
+                            }
+                            
                         }
-                    }}}}
-        
-        
-        var user1 = PFQuery(className: "User")
-        user1.getObjectInBackgroundWithId(objectid){
-           (edit_user: PFObject?, error: NSError?) -> Void in
-//            if error != nil {
-//                println(error)
-//            } else if let  edit_user = edit_user {
-                println("inside")
-               // let image = edit_user["image"] as PFFile
-               // let age = edit_user["age"] as  String
-               // let username = edit_user["user_email"] as String
-               // print (age, username)
-                //edit_user.saveInBackground()
+                    }
+                }
             }
-        
-        
-      
-        //new_user["gender"] = gender{
-        
-//        
-//        new_user.saveInBackgroundWithBlock {
-//            (success: Bool, error: NSError!) -> Void in
-//            if (success) {
-//                // The object has been saved.
-//                print("Success foto upload")
-//                
-//            } else {
-//                // There was a problem, check error.description
-//                print("error")
-//            }
-//        }
-//        
-        
-        
+            
+            
+            
+        }
         
     }
+    
     
 
     
