@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class UserProfileInfoViewController: UIViewController {
+class UserProfileInfoViewController: UIViewController, UITextViewDelegate {
 
       
     var usernameTable : [String]!
@@ -33,37 +33,65 @@ class UserProfileInfoViewController: UIViewController {
     
     @IBOutlet weak var test: UILabel!
     
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet  var charRemainingLabel: UILabel! = UILabel()
+    
+    @IBOutlet weak var userProfileNameLabel: UILabel!
+    @IBAction func sendNotification(sender: AnyObject) {
+        
+        // look into this for the notification docs to learn whether the installation is set to a particular object
+        
+        let message = textView.text
+        var data = [ "title": "Some Title",
+            "alert": message]
+        
+        var userQuery: PFQuery = PFInstallation.query()
+        //var userQuery: PFQuery = PFUser.query()
+        userQuery.whereKey("channels", equalTo: "channelName")
+        userQuery.whereKey("objectId", equalTo: "SS9zXFLAdb")
+        
+        //query.whereKey("user_email", equalTo: userQuery)
+        
+        var push: PFPush = PFPush()
+        push.setQuery(userQuery)
+        push.setData(data)
+        push.sendPushInBackground()
+        //        let push = PFPush()
+        //        push.setChannel("Giants")
+        //        push.setMessage(textView.text)
+        //        push.sendPushInBackground()
+        
+        
+    }
+    
+    func textView(textView: UITextView!,
+        shouldChangeTextInRange range: NSRange,
+        replacementText text: String!) -> Bool{
+            
+            var newLength:Int = (textView.text as NSString).length + (text as NSString).length - range.length
+            var remainingChar:Int = 140 - newLength
+            
+            charRemainingLabel.text = "\(remainingChar)"
+            
+            return (newLength > 140) ? false : true
+    }
+    
+    
+    
+    
+
+    
   
-//    func loadImageFromParse () {
-//        
-//        var query = PFQuery(className:"User")
-//        query.whereKey("objectId", equalTo:"lCfdnErgCY")
-//        query.findObjectsInBackgroundWithBlock {
-//            (objects: [AnyObject]!, error: NSError!) -> Void in
-//            if error == nil {
-//                println("Successfully retrieved \(objects.count) records.")
-//                for object in objects {
-//                    let userImageFile = object["image"] as PFFile!
-//                    userImageFile.getDataInBackgroundWithBlock {
-//                        (imageData: NSData!, error: NSError!) -> Void in
-//                        if error == nil {
-//                            if let imageData = imageData{
-//                                let image = UIImage(data: imageData)
-//                                println(image)
-//                                
-//                            }
-//                            
-//                        }
-//                    }
-//                }
-//                
-//            } else {
-//                NSLog("Error: %@ %@", error, error.userInfo!)
-//            }
-//        }
-//    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.userProfileNameLabel.text = user_email
+        textView.layer.borderColor = UIColor.blackColor().CGColor
+        textView.layer.borderWidth = 0.5
+        textView.layer.cornerRadius = 5
+        textView.delegate = self
+        
+        textView.becomeFirstResponder()
+
         println("in the user profile")
          println(user_email)
         
