@@ -1361,14 +1361,6 @@
                                     <segue destination="PWT-Rz-ubN" kind="presentation" identifier="UserActivity_Segue" id="coy-1M-CYD"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-qq-f8F">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="47" y="411" width="123" height="30"/>
-                                </variation>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxB-vx-KfA">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1444,6 +1436,19 @@
                                     <action selector="RoleSegment:" destination="Khk-f6-GAU" eventType="valueChanged" id="Xvv-m7-7Ww"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpS-Ix-jr6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="search">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="582" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="search:" destination="Khk-f6-GAU" eventType="touchUpInside" id="3ka-ud-FD1"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FnO-3k-mBg">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1468,26 +1473,20 @@
                                     <rect key="frame" x="206" y="511" width="123" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpS-Ix-jr6">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="search">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-qq-f8F">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="169" y="582" width="46" height="30"/>
+                                    <rect key="frame" x="47" y="411" width="123" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="search:" destination="Khk-f6-GAU" eventType="touchUpInside" id="3ka-ud-FD1"/>
-                                </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.3361601702" green="0.40205031149999998" blue="0.61736505679999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ylb-48-Sat"/>
                                 <exclude reference="iFM-gg-J9L"/>
-                                <exclude reference="LOa-qq-f8F"/>
                                 <exclude reference="MxB-vx-KfA"/>
                                 <exclude reference="FsG-1I-Nog"/>
                                 <exclude reference="SJ1-aU-Wga"/>
@@ -1496,17 +1495,17 @@
                                 <exclude reference="zDr-CM-UtC"/>
                                 <exclude reference="8bC-J5-mDh"/>
                                 <exclude reference="8sF-OR-nXC"/>
+                                <exclude reference="vpS-Ix-jr6"/>
                                 <exclude reference="FnO-3k-mBg"/>
                                 <exclude reference="qEV-M8-e1m"/>
                                 <exclude reference="99J-3y-DEZ"/>
-                                <exclude reference="vpS-Ix-jr6"/>
+                                <exclude reference="LOa-qq-f8F"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ylb-48-Sat"/>
                                 <include reference="iFM-gg-J9L"/>
-                                <include reference="LOa-qq-f8F"/>
                                 <include reference="MxB-vx-KfA"/>
                                 <include reference="FsG-1I-Nog"/>
                                 <include reference="SJ1-aU-Wga"/>
@@ -1515,10 +1514,11 @@
                                 <include reference="zDr-CM-UtC"/>
                                 <include reference="8bC-J5-mDh"/>
                                 <include reference="8sF-OR-nXC"/>
+                                <include reference="vpS-Ix-jr6"/>
                                 <include reference="FnO-3k-mBg"/>
                                 <include reference="qEV-M8-e1m"/>
                                 <include reference="99J-3y-DEZ"/>
-                                <include reference="vpS-Ix-jr6"/>
+                                <include reference="LOa-qq-f8F"/>
                             </mask>
                         </variation>
                     </view>
