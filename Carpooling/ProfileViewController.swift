@@ -79,7 +79,7 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
         let imageData = UIImageJPEGRepresentation(image, 0.05)
         print(imageData)
         imageProfile = PFFile(name:"image.jpg", data:imageData)
-        
+        imageView.image = image
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -131,14 +131,14 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
         print(age1)
         var  username1 = self.username.text
         var password1 = self.newPassword.text
-        var gender1: String!
+        var gender1: [String]!
         if ( self.temp == 1 ) {
-            gender1 = "Male"
+            gender1 = ["Male"]
         }
         else if ( self.temp == 2 ) {
-            gender1 = "Female"        }
+            gender1 = ["Female"]        }
         else if ( self.temp == 3 ) {
-            gender1 = "Unspecified"
+            gender1 = ["Unspecified"]
             
         }
         if (self.reenterPassword.text != newPassword.text){
@@ -175,7 +175,7 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
                             }
                             else {
                                 
-                                self.ParseData.uploadProfileImage(self.imageProfile, emailRetrieved :emailPassed , age: self.age.text , username: self.username.text, password : self.newPassword.text)
+                                self.ParseData.uploadProfileImage(self.imageProfile, emailRetrieved :emailPassed , age: self.age.text , username: self.username.text, password : self.newPassword.text, gender : gender1)
                             }
                     }
                 }
