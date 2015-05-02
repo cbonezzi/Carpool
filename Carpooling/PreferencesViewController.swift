@@ -198,18 +198,21 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
             let minage = self.min_age.text;
             let maxage = self.max_age.text;
             
-            if let match = numoc.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
-                if let match = lugg.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
-                    if let match = minage.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
-                        if let match = maxage.rangeOfString("^[0-9].$", options: .RegularExpressionSearch) {
+            if let match = numoc.rangeOfString("^[0-9]*$", options: .RegularExpressionSearch) {
+                if let match = lugg.rangeOfString("^[0-9]*$", options: .RegularExpressionSearch) {
+                    if let match = minage.rangeOfString("^[0-9]*$", options: .RegularExpressionSearch) {
+                        if let match = maxage.rangeOfString("^[0-9]*$", options: .RegularExpressionSearch) {
                         } else {
                             self.displayMyAlertMessage4();
+                            return;
                         }
                     } else {
                         self.displayMyAlertMessage3();
+                        return;
                     }
                 } else {
                     self.displayMyAlertMessage2();
+                    return;
                 }
             } else {
                 self.displayMyAlertMessage1();

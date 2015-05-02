@@ -15,8 +15,10 @@ var stuff : ProfileViewController!
 var currentUser : CurrentUser!
 var loginUser : LoginUser!
 var pUser : PUser!
+var alert = UIAlertView(title: "Alert", message: "Sorry, that combination does not exist.", delegate: nil, cancelButtonTitle: "OK")
 
 class ParseModel {
+    
     
     var Parser : [PFQuery]
     
@@ -24,7 +26,7 @@ class ParseModel {
         Parser = []
     }
     
-    func uploadProfileImage( file : PFFile, emailRetrieved: String, age : String, username : String, password : String){
+    func uploadProfileImage( file : PFFile, emailRetrieved: String, age : String, username : String, password : String, gender : [String]){
         
         var objectid : String!
         
@@ -55,8 +57,10 @@ class ParseModel {
                                 } else if let  edit_user = edit_user {
                                     println("inside")
                                     edit_user["image"] = file
+                                    //if (username.isEmpty | username == "optional") {
                                     edit_user["age"] =  age
                                     edit_user["user_email"] = username
+                                    edit_user["gender"] = gender
                                     edit_user["password"] = password
                                     print (age, username, password)
                                     edit_user.saveInBackground()
@@ -223,15 +227,21 @@ class ParseModel {
                                 //this is used for closure
                                 completion(user: loginUser)
                                 
+                            } else {
+                                alert.show();
                             }
                         }
-                            
                             
                         else {
                             // Log details of the failure
                             println("Error: \(error) \(error.userInfo!)")
                             //self.displayMyAlertMessage("Invalid Username!!");
                         }
+                        
+                    }
+                    
+                    if(objects.count == 0){
+                        alert.show();
                     }
                     
                     //return User1
