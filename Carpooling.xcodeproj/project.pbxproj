@@ -213,6 +213,9 @@
 		F5CC63B11AE03E4C003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B31AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B41AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
+		FBA5D0361AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */; };
+		FBA5D0371AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */; };
+		FBA5D0381AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */; };
 		a2b686bb1014db6fbe1aed2e /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03971A9C55BA0061A42B /* ParseCrashReporting.framework */; };
 		a47b0d14154508960426c19b /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AB1AA9732800150414 /* FacebookModel.swift */; };
 		a9cdf7d7b3878ba6e19ca78b /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03741A9C55260061A42B /* AudioToolbox.framework */; };
@@ -362,6 +365,7 @@
 		F5CC63A11ADF16AB003F3674 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F5CC63A41ADF1A79003F3674 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipsideViewController.swift; sourceTree = "<group>"; };
+		FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculatorViewController.swift; sourceTree = "<group>"; };
 		e7bb5ec9af6ed5407b292b10 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -548,6 +552,7 @@
 				F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */,
 				DB0C366A1AB600240011B520 /* UserActivityViewController.swift */,
 				D540DF911AC657FC00C797D8 /* searchPeople.swift */,
+				FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -802,11 +807,11 @@
 				ORGANIZATIONNAME = "Software Eng. Proj.";
 				TargetAttributes = {
 					7673658e09c8e9fcf048b5bf = {
-						DevelopmentTeam = PPJS5QNJ9P;
+						DevelopmentTeam = 625732G463;
 					};
 					DB962D061A927055007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = PPJS5QNJ9P;
+						DevelopmentTeam = 625732G463;
 						SystemCapabilities = {
 							com.apple.OMC = {
 								enabled = 1;
@@ -918,6 +923,7 @@
 				65941a5f20996a49d82c4440 /* searchPeople.swift in Sources */,
 				04A767EF1AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				b888e3569383ec3f8067ee67 /* AppDelegate.swift in Sources */,
+				FBA5D0371AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */,
 				d397b07353b56ef07768965d /* GetStartedViewController.swift in Sources */,
 				f694f6b2525a4da38944dc54 /* Login.swift in Sources */,
 				DBA19B0E1AEF69F100F9A4B0 /* SwiftyJSON.swift in Sources */,
@@ -953,6 +959,7 @@
 				37a2630152cb20a1d15616f8 /* searchPeople.swift in Sources */,
 				04A767F01AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				26a622106477737b77d19db5 /* AppDelegate.swift in Sources */,
+				FBA5D0381AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */,
 				9c0bc3cfe2e32a756683f1a6 /* GetStartedViewController.swift in Sources */,
 				b264e5695b6e7f1e78b36bcf /* Login.swift in Sources */,
 				DBA19B0F1AEF69F100F9A4B0 /* SwiftyJSON.swift in Sources */,
@@ -988,6 +995,7 @@
 				D540DF921AC657FC00C797D8 /* searchPeople.swift in Sources */,
 				04A767EE1AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				DB962D0D1A927055007D059D /* AppDelegate.swift in Sources */,
+				FBA5D0361AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */,
 				DB0C36691AB20A530011B520 /* GetStartedViewController.swift in Sources */,
 				DBA92FCC1ACA73C100917454 /* Login.swift in Sources */,
 				DBA19B0C1AEF69F100F9A4B0 /* SwiftyJSON.swift in Sources */,
@@ -1230,7 +1238,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "24a5c339-b375-4693-a74d-37bf34748240";
+				PROVISIONING_PROFILE = "f0e235fa-e409-4989-a59c-84eec228fdd3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Carpooling/Carpooling-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1259,7 +1267,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carpooling/PayPalMobile";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "24a5c339-b375-4693-a74d-37bf34748240";
+				PROVISIONING_PROFILE = "f0e235fa-e409-4989-a59c-84eec228fdd3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1361,7 +1369,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "24a5c339-b375-4693-a74d-37bf34748240";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Carpooling/Carpooling-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1396,7 +1404,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "24a5c339-b375-4693-a74d-37bf34748240";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
