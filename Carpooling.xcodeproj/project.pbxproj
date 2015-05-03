@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0091845424dd63ee028d7279 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03781A9C55260061A42B /* MobileCoreServices.framework */; };
+		045A8D611AF60710007FEE13 /* passwordCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049804FA1AF5B4C300C7967E /* passwordCorrection.swift */; };
+		045A8D621AF60936007FEE13 /* passwordCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049804FA1AF5B4C300C7967E /* passwordCorrection.swift */; };
+		049804FB1AF5B4C400C7967E /* passwordCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049804FA1AF5B4C300C7967E /* passwordCorrection.swift */; };
 		04994936ca8379c6afbe3850 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065441AA92154000DAE6B /* Passenger.swift */; };
 		049b17a5a0f6680a22d5777b /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB48B5E21AAC0042005A04D0 /* LaunchScreen.xib */; };
 		04A767EA1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */; };
@@ -269,6 +272,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049804FA1AF5B4C300C7967E /* passwordCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passwordCorrection.swift; sourceTree = "<group>"; };
 		04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfoViewController.swift; sourceTree = "<group>"; };
 		04A767ED1AF1B64C00F77BC7 /* searchList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchList.swift; sourceTree = "<group>"; };
 		D5310F011AA7E80A003B9F64 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -548,6 +552,7 @@
 				F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */,
 				DB0C366A1AB600240011B520 /* UserActivityViewController.swift */,
 				D540DF911AC657FC00C797D8 /* searchPeople.swift */,
+				049804FA1AF5B4C300C7967E /* passwordCorrection.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045A8D621AF60936007FEE13 /* passwordCorrection.swift in Sources */,
 				9d95be9eba7801b10cc4e4c4 /* SignupViewController.swift in Sources */,
 				04A767EB1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				0b3f40f5341d2559326193a4 /* Notification.swift in Sources */,
@@ -934,6 +940,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045A8D611AF60710007FEE13 /* passwordCorrection.swift in Sources */,
 				ca5f91167c347e97fc8ec673 /* SignupViewController.swift in Sources */,
 				04A767EC1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				62a919a197a3eaffc63e07f6 /* Notification.swift in Sources */,
@@ -982,6 +989,7 @@
 				DBD0C1AF1AA9732800150414 /* FacebookModel.swift in Sources */,
 				DBA19B111AEF6CD100F9A4B0 /* DataManager.swift in Sources */,
 				DBABC97F1A952E9C00CE6497 /* ProfileViewController.swift in Sources */,
+				049804FB1AF5B4C400C7967E /* passwordCorrection.swift in Sources */,
 				DBA19B161AEF704A00F9A4B0 /* AppModel.swift in Sources */,
 				DB962D0F1A927055007D059D /* PreferencesViewController.swift in Sources */,
 				D540DF961AC65EFB00C797D8 /* prefer.swift in Sources */,

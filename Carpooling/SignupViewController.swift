@@ -74,6 +74,8 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
     @IBAction func registerButton(sender: AnyObject) {
         
         var new_user = PFObject(className:"User")
+        var new_user1 = PFObject(className:"Preferences")
+        new_user1 ["user_email"] = registerUsernameTextField.text
         new_user["user_email"] = registerUsernameTextField.text
         new_user["password"] = registerPasswordTextField.text
         new_user.saveInBackgroundWithBlock {
@@ -82,6 +84,14 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
                 // The object has been saved.
             } else {
                 // There was a problem, check error.description
+            }
+        new_user1.saveInBackgroundWithBlock {
+                (success: Bool, error: NSError!) -> Void in
+                if (success) {
+                    println("added in preferences")
+                } else {
+                    // There was a problem, check error.description
+                }
             }
             
             let registerUsername = self.registerUsernameTextField.text;

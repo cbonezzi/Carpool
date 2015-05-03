@@ -22,20 +22,13 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
     var loginStatus : Bool = false
     
     
-    @IBOutlet weak var oldPassword: UITextField!
-    @IBOutlet weak var newPassword: UITextField!
+  
     @IBOutlet var age: UITextField!
     @IBOutlet var username: UITextField!
-    @IBOutlet weak var reenterPassword: UITextField!
-    // alert for passwordMatch
-    var alert = UIAlertView(title: "Alert", message: "password do not match!!", delegate: nil, cancelButtonTitle: "OK")
+      // alert for passwordMatch
+   
     
-    var alert1 = UIAlertView(title: "Alert", message: "Your current password is wrong", delegate: nil, cancelButtonTitle: "OK")
-    
-    @IBAction func gobackPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
-    }
-    
+   
     
     var imageProfile : PFFile!
     
@@ -53,8 +46,7 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
     
     
     
-    
-    @IBAction func uploadImage(sender: AnyObject) {
+        @IBAction func uploadImage(sender: AnyObject) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
             println("buttom captured")
@@ -111,18 +103,11 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
         
     }
     
-    func displayMyAlertMessage()
-    {
-        alert.show()
-        
-    }
     
-    func displayMyAlertMessage1()
-    {
-        alert1.show()
+    @IBAction func chPass(sender: AnyObject) {
         
+  self.performSegueWithIdentifier("passwordChange_Segue", sender: self)
     }
-    
     
     
     @IBAction func Submit(sender: AnyObject) {
@@ -130,8 +115,7 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
         var  age1 = self.age.text
         print(age1)
         var  username1 = self.username.text
-        var password1 = self.newPassword.text
-        var gender1: [String]!
+                var gender1: [String]!
         if ( self.temp == 1 ) {
             gender1 = ["Male"]
         }
@@ -141,52 +125,15 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
             gender1 = ["Unspecified"]
             
         }
-        if (self.reenterPassword.text != newPassword.text){
-            self.displayMyAlertMessage()
-            return
-            
-        }
         
         var emailPassed : String = login![0].email
         
         
-        var user = PFQuery(className:"User")
-        user.whereKey("user_email", equalTo:emailPassed)
-        user.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                // The find succeeded.
-                println("Successfully retrieved \(objects.count)objects")
-                // Do something with the found objects
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        var email : AnyObject = object.valueForKey("user_email")!
-                        var emailRetrieved  = email as String
-                        println("retirver id " + emailPassed)
-                        
-                        if (emailRetrieved == emailPassed){
-                            var password : AnyObject = object.valueForKey("password")!
-                            var passwordRetrieved = password as String
-                            println(passwordRetrieved)
-                            if (self.oldPassword.text != passwordRetrieved){
-                                self.displayMyAlertMessage1()
-                                
-                                
-                            }
-                            else {
-                                
-                                self.ParseData.uploadProfileImage(self.imageProfile, emailRetrieved :emailPassed , age: self.age.text , username: self.username.text, password : self.newPassword.text, gender : gender1)
-                            }
-                    }
-                }
-            }
-         
-            }}}
+        
+        self.ParseData.uploadProfileImage(self.imageProfile, emailRetrieved :emailPassed , age: self.age.text , username: self.username.text, gender : gender1)
+        
     
-    
-    
-    
-    
+    }
     //        var new_user = PFObject(className: "userInfo")
     //
     //        new_user["username"] = username.text
@@ -214,6 +161,10 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
     //            }
     //        }
     
+
+    
+    
+      
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "UserActivity_Segue") {
@@ -222,15 +173,62 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
                 childVC.login = login!
                 println("welcome to userActivity")
             }}
+        if (segue.identifier == "passwordChange_Segue") {
+            var childVC : passwordCorrection = segue.destinationViewController as passwordCorrection
+            if(login != nil){
+                childVC.login = login!
+                println("welcome to userActivity")
+            }
+        }
+}
         
-    }
+        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         println("Profile View Controller !!!!")
-    }
+        var emailPassed : String = login![0].email
+        
+
+        var  age1 = self.age.text
+        print(age1)
+        var  username1 = self.username.text
+        //var password1 = self.newPassword.text
+        var gender1: [String]!
+        var user = PFQuery(className:"User")
+        user.whereKey("user_email", equalTo:emailPassed)
+        user.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects.count)objects")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var email : AnyObject = object.valueForKey("user_email")!
+                        var emailRetrieved  = email as String
+                        println("retirver id " + emailPassed)
+                        
+                        if (emailRetrieved == emailPassed){
+                            var password : AnyObject = object.valueForKey("password")!
+                            var passwordRetrieved = password as String
+                            println(passwordRetrieved)
+                            let userImageFile = object["image"] as PFFile!
+                            userImageFile.getDataInBackgroundWithBlock {
+                                (imageData: NSData!, error: NSError!) -> Void in
+                                if error == nil {
+                                    if let imageData = imageData{
+                                        let image = UIImage(data: imageData)
+                                        println(image)
+                                        self.imageView.image = image
+                                      
+                                    }
+                                }
+                            }}}}}}}
+    
+
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

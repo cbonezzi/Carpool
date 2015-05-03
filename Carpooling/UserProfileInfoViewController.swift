@@ -31,7 +31,9 @@ class UserProfileInfoViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var genderLabel: UILabel!
     
     
-    @IBOutlet weak var test: UILabel!
+    @IBOutlet weak var smokerLabel: UILabel!
+    
+    @IBOutlet weak var musicLabel: UILabel!
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet  var charRemainingLabel: UILabel! = UILabel()
@@ -94,6 +96,44 @@ class UserProfileInfoViewController: UIViewController, UITextViewDelegate {
 
         println("in the user profile")
          println(user_email)
+        var user1 = PFQuery(className:"Preferences")
+        user1.whereKey("user_email", equalTo: user_email)
+        user1.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects.count)objects")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var email : AnyObject = object.valueForKey("user_email")!
+                        var emailRetrieved  = email as String
+                        println("retirver id " + self.user_email)
+                        
+                        if (emailRetrieved == self.user_email){
+                            self.objectid  = object.objectId
+                            println(self.objectid)
+                                var username : AnyObject = object.valueForKey("user_email")!
+                                var usernameRetrieved = username as String
+                                println(usernameRetrieved)
+                            
+                                var smoker : AnyObject = object.valueForKey("Smoker")!
+                                var smokerRetrieved = smoker[0] as String
+                                println(smokerRetrieved)
+                                self.smokerLabel.text = smokerRetrieved
+                                var music : AnyObject = object.valueForKey("music_taste")!
+                                println(music)
+                                var musicRetrieved = music as String
+                                self.musicLabel.text = musicRetrieved
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            
+        
+
         
         //self.loadImageFromParse()
         var user = PFQuery(className:"User")
