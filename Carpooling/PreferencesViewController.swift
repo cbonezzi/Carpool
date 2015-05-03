@@ -48,6 +48,7 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
     var alert2 = UIAlertView(title:"Alert2", message:"Luggage must be a number", delegate : nil , cancelButtonTitle : "OK")
     var alert3 = UIAlertView(title:"Alert3", message:"Min Age must be a number", delegate : nil , cancelButtonTitle : "OK")
     var alert4 = UIAlertView(title:"Alert4", message:"Max Age must be a number", delegate : nil , cancelButtonTitle : "OK")
+    var alert5 = UIAlertView(title:"Alert5", message:"Preferences Updated", delegate : nil , cancelButtonTitle : "OK")
     
     @IBOutlet weak var min_age: UITextField!
     @IBOutlet weak var max_age: UITextField!
@@ -178,6 +179,17 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
         //self.presentViewController(alert, animated: true, completion: nil);
     }
     
+    func displayMyAlertMessage5()
+    {
+        
+        
+        //let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default, handler:nil);
+        
+        alert5.show();
+        
+        //self.presentViewController(alert, animated: true, completion: nil);
+    }
+    
     
     @IBAction func Goback(sender: AnyObject) {
         self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
@@ -193,6 +205,22 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
 
         else {
             
+            var new_pref = PFObject(className:"Preferences")
+            var smokeArray = [smoker]
+            var gendArray = [gender]
+            var roleArray = [role]
+            new_pref["user_email"] = login![0].email
+            new_pref["music_taste"] = self.musicPreferenceTextField.text;
+            new_pref["Smoker"] = smokeArray
+            new_pref["gender"] = gendArray
+            new_pref["role"] = roleArray
+            new_pref["occupants"] = self.NumOfOccupantsTextField.text;
+            new_pref["luggage"] = self.luggageTextField.text;
+            new_pref["GoingTo"] = self.GoingTo.text;
+            new_pref["GoingFrom"] = self.GoingFrom.text;
+            new_pref["min_age"] = self.min_age.text;
+            new_pref["max_age"] = self.max_age.text;
+            
             let numoc = self.NumOfOccupantsTextField.text;
             let lugg = self.luggageTextField.text;
             let minage = self.min_age.text;
@@ -202,6 +230,18 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
                 if let match = lugg.rangeOfString("^[0-9]*$", options: .RegularExpressionSearch) {
                     if let match = minage.rangeOfString("^[0-9]*$", options: .RegularExpressionSearch) {
                         if let match = maxage.rangeOfString("^[0-9]*$", options: .RegularExpressionSearch) {
+                        
+                            new_pref.saveInBackgroundWithBlock {
+                                (success: Bool, error: NSError!) -> Void in
+                                if (success) {
+                                    // The object has been saved.
+                                    self.displayMyAlertMessage5();
+                                } else {
+                                    // There was a problem, check error.description
+                                }
+                            }
+
+                        
                         } else {
                             self.displayMyAlertMessage4();
                             return;
