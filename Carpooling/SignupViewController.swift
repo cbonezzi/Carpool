@@ -130,6 +130,14 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
                 
                 return;
             }
+        
+        new_user.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError!) -> Void in
+            if (success) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
             
             // Alert message to confirm registration
             

@@ -15,8 +15,10 @@ var stuff : ProfileViewController!
 var currentUser : CurrentUser!
 var loginUser : LoginUser!
 var pUser : PUser!
+var alert = UIAlertView(title: "Alert", message: "Sorry, that combination does not exist.", delegate: nil, cancelButtonTitle: "OK")
 
 class ParseModel {
+    
     
     var Parser : [PFQuery]
     
