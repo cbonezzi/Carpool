@@ -18,9 +18,9 @@ class PreferencesViewController: UIViewController , UIAlertViewDelegate  {
     var temp1 = 0
     var temp2 = 0
     var sliderValue = 0
-    var smoker : String = "Yes"
-    var gender : String = " Male"
-    var role : String = "Driver"
+    var smoker : String = ""
+    var gender : String = ""
+    var role : String = ""
     
     var loggedUser1 : LoginUser!
     var loggedUser : CurrentUser!
