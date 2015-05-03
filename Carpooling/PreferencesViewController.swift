@@ -55,7 +55,6 @@ var alert = UIAlertView(title:"Alert", message:"Fields cannot be empty", delegat
     var alert2 = UIAlertView(title:"Alert2", message:"Luggage must be a number", delegate : nil , cancelButtonTitle : "OK")
     var alert3 = UIAlertView(title:"Alert3", message:"Min Age must be a number", delegate : nil , cancelButtonTitle : "OK")
     var alert4 = UIAlertView(title:"Alert4", message:"Max Age must be a number", delegate : nil , cancelButtonTitle : "OK")
-    var alert5 = UIAlertView(title:"Alert5", message:"Preferences Updated", delegate : nil , cancelButtonTitle : "OK")
     
     @IBOutlet weak var min_age: UITextField!
     @IBOutlet weak var max_age: UITextField!

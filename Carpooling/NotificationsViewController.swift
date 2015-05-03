@@ -56,14 +56,6 @@ class NotificationsViewController : UIViewController, UITextViewDelegate  {
             return (newLength > 140) ? false : true
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "UserActivity_Segue") {
-            var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
-            println("welcome to userActivity")
-        }
-        
-    }
-
 
     
     override func viewDidLoad() {

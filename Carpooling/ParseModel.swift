@@ -15,10 +15,8 @@ var stuff : ProfileViewController!
 var currentUser : CurrentUser!
 var loginUser : LoginUser!
 var pUser : PUser!
-var alert = UIAlertView(title: "Alert", message: "Sorry, that combination does not exist.", delegate: nil, cancelButtonTitle: "OK")
 
 class ParseModel {
-    
     
     var Parser : [PFQuery]
     
@@ -241,7 +239,7 @@ class ParseModel {
                         var roledb: AnyObject = object.valueForKey("role")!
                         
                         var datedb: AnyObject = object.valueForKey("Date")!
-                        
+                        println(datedb)
                        // println(datedb)
                         //println(date)
                         // For array to get index value 
