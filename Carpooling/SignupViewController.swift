@@ -13,6 +13,7 @@ import Parse
 class Regex {
     let internalExpression: NSRegularExpression
     let pattern: String
+    var ParseData : ParseModel = ParseModel()
     
     init(_ pattern: String) {
         self.pattern = pattern
@@ -74,8 +75,11 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
     @IBAction func registerButton(sender: AnyObject) {
         
         var new_user = PFObject(className:"User")
+        var new_preference = PFObject(className: "Preferences")
         new_user["user_email"] = registerUsernameTextField.text
         new_user["password"] = registerPasswordTextField.text
+        new_preference["user_email"] = registerUsernameTextField.text
+        //new_user["password"] = registerPasswordTextField.text
             
             let registerUsername = self.registerUsernameTextField.text;
             let registerPassword = self.registerPasswordTextField.text;
@@ -114,17 +118,34 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
                 return;
             }
         
-        new_user.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError!) -> Void in
-            if (success) {
-                // The object has been saved.
-            } else {
-                // There was a problem, check error.description
-            }
+                new_user.saveInBackgroundWithBlock {
+                (success_user: Bool, error: NSError!) -> Void in
+                    //PFFile(name:"image.jpg", data:imageData)
+                    if (success_user) {
+                        // The object has been saved.
+                    } else {
+                        // There was a problem, check error.description
+                    }
+                
+                
+                new_preference.saveInBackgroundWithBlock {
+                    (success_pref: Bool, error: NSError!) -> Void in
+                    if (success_pref) {
+                        
+                    } else {
+                        
+                    }
+                }
+                
+                //var user_name_arr : [String] = Array.self[0]
+                //user_name_arr.append(registerUsername)
+                let currentInstallation = PFInstallation.currentInstallation()
+                currentInstallation.addUniqueObject(registerUsername, forKey:  "Users")
+                currentInstallation.saveInBackground()
             
             // Alert message to confirm registration
             
-            var alert = UIAlertController(title:"Alert", message:"Registration is Succesful!!", preferredStyle: UIAlertControllerStyle.Alert)
+            var alert = UIAlertController(title:"Alert", message:"Registration is Succesful\n Now login and set preferences for your trip.", preferredStyle: UIAlertControllerStyle.Alert)
             
             let ok = UIAlertAction(title: "OK", style:UIAlertActionStyle.Default){ action in
                 self.dismissViewControllerAnimated(true, completion:nil);
@@ -134,20 +155,26 @@ class SignupViewController : UIViewController, UITextFieldDelegate {
             self.presentViewController(alert, animated: true, completion: nil);
             
             
-        }
+            }
         
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green.jpg")!)
         // Do any additional setup after loading the view, typically from a nib.
         
         
         //add try-catch block, move elsewhere, add things to deal with?
-        //self.registerUsernameTextField.delegate = self
-        //self.registerPasswordTextField.delegate = self
-        //self.registerCPasswordTextField.delegate = self
+        registerUsernameTextField.delegate = self
+        registerPasswordTextField.delegate = self
+        registerCPasswordTextField.delegate = self
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+        //return
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {

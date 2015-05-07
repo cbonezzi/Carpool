@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class DistancCalculatorViewController: UIViewController, CLLocationManagerDelegate {
+    
+    // variable to hold the current logged in user
+    var login : [Login]!
 
     @IBOutlet weak var latitude: UILabel!
 
@@ -28,11 +31,20 @@ class DistancCalculatorViewController: UIViewController, CLLocationManagerDelega
     @IBAction func resetDistance(sender: AnyObject) {
         
         startLocation = nil
+        distanceMiles.text = "0"
+        distance.text = "0"
     }
     //var totalAmountDue = 0
     var locationManager: CLLocationManager = CLLocationManager()
     var startLocation: CLLocation!
     
+    @IBAction func backPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("goToUserActivity_segue", sender: self )
+    }
+    
+    @IBAction func payButton(sender: AnyObject) {
+         self.performSegueWithIdentifier("bankRedirect_segue", sender: self)
+    }
     func locationManager(manager: CLLocationManager!,
         didUpdateLocations locations: [AnyObject]!)
     {
@@ -42,13 +54,8 @@ class DistancCalculatorViewController: UIViewController, CLLocationManagerDelega
             latestLocation.coordinate.latitude)
         longitude.text = String(format: "%.4f",
             latestLocation.coordinate.longitude)
-        horizontalAccuracy.text = String(format: "%.4f",
-            latestLocation.horizontalAccuracy)
         altitude.text = String(format: "%.4f",
             latestLocation.altitude)
-        verticalAccuracy.text = String(format: "%.4f",
-            latestLocation.verticalAccuracy)
-        
         
         if startLocation == nil {
             startLocation = latestLocation as CLLocation
@@ -57,8 +64,8 @@ class DistancCalculatorViewController: UIViewController, CLLocationManagerDelega
         var distanceBetween: CLLocationDistance =
         latestLocation.distanceFromLocation(startLocation)
         
-        distanceMiles.text = String(format: "%.2f", distanceBetween * 0.000621371)
-         distance.text = String(format: "%.2f", distanceBetween)
+        distanceMiles.text = String(format: "%.4f", distanceBetween * 0.000621371)
+         distance.text = String(format: "%.4f", distanceBetween)
         
         
         // THIS IS HOW YOU CONVERT A STRING TO DOUBLE
@@ -76,11 +83,23 @@ class DistancCalculatorViewController: UIViewController, CLLocationManagerDelega
             
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "goToUserActivity_segue"){
+            var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
+            childVC.login = login!
+        }
+        if (segue.identifier == "bankRedirect_segue"){
+            var childVC : PayViewController = segue.destinationViewController as PayViewController
+            childVC.login = login
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green.jpg")!)
         
-        
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()

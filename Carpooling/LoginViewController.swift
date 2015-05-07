@@ -76,10 +76,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green.jpg")!)
         // Do any additional setup after loading the view, typically from a nib.
         
-        //self.loginUsernameTextField.delegate = self
-        //self.loginPasswordTextField.delegate = self
+        loginUsernameTextField.delegate = self
+        loginPasswordTextField.delegate = self
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+        //return
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {

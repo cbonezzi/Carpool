@@ -103,6 +103,10 @@
 		DB50655D1AA921FB000DAE6B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5065591AA921FB000DAE6B /* SearchViewController.swift */; };
 		DB50655E1AA921FB000DAE6B /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655A1AA921FB000DAE6B /* PaymentViewController.swift */; };
 		DB50655F1AA921FB000DAE6B /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50655B1AA921FB000DAE6B /* NotificationsViewController.swift */; };
+		DB5C97CF1AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C97CE1AF6E7A900E4FD16 /* passwordCorrection.swift */; };
+		DB5C97D01AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C97CE1AF6E7A900E4FD16 /* passwordCorrection.swift */; };
+		DB5C97D11AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C97CE1AF6E7A900E4FD16 /* passwordCorrection.swift */; };
+		DB5C97D21AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C97CE1AF6E7A900E4FD16 /* passwordCorrection.swift */; };
 		DB5E037D1A9C55270061A42B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03741A9C55260061A42B /* AudioToolbox.framework */; };
 		DB5E037E1A9C55270061A42B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03751A9C55260061A42B /* CFNetwork.framework */; };
 		DB5E037F1A9C55270061A42B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03761A9C55260061A42B /* CoreGraphics.framework */; };
@@ -145,6 +149,10 @@
 		DBACA7ED1A9CD4FC0072FA53 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBACA7EC1A9CD4FC0072FA53 /* Bolts.framework */; };
 		DBACA7F01A9CE6710072FA53 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBACA7EE1A9CE6710072FA53 /* GoogleMaps.bundle */; };
 		DBACA7F11A9CE6710072FA53 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBACA7EF1A9CE6710072FA53 /* GoogleMaps.framework */; };
+		DBC81C9B1AF7420A00A217ED /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC81C9A1AF7420A00A217ED /* LocationInfo.swift */; };
+		DBC81C9C1AF7420A00A217ED /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC81C9A1AF7420A00A217ED /* LocationInfo.swift */; };
+		DBC81C9D1AF7420A00A217ED /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC81C9A1AF7420A00A217ED /* LocationInfo.swift */; };
+		DBC81C9E1AF7420A00A217ED /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC81C9A1AF7420A00A217ED /* LocationInfo.swift */; };
 		DBD0C1AF1AA9732800150414 /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AB1AA9732800150414 /* FacebookModel.swift */; };
 		DBD0C1B01AA9732800150414 /* GoogleMapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AC1AA9732800150414 /* GoogleMapsModel.swift */; };
 		DBD0C1B11AA9732800150414 /* GoogleWalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AD1AA9732800150414 /* GoogleWalletModel.swift */; };
@@ -214,14 +222,56 @@
 		F5CC63B11AE03E4C003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B31AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
 		F5CC63B41AE03E50003F3674 /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */; };
-		FBA560AB1AF53B8D005AC13A /* tumblr_m.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA560AA1AF53B8D005AC13A /* tumblr_m.jpg */; };
+		FB18C2F21AF5E15000A075FD /* ProjectWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18C2F11AF5E15000A075FD /* ProjectWebViewVC.swift */; };
+		FB18C2F31AF5E15000A075FD /* ProjectWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18C2F11AF5E15000A075FD /* ProjectWebViewVC.swift */; };
+		FB18C2F41AF5E15000A075FD /* ProjectWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18C2F11AF5E15000A075FD /* ProjectWebViewVC.swift */; };
+		FB759FD11AF633C600310F3D /* FinalBG11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD01AF633C500310F3D /* FinalBG11.jpg */; };
+		FB759FD21AF633C600310F3D /* FinalBG11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD01AF633C500310F3D /* FinalBG11.jpg */; };
+		FB759FD31AF633C600310F3D /* FinalBG11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD01AF633C500310F3D /* FinalBG11.jpg */; };
+		FB759FD51AF6348E00310F3D /* FinalBG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD41AF6348E00310F3D /* FinalBG1.jpg */; };
+		FB759FD61AF6348E00310F3D /* FinalBG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD41AF6348E00310F3D /* FinalBG1.jpg */; };
+		FB759FD71AF6348E00310F3D /* FinalBG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD41AF6348E00310F3D /* FinalBG1.jpg */; };
+		FB759FDC1AF6368000310F3D /* FinalBG111.png in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD81AF6368000310F3D /* FinalBG111.png */; };
+		FB759FDD1AF6368000310F3D /* FinalBG111.png in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD81AF6368000310F3D /* FinalBG111.png */; };
+		FB759FDE1AF6368000310F3D /* FinalBG111.png in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD81AF6368000310F3D /* FinalBG111.png */; };
+		FB759FDF1AF6368000310F3D /* FinalBG1111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD91AF6368000310F3D /* FinalBG1111.jpg */; };
+		FB759FE01AF6368000310F3D /* FinalBG1111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD91AF6368000310F3D /* FinalBG1111.jpg */; };
+		FB759FE11AF6368000310F3D /* FinalBG1111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FD91AF6368000310F3D /* FinalBG1111.jpg */; };
+		FB759FE21AF6368000310F3D /* FinalBG11111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FDA1AF6368000310F3D /* FinalBG11111.jpg */; };
+		FB759FE31AF6368000310F3D /* FinalBG11111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FDA1AF6368000310F3D /* FinalBG11111.jpg */; };
+		FB759FE41AF6368000310F3D /* FinalBG11111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FDA1AF6368000310F3D /* FinalBG11111.jpg */; };
+		FB759FE51AF6368000310F3D /* FinalBG111111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FDB1AF6368000310F3D /* FinalBG111111.jpg */; };
+		FB759FE61AF6368000310F3D /* FinalBG111111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FDB1AF6368000310F3D /* FinalBG111111.jpg */; };
+		FB759FE71AF6368000310F3D /* FinalBG111111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB759FDB1AF6368000310F3D /* FinalBG111111.jpg */; };
 		FBA5D0361AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */; };
 		FBA5D0371AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */; };
 		FBA5D0381AF315FC0074E39D /* DistanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */; };
-		FBAA067D1AF4B606009A202C /* bgimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBAA067C1AF4B606009A202C /* bgimage.jpg */; };
-		FBAA067F1AF4B6B7009A202C /* bgimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBAA067E1AF4B6B7009A202C /* bgimage1.jpg */; };
-		FBAA06801AF4B6B7009A202C /* bgimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBAA067E1AF4B6B7009A202C /* bgimage1.jpg */; };
-		FBAA06811AF4B6B7009A202C /* bgimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBAA067E1AF4B6B7009A202C /* bgimage1.jpg */; };
+		FBAA101E1AF62B41004DA0DC /* rsz_12go-back.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAA101D1AF62B41004DA0DC /* rsz_12go-back.png */; };
+		FBAA101F1AF62B41004DA0DC /* rsz_12go-back.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAA101D1AF62B41004DA0DC /* rsz_12go-back.png */; };
+		FBAA10201AF62B41004DA0DC /* rsz_12go-back.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAA101D1AF62B41004DA0DC /* rsz_12go-back.png */; };
+		FBAA10221AF62E14004DA0DC /* road-trip1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBAA10211AF62E14004DA0DC /* road-trip1.jpg */; };
+		FBAA10231AF62E14004DA0DC /* road-trip1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBAA10211AF62E14004DA0DC /* road-trip1.jpg */; };
+		FBAA10241AF62E14004DA0DC /* road-trip1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBAA10211AF62E14004DA0DC /* road-trip1.jpg */; };
+		FBAD91CC1AF5D26A00C4E05E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD91CB1AF5D26A00C4E05E /* PayViewController.swift */; };
+		FBAD91CD1AF5D26A00C4E05E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD91CB1AF5D26A00C4E05E /* PayViewController.swift */; };
+		FBAD91CE1AF5D26A00C4E05E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD91CB1AF5D26A00C4E05E /* PayViewController.swift */; };
+		FBAD91D01AF5D44D00C4E05E /* ClassProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD91CF1AF5D44D00C4E05E /* ClassProjects.swift */; };
+		FBAD91D11AF5D44D00C4E05E /* ClassProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD91CF1AF5D44D00C4E05E /* ClassProjects.swift */; };
+		FBAD91D21AF5D44D00C4E05E /* ClassProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD91CF1AF5D44D00C4E05E /* ClassProjects.swift */; };
+		FBD4800E1AF6AD4600745050 /* BG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD4800C1AF6AD4600745050 /* BG1.jpg */; };
+		FBD4800F1AF6AD4600745050 /* BG3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD4800D1AF6AD4600745050 /* BG3.jpg */; };
+		FBD480131AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD480121AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg */; };
+		FBD480141AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD480121AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg */; };
+		FBD480151AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD480121AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg */; };
+		FBD480171AF6C5FA00745050 /* images2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD480161AF6C5FA00745050 /* images2.jpg */; };
+		FBD480181AF6C5FA00745050 /* images2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD480161AF6C5FA00745050 /* images2.jpg */; };
+		FBD480191AF6C5FA00745050 /* images2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD480161AF6C5FA00745050 /* images2.jpg */; };
+		FBD4801B1AF6C89000745050 /* backgradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD4801A1AF6C89000745050 /* backgradient.jpg */; };
+		FBD4801C1AF6C89000745050 /* backgradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD4801A1AF6C89000745050 /* backgradient.jpg */; };
+		FBD4801D1AF6C89000745050 /* backgradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBD4801A1AF6C89000745050 /* backgradient.jpg */; };
+		FBECC7301AF6CA22005986B6 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBECC72F1AF6CA22005986B6 /* green.jpg */; };
+		FBECC7311AF6CA22005986B6 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBECC72F1AF6CA22005986B6 /* green.jpg */; };
+		FBECC7321AF6CA22005986B6 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBECC72F1AF6CA22005986B6 /* green.jpg */; };
 		a2b686bb1014db6fbe1aed2e /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03971A9C55BA0061A42B /* ParseCrashReporting.framework */; };
 		a47b0d14154508960426c19b /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0C1AB1AA9732800150414 /* FacebookModel.swift */; };
 		a9cdf7d7b3878ba6e19ca78b /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E03741A9C55260061A42B /* AudioToolbox.framework */; };
@@ -300,6 +350,7 @@
 		DB5065591AA921FB000DAE6B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DB50655A1AA921FB000DAE6B /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		DB50655B1AA921FB000DAE6B /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		DB5C97CE1AF6E7A900E4FD16 /* passwordCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passwordCorrection.swift; sourceTree = "<group>"; };
 		DB5E03741A9C55260061A42B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DB5E03751A9C55260061A42B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DB5E03761A9C55260061A42B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -338,6 +389,7 @@
 		DBACA7EC1A9CD4FC0072FA53 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 		DBACA7EE1A9CE6710072FA53 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMapsSDK/GoogleMaps.bundle; sourceTree = "<group>"; };
 		DBACA7EF1A9CE6710072FA53 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = GoogleMapsSDK/GoogleMaps.framework; sourceTree = "<group>"; };
+		DBC81C9A1AF7420A00A217ED /* LocationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
 		DBD0C1AB1AA9732800150414 /* FacebookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookModel.swift; sourceTree = "<group>"; };
 		DBD0C1AC1AA9732800150414 /* GoogleMapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsModel.swift; sourceTree = "<group>"; };
 		DBD0C1AD1AA9732800150414 /* GoogleWalletModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleWalletModel.swift; sourceTree = "<group>"; };
@@ -371,10 +423,24 @@
 		F5CC63A11ADF16AB003F3674 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F5CC63A41ADF1A79003F3674 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F5CC63B01AE03E4C003F3674 /* FlipsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipsideViewController.swift; sourceTree = "<group>"; };
-		FBA560AA1AF53B8D005AC13A /* tumblr_m.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tumblr_m.jpg; sourceTree = "<group>"; };
+		FB18C2F11AF5E15000A075FD /* ProjectWebViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectWebViewVC.swift; sourceTree = "<group>"; };
+		FB759FD01AF633C500310F3D /* FinalBG11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FinalBG11.jpg; sourceTree = "<group>"; };
+		FB759FD41AF6348E00310F3D /* FinalBG1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FinalBG1.jpg; sourceTree = "<group>"; };
+		FB759FD81AF6368000310F3D /* FinalBG111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FinalBG111.png; sourceTree = "<group>"; };
+		FB759FD91AF6368000310F3D /* FinalBG1111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FinalBG1111.jpg; sourceTree = "<group>"; };
+		FB759FDA1AF6368000310F3D /* FinalBG11111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FinalBG11111.jpg; sourceTree = "<group>"; };
+		FB759FDB1AF6368000310F3D /* FinalBG111111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FinalBG111111.jpg; sourceTree = "<group>"; };
 		FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculatorViewController.swift; sourceTree = "<group>"; };
-		FBAA067C1AF4B606009A202C /* bgimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgimage.jpg; sourceTree = "<group>"; };
-		FBAA067E1AF4B6B7009A202C /* bgimage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgimage1.jpg; sourceTree = "<group>"; };
+		FBAA101D1AF62B41004DA0DC /* rsz_12go-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rsz_12go-back.png"; sourceTree = "<group>"; };
+		FBAA10211AF62E14004DA0DC /* road-trip1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "road-trip1.jpg"; sourceTree = "<group>"; };
+		FBAD91CB1AF5D26A00C4E05E /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		FBAD91CF1AF5D44D00C4E05E /* ClassProjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassProjects.swift; sourceTree = "<group>"; };
+		FBD4800C1AF6AD4600745050 /* BG1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG1.jpg; sourceTree = "<group>"; };
+		FBD4800D1AF6AD4600745050 /* BG3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG3.jpg; sourceTree = "<group>"; };
+		FBD480121AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-road-Death-Valley-California-1136x640.jpg"; sourceTree = "<group>"; };
+		FBD480161AF6C5FA00745050 /* images2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images2.jpg; sourceTree = "<group>"; };
+		FBD4801A1AF6C89000745050 /* backgradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgradient.jpg; sourceTree = "<group>"; };
+		FBECC72F1AF6CA22005986B6 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
 		e7bb5ec9af6ed5407b292b10 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -547,10 +613,10 @@
 		DB50653F1AA920F7000DAE6B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DB5C97CE1AF6E7A900E4FD16 /* passwordCorrection.swift */,
 				04A767ED1AF1B64C00F77BC7 /* searchList.swift */,
 				04A767E91AF1B0D000F77BC7 /* UserProfileInfoViewController.swift */,
 				DBFC60731A9ABBCF001BE648 /* HomeViewController.swift */,
-				FBAA067C1AF4B606009A202C /* bgimage.jpg */,
 				DB0C36681AB20A530011B520 /* GetStartedViewController.swift */,
 				D59C071A1AA5147F00F4AB93 /* LoginViewController.swift */,
 				DB48B5E81AAC0573005A04D0 /* SignupViewController.swift */,
@@ -563,6 +629,8 @@
 				DB0C366A1AB600240011B520 /* UserActivityViewController.swift */,
 				D540DF911AC657FC00C797D8 /* searchPeople.swift */,
 				FBA5D0351AF315FC0074E39D /* DistanceCalculatorViewController.swift */,
+				FBAD91CB1AF5D26A00C4E05E /* PayViewController.swift */,
+				FB18C2F11AF5E15000A075FD /* ProjectWebViewVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -612,8 +680,20 @@
 		DB962D091A927055007D059D /* Carpooling */ = {
 			isa = PBXGroup;
 			children = (
-				FBA560AA1AF53B8D005AC13A /* tumblr_m.jpg */,
-				FBAA067E1AF4B6B7009A202C /* bgimage1.jpg */,
+				FBECC72F1AF6CA22005986B6 /* green.jpg */,
+				FBD4801A1AF6C89000745050 /* backgradient.jpg */,
+				FBD480161AF6C5FA00745050 /* images2.jpg */,
+				FBD480121AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg */,
+				FBD4800C1AF6AD4600745050 /* BG1.jpg */,
+				FBD4800D1AF6AD4600745050 /* BG3.jpg */,
+				FB759FD81AF6368000310F3D /* FinalBG111.png */,
+				FB759FD91AF6368000310F3D /* FinalBG1111.jpg */,
+				FB759FDA1AF6368000310F3D /* FinalBG11111.jpg */,
+				FB759FDB1AF6368000310F3D /* FinalBG111111.jpg */,
+				FB759FD41AF6348E00310F3D /* FinalBG1.jpg */,
+				FB759FD01AF633C500310F3D /* FinalBG11.jpg */,
+				FBAA10211AF62E14004DA0DC /* road-trip1.jpg */,
+				FBAA101D1AF62B41004DA0DC /* rsz_12go-back.png */,
 				DB6B87F21AEF2C1C009DA8FE /* images.jpg */,
 				DBDF0E891AEBEE4C00A34ECB /* Carpooling.entitlements */,
 				F5CC638D1ADF14E8003F3674 /* PayPalMobile */,
@@ -710,6 +790,8 @@
 				DB5065451AA92154000DAE6B /* Driver.swift */,
 				DB5065461AA92154000DAE6B /* Notification.swift */,
 				D540DF951AC65EFB00C797D8 /* prefer.swift */,
+				DBC81C9A1AF7420A00A217ED /* LocationInfo.swift */,
+				FBAD91CF1AF5D44D00C4E05E /* ClassProjects.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -823,7 +905,7 @@
 					};
 					DB962D061A927055007D059D = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 625732G463;
+						DevelopmentTeam = PPJS5QNJ9P;
 						SystemCapabilities = {
 							com.apple.OMC = {
 								enabled = 1;
@@ -866,12 +948,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB759FD21AF633C600310F3D /* FinalBG11.jpg in Resources */,
+				FBAA10231AF62E14004DA0DC /* road-trip1.jpg in Resources */,
 				049b17a5a0f6680a22d5777b /* LaunchScreen.xib in Resources */,
+				FB759FD61AF6348E00310F3D /* FinalBG1.jpg in Resources */,
 				ec5a4a1d72a7c457a0483276 /* Main.storyboard in Resources */,
-				FBAA06801AF4B6B7009A202C /* bgimage1.jpg in Resources */,
 				56b1f85f30658438dabda089 /* Images.xcassets in Resources */,
 				ceede026c89166422f8a3fdb /* GoogleMaps.bundle in Resources */,
+				FB759FE61AF6368000310F3D /* FinalBG111111.jpg in Resources */,
+				FB759FE01AF6368000310F3D /* FinalBG1111.jpg in Resources */,
+				FBAA101F1AF62B41004DA0DC /* rsz_12go-back.png in Resources */,
 				8bdfebd220b871b0bc77e777 /* GoogleWalletSDK.bundle in Resources */,
+				FBECC7311AF6CA22005986B6 /* green.jpg in Resources */,
+				FB759FDD1AF6368000310F3D /* FinalBG111.png in Resources */,
+				FBD480141AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg in Resources */,
+				FB759FE31AF6368000310F3D /* FinalBG11111.jpg in Resources */,
+				FBD4801C1AF6C89000745050 /* backgradient.jpg in Resources */,
+				FBD480181AF6C5FA00745050 /* images2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,12 +972,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB759FD31AF633C600310F3D /* FinalBG11.jpg in Resources */,
+				FBAA10241AF62E14004DA0DC /* road-trip1.jpg in Resources */,
 				d688c2f0eeb7ad364c351d44 /* LaunchScreen.xib in Resources */,
+				FB759FD71AF6348E00310F3D /* FinalBG1.jpg in Resources */,
 				0d4dc60d69370da4fe337e72 /* Main.storyboard in Resources */,
-				FBAA06811AF4B6B7009A202C /* bgimage1.jpg in Resources */,
 				7d77ffe1299dd4dce18a41f7 /* Images.xcassets in Resources */,
 				51866ba59e521d4fbc444e11 /* GoogleMaps.bundle in Resources */,
+				FB759FE71AF6368000310F3D /* FinalBG111111.jpg in Resources */,
+				FB759FE11AF6368000310F3D /* FinalBG1111.jpg in Resources */,
+				FBAA10201AF62B41004DA0DC /* rsz_12go-back.png in Resources */,
 				0cbb823ac2d34e06fb903e8b /* GoogleWalletSDK.bundle in Resources */,
+				FBECC7321AF6CA22005986B6 /* green.jpg in Resources */,
+				FB759FDE1AF6368000310F3D /* FinalBG111.png in Resources */,
+				FBD480151AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg in Resources */,
+				FB759FE41AF6368000310F3D /* FinalBG11111.jpg in Resources */,
+				FBD4801D1AF6C89000745050 /* backgradient.jpg in Resources */,
+				FBD480191AF6C5FA00745050 /* images2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,15 +996,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBAA067F1AF4B6B7009A202C /* bgimage1.jpg in Resources */,
-				FBAA067D1AF4B606009A202C /* bgimage.jpg in Resources */,
+				FB759FE21AF6368000310F3D /* FinalBG11111.jpg in Resources */,
+				FBAA10221AF62E14004DA0DC /* road-trip1.jpg in Resources */,
+				FBD4800F1AF6AD4600745050 /* BG3.jpg in Resources */,
+				FB759FDF1AF6368000310F3D /* FinalBG1111.jpg in Resources */,
+				FBD4801B1AF6C89000745050 /* backgradient.jpg in Resources */,
 				DB48B5E61AAC0042005A04D0 /* LaunchScreen.xib in Resources */,
+				FBAA101E1AF62B41004DA0DC /* rsz_12go-back.png in Resources */,
+				FBD480131AF6C55E00745050 /* the-road-Death-Valley-California-1136x640.jpg in Resources */,
+				FB759FD51AF6348E00310F3D /* FinalBG1.jpg in Resources */,
+				FBD4800E1AF6AD4600745050 /* BG1.jpg in Resources */,
+				FB759FD11AF633C600310F3D /* FinalBG11.jpg in Resources */,
 				DB48B5E71AAC0042005A04D0 /* Main.storyboard in Resources */,
+				FB759FDC1AF6368000310F3D /* FinalBG111.png in Resources */,
+				FB759FE51AF6368000310F3D /* FinalBG111111.jpg in Resources */,
 				DB962D141A927056007D059D /* Images.xcassets in Resources */,
+				FBECC7301AF6CA22005986B6 /* green.jpg in Resources */,
+				FBD480171AF6C5FA00745050 /* images2.jpg in Resources */,
 				DBACA7F01A9CE6710072FA53 /* GoogleMaps.bundle in Resources */,
 				DB128BAA1AA50960007A8179 /* GoogleWalletSDK.bundle in Resources */,
 				DB6B87F31AEF2C1C009DA8FE /* images.jpg in Resources */,
-				FBA560AB1AF53B8D005AC13A /* tumblr_m.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,11 +1037,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9d95be9eba7801b10cc4e4c4 /* SignupViewController.swift in Sources */,
+				FBAD91CD1AF5D26A00C4E05E /* PayViewController.swift in Sources */,
 				04A767EB1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				0b3f40f5341d2559326193a4 /* Notification.swift in Sources */,
 				26c8943097badfa78902e960 /* UserActivityViewController.swift in Sources */,
 				af8f0dd56676d6b3b69d3dce /* Driver.swift in Sources */,
 				63d3c28292bb5d18d8b6a9de /* GoogleMapsModel.swift in Sources */,
+				FBAD91D11AF5D44D00C4E05E /* ClassProjects.swift in Sources */,
 				822a66cc3c1c348ade63b5b2 /* PaymentViewController.swift in Sources */,
 				ce72f2d8e71241b900fb7ce2 /* NotificationsViewController.swift in Sources */,
 				7795c610493623facf19abb4 /* LoginViewController.swift in Sources */,
@@ -937,6 +1054,8 @@
 				DBA19B181AEF704A00F9A4B0 /* AppModel.swift in Sources */,
 				5fd978976cb7670ad5e84e10 /* PreferencesViewController.swift in Sources */,
 				49aea9bd8eb8373143fb8e86 /* prefer.swift in Sources */,
+				DBC81C9D1AF7420A00A217ED /* LocationInfo.swift in Sources */,
+				DB5C97D11AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */,
 				65941a5f20996a49d82c4440 /* searchPeople.swift in Sources */,
 				04A767EF1AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				b888e3569383ec3f8067ee67 /* AppDelegate.swift in Sources */,
@@ -945,6 +1064,7 @@
 				f694f6b2525a4da38944dc54 /* Login.swift in Sources */,
 				DBA19B0E1AEF69F100F9A4B0 /* SwiftyJSON.swift in Sources */,
 				34e87f9e7c76e51d4534e9c2 /* Passenger.swift in Sources */,
+				FB18C2F31AF5E15000A075FD /* ProjectWebViewVC.swift in Sources */,
 				1835ac4679e699328b7c3270 /* User.swift in Sources */,
 				56ea49c90e37e8d93839fb4c /* HomeViewController.swift in Sources */,
 				ce98996dc0c60ef295462464 /* ParseModel.swift in Sources */,
@@ -958,11 +1078,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ca5f91167c347e97fc8ec673 /* SignupViewController.swift in Sources */,
+				FBAD91CE1AF5D26A00C4E05E /* PayViewController.swift in Sources */,
 				04A767EC1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				62a919a197a3eaffc63e07f6 /* Notification.swift in Sources */,
 				83f31a75cbe8f0a42e5f2fec /* UserActivityViewController.swift in Sources */,
 				200f12834dc9de730349c0d2 /* Driver.swift in Sources */,
 				5454d8afb8a8c1825c807aec /* GoogleMapsModel.swift in Sources */,
+				FBAD91D21AF5D44D00C4E05E /* ClassProjects.swift in Sources */,
 				1dcd50a5f807d48ae434f17b /* PaymentViewController.swift in Sources */,
 				3cb497873085e0fa7209218b /* NotificationsViewController.swift in Sources */,
 				e2a9ad2032598b77ea044ad3 /* LoginViewController.swift in Sources */,
@@ -973,6 +1095,8 @@
 				DBA19B191AEF704A00F9A4B0 /* AppModel.swift in Sources */,
 				ffeee5c1675cb885269212dc /* PreferencesViewController.swift in Sources */,
 				06ae9a2964494be62276675c /* prefer.swift in Sources */,
+				DBC81C9E1AF7420A00A217ED /* LocationInfo.swift in Sources */,
+				DB5C97D21AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */,
 				37a2630152cb20a1d15616f8 /* searchPeople.swift in Sources */,
 				04A767F01AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				26a622106477737b77d19db5 /* AppDelegate.swift in Sources */,
@@ -981,6 +1105,7 @@
 				b264e5695b6e7f1e78b36bcf /* Login.swift in Sources */,
 				DBA19B0F1AEF69F100F9A4B0 /* SwiftyJSON.swift in Sources */,
 				04994936ca8379c6afbe3850 /* Passenger.swift in Sources */,
+				FB18C2F41AF5E15000A075FD /* ProjectWebViewVC.swift in Sources */,
 				aeab8e50e6367a297084f627 /* User.swift in Sources */,
 				615ed7ead81cc62474fb8f1b /* HomeViewController.swift in Sources */,
 				0ec2c3ff783c3e8890ee172a /* ParseModel.swift in Sources */,
@@ -994,11 +1119,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB48B5E91AAC0573005A04D0 /* SignupViewController.swift in Sources */,
+				FBAD91CC1AF5D26A00C4E05E /* PayViewController.swift in Sources */,
 				04A767EA1AF1B0D000F77BC7 /* UserProfileInfoViewController.swift in Sources */,
 				DB50654C1AA92154000DAE6B /* Notification.swift in Sources */,
 				DB0C366B1AB600240011B520 /* UserActivityViewController.swift in Sources */,
 				DB50654B1AA92154000DAE6B /* Driver.swift in Sources */,
 				DBD0C1B01AA9732800150414 /* GoogleMapsModel.swift in Sources */,
+				FBAD91D01AF5D44D00C4E05E /* ClassProjects.swift in Sources */,
 				DB50655E1AA921FB000DAE6B /* PaymentViewController.swift in Sources */,
 				DB50655F1AA921FB000DAE6B /* NotificationsViewController.swift in Sources */,
 				D59C071B1AA5147F00F4AB93 /* LoginViewController.swift in Sources */,
@@ -1009,6 +1136,8 @@
 				DBA19B161AEF704A00F9A4B0 /* AppModel.swift in Sources */,
 				DB962D0F1A927055007D059D /* PreferencesViewController.swift in Sources */,
 				D540DF961AC65EFB00C797D8 /* prefer.swift in Sources */,
+				DBC81C9B1AF7420A00A217ED /* LocationInfo.swift in Sources */,
+				DB5C97CF1AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */,
 				D540DF921AC657FC00C797D8 /* searchPeople.swift in Sources */,
 				04A767EE1AF1B64C00F77BC7 /* searchList.swift in Sources */,
 				DB962D0D1A927055007D059D /* AppDelegate.swift in Sources */,
@@ -1017,6 +1146,7 @@
 				DBA92FCC1ACA73C100917454 /* Login.swift in Sources */,
 				DBA19B0C1AEF69F100F9A4B0 /* SwiftyJSON.swift in Sources */,
 				DB50654A1AA92154000DAE6B /* Passenger.swift in Sources */,
+				FB18C2F21AF5E15000A075FD /* ProjectWebViewVC.swift in Sources */,
 				DB5065481AA92154000DAE6B /* User.swift in Sources */,
 				DBFC60771A9ABBD0001BE648 /* HomeViewController.swift in Sources */,
 				DBD0C1B21AA9732800150414 /* ParseModel.swift in Sources */,
@@ -1047,10 +1177,12 @@
 				F58BBE291AD5CBBF0087BF5A /* HomeViewController.swift in Sources */,
 				F58BBE381AD5CD320087BF5A /* PreferencesViewController.swift in Sources */,
 				F58BBE3B1AD5CD420087BF5A /* searchPeople.swift in Sources */,
+				DBC81C9C1AF7420A00A217ED /* LocationInfo.swift in Sources */,
 				F58BBE301AD5CD0B0087BF5A /* NotificationsViewController.swift in Sources */,
 				F58BBE2A1AD5CC460087BF5A /* GetStartedViewController.swift in Sources */,
 				F58BBE3A1AD5CD3E0087BF5A /* UserActivityViewController.swift in Sources */,
 				F58BBE351AD5CD1A0087BF5A /* Login.swift in Sources */,
+				DB5C97D01AF6E7A900E4FD16 /* passwordCorrection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1260,7 +1392,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "f0e235fa-e409-4989-a59c-84eec228fdd3";
+				PROVISIONING_PROFILE = "2e34933a-fedc-4543-ac78-5e05937f9878";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Carpooling/Carpooling-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1289,7 +1421,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Carpooling/PayPalMobile";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "f0e235fa-e409-4989-a59c-84eec228fdd3";
+				PROVISIONING_PROFILE = "2e34933a-fedc-4543-ac78-5e05937f9878";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1393,7 +1525,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "24a5c339-b375-4693-a74d-37bf34748240";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Carpooling/Carpooling-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1428,7 +1560,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Carpooling;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "24a5c339-b375-4693-a74d-37bf34748240";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carpooling/Carpooling-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

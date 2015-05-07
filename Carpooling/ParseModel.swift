@@ -15,6 +15,7 @@ var stuff : ProfileViewController!
 var currentUser : CurrentUser!
 var loginUser : LoginUser!
 var pUser : PUser!
+
 var alert = UIAlertView(title: "Alert", message: "Sorry, that combination does not exist.", delegate: nil, cancelButtonTitle: "OK")
 
 class ParseModel {
@@ -26,7 +27,127 @@ class ParseModel {
         Parser = []
     }
     
-    func uploadProfileImage( file : PFFile, emailRetrieved: String, age : String, username : String, password : String, gender : [String]){
+    var alert2 = UIAlertView(title: "Alert", message: "profile Updated!", delegate: nil, cancelButtonTitle: "OK")
+    
+    func displayMyAlertMessage2()
+    {
+        alert2.show()
+        
+    }
+    
+    var alert = UIAlertView(title: "Alert", message: "Password changed!", delegate: nil, cancelButtonTitle: "OK")
+    
+    func displayMyAlertMessage()
+    {
+        alert.show()
+        
+    }
+    var alert1 = UIAlertView(title: "Alert", message: "No user Found", delegate: nil, cancelButtonTitle: "OK")
+    
+    func displayMyAlertMessage1()
+    {
+        alert1.show()
+        
+    }
+    
+    
+    
+    
+    func  changePassword(emailRetrieved: String , password : String){
+        
+        var objectid : String!
+        
+        print("in parse model")
+        
+        // retrieving object id
+        var user = PFQuery(className:"User")
+        user.whereKey("user_email", equalTo:emailRetrieved)
+        user.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects.count)objects")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var email : AnyObject = object.valueForKey("user_email")!
+                        var emailPassed  = email as String
+                        println("retirver id " + emailPassed)
+                        
+                        if (emailRetrieved == emailPassed){
+                            objectid  = object.objectId
+                            println(objectid)
+                            user.getObjectInBackgroundWithId(objectid){
+                                (edit_user: PFObject?, error: NSError?) -> Void in
+                                if error != nil {
+                                    println(error)
+                                } else if let  edit_user = edit_user {
+                                    println("inside")
+                                    
+                                    edit_user["password"] = password
+                                    
+                                    print (password)
+                                    edit_user.saveInBackground()
+                                    self.displayMyAlertMessage()
+                                    
+                                    
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    func uploadImageRegisterUser(file : PFFile, emailRetrieved: String){
+        var objectid : String!
+        
+        print("in parse model")
+        
+        // retrieving object id
+        var user = PFQuery(className:"User")
+        user.whereKey("user_email", equalTo:emailRetrieved)
+        user.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects.count)objects")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var email : AnyObject = object.valueForKey("user_email")!
+                        var emailPassed  = email as String
+                        println("retirver id " + emailPassed)
+                        
+                        if (emailRetrieved == emailPassed){
+                            objectid  = object.objectId
+                            println(objectid)
+                            user.getObjectInBackgroundWithId(objectid){
+                                (edit_user: PFObject?, error: NSError?) -> Void in
+                                if error != nil {
+                                    println(error)
+                                } else if let  edit_user = edit_user {
+                                    println("inside")
+                                    edit_user["image"] = file
+                                    edit_user.saveInBackground()
+                                    //self.displayMyAlertMessage2()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func uploadProfileImage( file : PFFile, emailRetrieved: String, age : String, /*username : String,*/ gender : [String]){
+        
+        
         
         var objectid : String!
         
@@ -57,32 +178,78 @@ class ParseModel {
                                 } else if let  edit_user = edit_user {
                                     println("inside")
                                     edit_user["image"] = file
-                                    //if (username.isEmpty | username == "optional") {
+                                    
+                                    
                                     edit_user["age"] =  age
-                                    edit_user["user_email"] = username
+                                    edit_user["user_email"] = emailRetrieved
                                     edit_user["gender"] = gender
-                                    edit_user["password"] = password
-                                    print (age, username, password)
+                                    
+                                    print (age, emailRetrieved)
                                     edit_user.saveInBackground()
+                                    self.displayMyAlertMessage2()
                                 }
                             }
-                            
                         }
                     }
                 }
             }
-            
-            
-            
         }
-        
     }
     
     
-
+    func  uploadDataPreferences(email : String , minAge : String, maxAge: String, music: String, smoker : [String], date : String , occupants : String , luggage : String, gender : [String], role : [String], goingFrom: String , goingTo : String, fromState: String, toState: String){
+        
+        var user = PFQuery(className:"Preferences")
+        user.whereKey("user_email", equalTo:email)
+        user.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("in parse" + email)
+                println("Successfully retrieved \(objects.count)objects")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var email : AnyObject = object.valueForKey("user_email")!
+                        var emailPassed  = email as String
+                        println("retirver id " + emailPassed)
+                        
+                        if (email as NSString == emailPassed){
+                            println("uploading data")
+                            println(date)
+                            object["music_taste"] = music
+                            object["Smoker"] = smoker
+                            object["gender"] = gender
+                            object["GoingFrom"] = goingFrom
+                            object["GoingTo"] = goingTo
+                            object["role"] = role
+                            object["occupants"] = occupants
+                            object["luggage"] = luggage
+                            object["Date"] = date
+                            object["max_age"] = maxAge
+                            object["min_age"] = minAge
+                            object["fromState"] = fromState
+                            object["toState"] = toState
+                            
+                            
+                            
+                            
+                            object.saveInBackgroundWithBlock {
+                                (success: Bool, error: NSError!) -> Void in
+                                if (success) {
+                                    println("added alll in preferences")
+                                } else {
+                                    // There was a problem, check error.description
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
-
-    func RetrieveDataForSearch(numOccupant: String, numLuggage: String , Role1 : String , GoingFrom: String, GoingTo: String, completion: (user: Prefer) -> Void) {
+    func RetrieveDataForSearch(numOccupant: String, numLuggage: String , Role1 : String , GoingFrom: String, GoingTo: String, date: String , fromState : String,  toState : String , completion : (user: Prefer) -> Void) {
         var index: Int
         var user0: Prefer!
         var list: Prefer = Prefer()
@@ -104,14 +271,22 @@ class ParseModel {
                         //println(lug)
                         var sou: AnyObject = object.valueForKey("GoingFrom")!
                         //println(sou)
-
-                        var des: AnyObject = object.valueForKey("GoingTo")!
+                        var des : AnyObject = object.valueForKey("GoingTo")!
+                        
+                        var state1: AnyObject = object.valueForKey("fromState")!
+                        
+                        var state2: AnyObject = object.valueForKey("toState")!
                         //println(des)
-
+                        
                         var roledb: AnyObject = object.valueForKey("role")!
-                        // For array to get index value 
+                        
+                        var datedb: AnyObject = object.valueForKey("Date")!
+                        println(datedb)
+                        // println(datedb)
+                        //println(date)
+                        // For array to get index value
                         var role : String = roledb[0] as String!
-                        println(roledb)
+                        //println(roledb)
                         if  (occ as? NSObject == numOccupant){
                             println(occ)
                             if (lug as? NSObject == numLuggage){
@@ -120,27 +295,45 @@ class ParseModel {
                                     
                                     if (des as? NSObject == GoingTo){
                                         
-                                        if (role  == Role1){
+                                        if (state1 as? NSObject == fromState){
+                                            
+                                            if (state2 as? NSObject == toState){
+
+
                                         
-                                        print("hieeee")
-                                        var email: AnyObject = object.valueForKey("user_email")!
-                                        println(email)
-                                        var user0 = Prefer(email :toString(email))
-                                        prefer = user0
-                                        var sup: [Prefer]!
-                                        pUser = PUser(cuser: user0)
-                                        list.list.append(toString(email))
-                                
-                                        }}}}}
+                                                if (role  == Role1){
+                                            
+                                                    if(datedb as? NSObject == date){
+                                                
+                                                        print("users found")
+                                                        var email: AnyObject = object.valueForKey("user_email")!
+                                                        println(email)
+                                                        var user0 = Prefer(email :toString(email))
+                                                        prefer = user0
+                                                        var sup: [Prefer]!
+                                                        pUser = PUser(cuser: user0)
+                                                        list.list.append(toString(email))
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         else {
                             // Log details of the failure
                             
                             println("Error nothing found")
+                            //self.displayMyAlertMessage1()
                         }
-                    }}}
+                    }
+                }
+            }
             //this is used for closure
             completion(user: list)
-        }}
+        }
+    }
         
     
     
@@ -171,7 +364,6 @@ class ParseModel {
                         println(object.objectId)
                         println("Successfully retrieved \(objects.count+2) scores.")
                         var user = User(type: toString(type), username: toString(username), age: age, language: toString(language), gender: toString(gender), email: toString(email))
-                        //var user0 = User("Driver", username: object.valueForKey("username"), age: object.valueForKey("age"), language: object.valueForKey("language"), gender: object.valueForKey("gender"), email: object.valueForKey("email"))
                         User1 = user
                         var sup: [User]!
                         currentUser = CurrentUser(cuser: user)
@@ -228,7 +420,7 @@ class ParseModel {
                                 completion(user: loginUser)
                                 
                             } else {
-                                alert.show();
+                                self.alert.show();
                             }
                         }
                             
@@ -241,7 +433,7 @@ class ParseModel {
                     }
                     
                     if(objects.count == 0){
-                        alert.show();
+                        self.alert.show();
                     }
                     
                     //return User1

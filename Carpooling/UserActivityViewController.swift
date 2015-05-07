@@ -15,8 +15,6 @@ class UserActivityViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     // needs to be optional
     
-    
-    
     @IBAction func logoutPressed(sender: UIButton) {
         self.performSegueWithIdentifier("HomePage_Segue", sender: self)
     }
@@ -24,8 +22,6 @@ class UserActivityViewController: UIViewController {
     @IBAction func SearchPressed(sender: UIButton) {
         
         self.performSegueWithIdentifier("SearchPeople_Segue", sender: self)
-        
-        
     }
     
     @IBAction func NotificationPressed(sender: UIButton) {
@@ -38,9 +34,12 @@ class UserActivityViewController: UIViewController {
         self.performSegueWithIdentifier("Profile_Segue", sender: self)
     }
     
-    
+    @IBAction func strarttripPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("startTrip_Segue", sender: self)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if (segue.identifier == "SearchPeople_Segue") {
             var childVC : searchPeople = segue.destinationViewController as searchPeople
             childVC.login = login
@@ -61,8 +60,9 @@ class UserActivityViewController: UIViewController {
             println("welcome to Get Started Page")
         }
         
-        if (segue.identifier == "Notifications_Segue") {
-            var childVC : NotificationsViewController = segue.destinationViewController as NotificationsViewController
+        if (segue.identifier == "startTrip_Segue") {
+            var childVC : DistancCalculatorViewController  = segue.destinationViewController as DistancCalculatorViewController
+            childVC.login = login
             println("welcome to Notification Page")
         }
 
@@ -72,6 +72,7 @@ class UserActivityViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green.jpg")!)
         //Add something for test?
         if(login != nil){
             usernameLabel.text! = login![0].email

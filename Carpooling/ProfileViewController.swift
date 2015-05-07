@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate , UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     var temp = 0
@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
     var loginStatus : Bool = false
     
     
+    @IBOutlet weak var username_label: UILabel!
     @IBOutlet weak var oldPassword: UITextField!
     @IBOutlet weak var newPassword: UITextField!
     @IBOutlet var age: UITextField!
@@ -31,6 +32,9 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
     var alert = UIAlertView(title: "Alert", message: "password do not match!!", delegate: nil, cancelButtonTitle: "OK")
     
     var alert1 = UIAlertView(title: "Alert", message: "Your current password is wrong", delegate: nil, cancelButtonTitle: "OK")
+    
+    var alert2 = UIAlertView(title: "Alert", message: "Information updated successfully", delegate: nil, cancelButtonTitle: "OK")
+    var alert3 = UIAlertView(title: "Alert", message: "Nothing to update, upload image + update age + gender", delegate: nil, cancelButtonTitle: "OK")
     
     @IBAction func gobackPressed(sender: UIButton) {
         self.performSegueWithIdentifier("UserActivity_Segue", sender: self)
@@ -63,13 +67,7 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
             imagePicker.allowsEditing = false
             self.presentViewController(imagePicker, animated : true, completion : nil)
         }
-        
-        
-        
     }
-    
-    
-    
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info : [NSObject : AnyObject]!)  {
         var  emailF: String!
@@ -94,7 +92,7 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
     @IBAction func genderSegmentedControl(sender: AnyObject) {
         
         
-        var new_user = PFObject(className: "userInfo")
+        var new_user = PFObject(className: "User")
         
         if sender.selectedSegmentIndex == 0 {
             // new_user.addObject(("Male"), forKey: "gender")
@@ -123,14 +121,23 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
         
     }
     
+    func displayMyAlertMessageUpdateData(){
+        alert2.show()
+    }
     
+    func displayMyAlertMessageNoUpdate(){
+        alert3.show()
+    }
+    
+    @IBAction func changePasswordPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("passwordChange_Segue", sender: self)
+    }
     
     @IBAction func Submit(sender: AnyObject) {
         
         var  age1 = self.age.text
         print(age1)
         var  username1 = self.username.text
-        var password1 = self.newPassword.text
         var gender1: [String]!
         if ( self.temp == 1 ) {
             gender1 = ["Male"]
@@ -141,15 +148,56 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
             gender1 = ["Unspecified"]
             
         }
-        if (self.reenterPassword.text != newPassword.text){
-            self.displayMyAlertMessage()
-            return
-            
-        }
         
         var emailPassed : String = login![0].email
         
         
+        if (age != "" && gender1 != nil && self.imageProfile != nil){
+            //if (gender1 != nil){
+                self.ParseData.uploadProfileImage(self.imageProfile, emailRetrieved :emailPassed , age: self.age.text, /* username: username*/ gender : gender1)
+                //displayMyAlertMessageUpdateData()
+            
+        }
+        else {
+            displayMyAlertMessageNoUpdate()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "UserActivity_Segue") {
+            var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
+            if(login != nil){
+                childVC.login = login!
+                println("welcome to userActivity")
+            }
+        }
+        if (segue.identifier == "passwordChange_Segue") {
+            var childVC : passwordCorrection = segue.destinationViewController as passwordCorrection
+            if(login != nil){
+                childVC.login = login!
+                println("welcome to userActivity")
+            }
+        }
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green.jpg")!)
+        // Do any additional setup after loading the view, typically from a nib.
+        println("Profile View Controller !!!!")
+        var emailPassed : String = login![0].email
+        age.delegate = self
+        username.delegate = self
+        
+        // current user
+        username_label.text = emailPassed
+        
+        var  age1 = self.age.text
+        print(age1)
+        var  username1 = self.username.text
+        //var password1 = self.newPassword.text
+        var gender1: [String]!
         var user = PFQuery(className:"User")
         user.whereKey("user_email", equalTo:emailPassed)
         user.findObjectsInBackgroundWithBlock {
@@ -168,73 +216,34 @@ class ProfileViewController: UIViewController ,UIImagePickerControllerDelegate ,
                             var password : AnyObject = object.valueForKey("password")!
                             var passwordRetrieved = password as String
                             println(passwordRetrieved)
-                            if (self.oldPassword.text != passwordRetrieved){
-                                self.displayMyAlertMessage1()
-                                
-                                
+                            if let userImageFile = object["image"] as PFFile! {
+                                userImageFile.getDataInBackgroundWithBlock {
+                                    (imageData: NSData!, error: NSError!) -> Void in
+                                    if error == nil {
+                                        if let imageData = imageData{
+                                            let image = UIImage(data: imageData)
+                                            println(image)
+                                            self.imageView.image = image
+                                        }
+                                    }
+                                }
                             }
-                            else {
-                                
-                                self.ParseData.uploadProfileImage(self.imageProfile, emailRetrieved :emailPassed , age: self.age.text , username: self.username.text, password : self.newPassword.text, gender : gender1)
-                            }
+                        }
                     }
                 }
             }
-         
-            }}}
-    
-    
-    
-    
-    
-    //        var new_user = PFObject(className: "userInfo")
-    //
-    //        new_user["username"] = username.text
-    //        new_user["age"] = age.text
-    //
-    //        if ( temp == 1 ) {
-    //            new_user.addObject(("Male"), forKey: "gender")
-    //        }
-    //        else if ( temp == 2 ) {
-    //            new_user.addObject(("Female"), forKey: "gender")
-    //        }
-    //        else if ( temp == 3 ) {
-    //            new_user.addObject(toString("Unspecified"), forKey: "gender")
-    //        }
-    //
-    //
-    //        new_user.saveInBackgroundWithBlock {
-    //            (success: Bool, error: NSError!) -> Void in
-    //            if (success) {
-    //                // The object has been saved.
-    //                print("Success")
-    //            } else {
-    //                // There was a problem, check error.description
-    //                print("error")
-    //            }
-    //        }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "UserActivity_Segue") {
-            var childVC : UserActivityViewController = segue.destinationViewController as UserActivityViewController
-            if(login != nil){
-                childVC.login = login!
-                println("welcome to userActivity")
-            }}
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        println("Profile View Controller !!!!")
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+        //return
     }
     
     
